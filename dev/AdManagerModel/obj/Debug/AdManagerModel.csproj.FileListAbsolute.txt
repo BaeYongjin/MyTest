@@ -1,6 +1,0 @@
-F:\Project\2016IPTV\dev\AdManagerModel\bin\Debug\AdManagerModel.dll
-F:\Project\2016IPTV\dev\AdManagerModel\bin\Debug\AdManagerModel.pdb
-F:\Project\2016IPTV\dev\AdManagerModel\bin\Debug\AdTargets.WinFramework.dll
-F:\Project\2016IPTV\dev\AdManagerModel\obj\Debug\AdManagerModel.dll
-F:\Project\2016IPTV\dev\AdManagerModel\obj\Debug\AdManagerModel.pdb
-F:\Project\2016IPTV\dev\AdManagerModel\obj\Debug\AdManagerModel.csprojResolveAssemblyReference.cache
