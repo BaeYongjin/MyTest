@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetSystemConfigList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemConfigModel" type="tns:SystemConfigModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SystemConfigModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FtpUploadID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FtpUploadPW" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FtpUploadHost" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FtpUploadPort" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FtpUploadPath" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FtpCdnID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FtpCdnPW" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FtpCdnHost" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FtpCdnPort" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FtpMovePath" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FtpMoveUseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FileQueueUseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FileQueueInterval" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FileQueueCnt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="URLGetAdPopList" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="URLSetAdPop" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CmsMasUrl" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CmsMasQuery" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SystemConfigDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSystemConfigListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSystemConfigListResult" type="tns:SystemConfigModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSystemConfigUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemConfigModel" type="tns:SystemConfigModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSystemConfigUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSystemConfigUpdateResult" type="tns:SystemConfigModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSystemConfigListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSystemConfigList" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemConfigListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSystemConfigListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSystemConfigUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSystemConfigUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetSystemConfigUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSystemConfigUpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SystemConfigServiceSoap">
+    <wsdl:operation name="GetSystemConfigList">
+      <wsdl:input message="tns:GetSystemConfigListSoapIn" />
+      <wsdl:output message="tns:GetSystemConfigListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSystemConfigUpdate">
+      <wsdl:input message="tns:SetSystemConfigUpdateSoapIn" />
+      <wsdl:output message="tns:SetSystemConfigUpdateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SystemConfigServiceSoap" type="tns:SystemConfigServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSystemConfigList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSystemConfigList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSystemConfigUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSystemConfigUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SystemConfigServiceSoap12" type="tns:SystemConfigServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSystemConfigList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSystemConfigList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSystemConfigUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSystemConfigUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SystemConfigService">
+    <wsdl:port name="SystemConfigServiceSoap" binding="tns:SystemConfigServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Common/SystemConfigService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SystemConfigServiceSoap12" binding="tns:SystemConfigServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Common/SystemConfigService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

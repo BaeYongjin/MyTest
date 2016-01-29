@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<xs:schema id="SchAppendAdDs" 
+                  targetNamespace="http://tempuri.org/SchAppendAdDs.xsd"
+                  elementFormDefault="qualified"
+                  attributeFormDefault="qualified"
+                  xmlns="http://tempuri.org/SchAppendAdDs.xsd"
+                  xmlns:mstns="http://tempuri.org/SchAppendAdDs.xsd"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="SchAppendAdDs" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+			<xs:element name="HomeAdSchedule">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AdType" type="xs:string" minOccurs="0" />
+							<xs:element name="AdTypeName" type="xs:string" minOccurs="0" />
+							<xs:element name="ScheduleOrder" type="xs:string" minOccurs="0" />
+							<xs:element name="ItemNo" type="xs:string" minOccurs="0" />
+							<xs:element name="ItemName" type="xs:string" minOccurs="0" />
+							<xs:element name="ContractName" type="xs:string" minOccurs="0" />
+							<xs:element name="AdvertiserName" type="xs:string" minOccurs="0" />
+							<xs:element name="ContState" type="xs:string" minOccurs="0" />
+							<xs:element name="ContStateName" type="xs:string" minOccurs="0" />
+							<xs:element name="RealEndDay" type="xs:string" minOccurs="0" />
+							<xs:element name="AdClassName" type="xs:string" minOccurs="0" />
+							<xs:element name="AdState" type="xs:string" minOccurs="0" />
+							<xs:element name="AdStateName" type="xs:string" minOccurs="0" />
+							<xs:element name="FileState" type="xs:string" minOccurs="0" />
+							<xs:element name="FileStateName" type="xs:string" minOccurs="0" />
+							<xs:element name="CheckYn" type="xs:string" minOccurs="0" />
+							<xs:element name="AckState" type="xs:string" minOccurs="0" />
+							<xs:element name="TgtTimeYn" type="xs:string" minOccurs="0" />
+							<xs:element name="JumpTypeName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Medias">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+							<xs:element name="MediaName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MediaRaps">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RapCode" type="xs:string" minOccurs="0" />
+							<xs:element name="RapName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Agencys">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AgencyCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AgencyName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Advertisers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AdvertiserCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AdvertiserName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AdClass">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Section" type="xs:string" minOccurs="0" />
+							<xs:element name="Code" type="xs:string" minOccurs="0" />
+							<xs:element name="CodeName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AdState">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Section" type="xs:string" minOccurs="0" />
+							<xs:element name="Code" type="xs:string" minOccurs="0" />
+							<xs:element name="CodeName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ContractState">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Section" type="xs:string" minOccurs="0" />
+							<xs:element name="Code" type="xs:string" minOccurs="0" />
+							<xs:element name="CodeName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

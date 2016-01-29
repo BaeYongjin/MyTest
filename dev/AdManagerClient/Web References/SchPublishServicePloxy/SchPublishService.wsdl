@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetPublishState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SchPublishModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="PublishDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="ScheduleDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AckNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AckDesc" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChkDesc" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PublishDesc" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPublishStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPublishStateResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHomePublishState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHomePublishStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHomePublishStateResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCmPublishState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCmPublishStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCmPublishStateResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOapPublishState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOapPublishStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOapPublishStateResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHomeKidsPublishState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHomeKidsPublishStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHomeKidsPublishStateResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHomeTargetPublishState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHomeTargetPublishStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHomeTargetPublishStateResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSchPublishList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSchPublishListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSchPublishListResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScheduleList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScheduleListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScheduleListResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetScheduleAck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetScheduleAckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetScheduleAckResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetScheduleAckCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetScheduleAckCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetScheduleAckCancelResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetScheduleChk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetScheduleChkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetScheduleChkResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetScheduleChkCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetScheduleChkCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetScheduleChkCancelResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchedulePublish">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchedulePublishResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchedulePublishResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchedulePublishCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPublishModel" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchedulePublishCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchedulePublishCancelResult" type="tns:SchPublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPublishStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPublishState" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPublishStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHomePublishStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHomePublishState" />
+  </wsdl:message>
+  <wsdl:message name="GetHomePublishStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHomePublishStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCmPublishStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCmPublishState" />
+  </wsdl:message>
+  <wsdl:message name="GetCmPublishStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCmPublishStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOapPublishStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOapPublishState" />
+  </wsdl:message>
+  <wsdl:message name="GetOapPublishStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOapPublishStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHomeKidsPublishStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHomeKidsPublishState" />
+  </wsdl:message>
+  <wsdl:message name="GetHomeKidsPublishStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHomeKidsPublishStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHomeTargetPublishStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHomeTargetPublishState" />
+  </wsdl:message>
+  <wsdl:message name="GetHomeTargetPublishStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHomeTargetPublishStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSchPublishListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSchPublishList" />
+  </wsdl:message>
+  <wsdl:message name="GetSchPublishListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSchPublishListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScheduleListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScheduleList" />
+  </wsdl:message>
+  <wsdl:message name="GetScheduleListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScheduleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetScheduleAckSoapIn">
+    <wsdl:part name="parameters" element="tns:SetScheduleAck" />
+  </wsdl:message>
+  <wsdl:message name="SetScheduleAckSoapOut">
+    <wsdl:part name="parameters" element="tns:SetScheduleAckResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetScheduleAckCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:SetScheduleAckCancel" />
+  </wsdl:message>
+  <wsdl:message name="SetScheduleAckCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:SetScheduleAckCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetScheduleChkSoapIn">
+    <wsdl:part name="parameters" element="tns:SetScheduleChk" />
+  </wsdl:message>
+  <wsdl:message name="SetScheduleChkSoapOut">
+    <wsdl:part name="parameters" element="tns:SetScheduleChkResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetScheduleChkCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:SetScheduleChkCancel" />
+  </wsdl:message>
+  <wsdl:message name="SetScheduleChkCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:SetScheduleChkCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchedulePublishSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchedulePublish" />
+  </wsdl:message>
+  <wsdl:message name="SetSchedulePublishSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchedulePublishResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchedulePublishCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchedulePublishCancel" />
+  </wsdl:message>
+  <wsdl:message name="SetSchedulePublishCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchedulePublishCancelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SchPublishServiceSoap">
+    <wsdl:operation name="GetPublishState">
+      <wsdl:input message="tns:GetPublishStateSoapIn" />
+      <wsdl:output message="tns:GetPublishStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHomePublishState">
+      <wsdl:input message="tns:GetHomePublishStateSoapIn" />
+      <wsdl:output message="tns:GetHomePublishStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCmPublishState">
+      <wsdl:input message="tns:GetCmPublishStateSoapIn" />
+      <wsdl:output message="tns:GetCmPublishStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOapPublishState">
+      <wsdl:input message="tns:GetOapPublishStateSoapIn" />
+      <wsdl:output message="tns:GetOapPublishStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeKidsPublishState">
+      <wsdl:input message="tns:GetHomeKidsPublishStateSoapIn" />
+      <wsdl:output message="tns:GetHomeKidsPublishStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeTargetPublishState">
+      <wsdl:input message="tns:GetHomeTargetPublishStateSoapIn" />
+      <wsdl:output message="tns:GetHomeTargetPublishStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchPublishList">
+      <wsdl:input message="tns:GetSchPublishListSoapIn" />
+      <wsdl:output message="tns:GetSchPublishListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleList">
+      <wsdl:input message="tns:GetScheduleListSoapIn" />
+      <wsdl:output message="tns:GetScheduleListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleAck">
+      <wsdl:input message="tns:SetScheduleAckSoapIn" />
+      <wsdl:output message="tns:SetScheduleAckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleAckCancel">
+      <wsdl:input message="tns:SetScheduleAckCancelSoapIn" />
+      <wsdl:output message="tns:SetScheduleAckCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleChk">
+      <wsdl:input message="tns:SetScheduleChkSoapIn" />
+      <wsdl:output message="tns:SetScheduleChkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleChkCancel">
+      <wsdl:input message="tns:SetScheduleChkCancelSoapIn" />
+      <wsdl:output message="tns:SetScheduleChkCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchedulePublish">
+      <wsdl:input message="tns:SetSchedulePublishSoapIn" />
+      <wsdl:output message="tns:SetSchedulePublishSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchedulePublishCancel">
+      <wsdl:input message="tns:SetSchedulePublishCancelSoapIn" />
+      <wsdl:output message="tns:SetSchedulePublishCancelSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SchPublishServiceSoap" type="tns:SchPublishServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPublishState">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPublishState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomePublishState">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetHomePublishState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCmPublishState">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCmPublishState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOapPublishState">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetOapPublishState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeKidsPublishState">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetHomeKidsPublishState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeTargetPublishState">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetHomeTargetPublishState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchPublishList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSchPublishList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetScheduleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleAck">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetScheduleAck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleAckCancel">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetScheduleAckCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleChk">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetScheduleChk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleChkCancel">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetScheduleChkCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchedulePublish">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchedulePublish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchedulePublishCancel">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchedulePublishCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SchPublishServiceSoap12" type="tns:SchPublishServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPublishState">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPublishState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomePublishState">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetHomePublishState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCmPublishState">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCmPublishState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOapPublishState">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetOapPublishState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeKidsPublishState">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetHomeKidsPublishState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeTargetPublishState">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetHomeTargetPublishState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchPublishList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSchPublishList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetScheduleList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleAck">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetScheduleAck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleAckCancel">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetScheduleAckCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleChk">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetScheduleChk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduleChkCancel">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetScheduleChkCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchedulePublish">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchedulePublish" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchedulePublishCancel">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchedulePublishCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SchPublishService">
+    <wsdl:port name="SchPublishServiceSoap" binding="tns:SchPublishServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Schedule/SchPublishService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SchPublishServiceSoap12" binding="tns:SchPublishServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Schedule/SchPublishService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

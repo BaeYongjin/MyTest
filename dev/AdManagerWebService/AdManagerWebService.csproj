@@ -1,0 +1,1578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE7A9FBE-3CD4-422D-97FA-961B6F7E60B3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>AdManagerWebService</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AdManagerWebService</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <PublishDatabases>false</PublishDatabases>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdTargets.WinFramework, Version=2.1.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FrameworkLib\AdTargets.WinFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <ProjectReference Include="..\AdManagerModel\AdManagerModel.csproj">
+      <Name>AdManagerModel</Name>
+      <Project>{04D71333-82A8-4B47-BE33-E2BE47741D77}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\AgencyCodeService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Common\CampaignCodeService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Common\CategoryGenreService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Common\CodeService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Common\CugCodeService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Common\ItemService.asmx" />
+    <Content Include="Common\MediaCodeService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Common\MediaRapCodeService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Common\MenuService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Common\SystemConfigService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Common\SystemMenuService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Common\ZipCodeService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\AdFileService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\AdFileWideService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\AdvertiserService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\AgencyService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\CampaignService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\ClientService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\ContractItemService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\ContractPackageService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\ContractService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\FilePublishService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Contract\MediaAgencyService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Global.asax">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="Interface\AdFileDistribute.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Interface\cssComm.css" />
+    <Content Include="Interface\cssList.css" />
+    <Content Include="Interface\DataSetFileDis.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFileDis.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Interface\GetDataService.asmx" />
+    <Content Include="Interface\images\search.jpg" />
+    <Content Include="Interface\images\search.png" />
+    <Content Include="Interface\images\table_01.jpg" />
+    <Content Include="Interface\images\table_02.jpg" />
+    <Content Include="Interface\images\table_03.jpg" />
+    <Content Include="Interface\images\table_04.jpg" />
+    <Content Include="Interface\images\table_05.jpg" />
+    <Content Include="Interface\images\table_06.jpg" />
+    <Content Include="Interface\images\table_07.jpg" />
+    <Content Include="Interface\images\table_08.jpg" />
+    <Content Include="Interface\images\table_09.jpg" />
+    <Content Include="Interface\images\table_bg.jpg" />
+    <Content Include="Interface\images\title_l.jpg" />
+    <Content Include="Interface\images\title_m.jpg" />
+    <Content Include="Interface\images\title_r.jpg" />
+    <Content Include="Interface\images\title_rr.jpg" />
+    <Content Include="Interface\InterfaceService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Interface\ItemList2Ukey.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Interface\Relay.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Interface\ReportService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Interface\RequestAdPopContentList.aspx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Login\LoginService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Media\AnalysisItemGroupService.asmx" />
+    <Content Include="Media\CategoryService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Media\ChannelService.asmx" />
+    <Content Include="Media\ChannelSetService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Media\ContentsService.asmx" />
+    <Content Include="Media\GenreService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Media\GroupOrganizationService.asmx" />
+    <Content Include="Media\GroupService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Media\MediaInfoService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Media\MediaMenuService.asmx" />
+    <Content Include="Media\MediaMenuSetService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Media\MediaRapService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Media\MenuMapService.asmx" />
+    <Content Include="Media\SchOrgGenreService.asmx" />
+    <Content Include="Media\SlotAdInfoService.asmx" />
+    <Content Include="Media\SlotOrganizationService.asmx" />
+    <Content Include="Media\UserInfoService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\AdHitStatusService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\AreaDayService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\DailyAdHitService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\DailyProgramHitService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\DateSummaryService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\ProgramAdHitService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\RegionDateService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\StatisticsChannelService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\StatisticsDailyService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\StatisticsRegionService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\StatisticsTimeService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\StatisticsTotalService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\SummaryAdService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportAd\TimeSummaryService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportMedia\CategoryRatingService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportMedia\ContentRatingService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportMedia\GenreRatingService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportMedia\PgmDailyRatingService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportMedia\StatisticsPgCategoryService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportMedia\StatisticsPgChannelService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportMedia\StatisticsPgService.asmx" />
+    <Content Include="ReportMedia\StatisticsPgRegionService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportMedia\StatisticsPgTimeService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportMedia\StatisticsPgWeekService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportSummaryAd\AdExecuteRateService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportSummaryAd\AdTypeMoniteringService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportSummaryAd\BizManageService.asmx" />
+    <Content Include="ReportSummaryAd\DailyAdExecSummaryRptService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportSummaryAd\DateAdTypeSummaryRptService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportSummaryAd\InventoryPresentConditionService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportSummaryAd\OAPWeekSummaryRptService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportSummaryAd\PreferenceTotalizeService.asmx" />
+    <Content Include="ReportSummaryAd\ReportSummAdService.asmx" />
+    <Content Include="ReportSummaryAd\RptAdCategorySummaryService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportSummaryAd\RptSummaryAdDailyService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportSummaryAd\RptSummaryAdMonthlyService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="ReportSummaryAd\RptSummaryAdWeeklyService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\AdStatusService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\ChannelGroupService.asmx" />
+    <Content Include="Schedule\ChannelJumpService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\ChooseAdScheduleService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\GenreGroupService.asmx" />
+    <Content Include="Schedule\Sch3FormService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\SchAppendAdService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\SchChoiceAdService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\SchDesignateService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\SchExcelService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\SchExclusiveZoneService.asmx" />
+    <Content Include="Schedule\SchMenuAdService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\SchMidAdService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\SchPopularChannelService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\SchPublishService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Schedule\SchRecommService.asmx" />
+    <Content Include="Target\GradeService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Target\RatioService.asmx">
+      <SubType>Form</SubType>
+    </Content>
+    <Content Include="Target\TargetingService.asmx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\AgencyCodeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\AgencyCodeService.asmx.cs">
+      <DependentUpon>AgencyCodeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\CampaignCodeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CampaignCodeService.asmx.cs">
+      <DependentUpon>CampaignCodeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\CategoryGenreBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CategoryGenreService.asmx.cs">
+      <DependentUpon>CategoryGenreService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\CodeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CodeService.asmx.cs">
+      <DependentUpon>CodeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\CugCodeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CugCodeService.asmx.cs">
+      <DependentUpon>CugCodeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\FtpManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ItemBiz.cs" />
+    <Compile Include="Common\ItemService.asmx.cs">
+      <DependentUpon>ItemService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\MediaCodeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\MediaCodeService.asmx.cs">
+      <DependentUpon>MediaCodeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\MediaRapCodeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\MediaRapCodeService.asmx.cs">
+      <DependentUpon>MediaRapCodeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\MenuBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\MenuService.asmx.cs">
+      <DependentUpon>MenuService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\SystemConfigBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SystemConfigService.asmx.cs">
+      <DependentUpon>SystemConfigService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\SystemMenuBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SystemMenuService.asmx.cs">
+      <DependentUpon>SystemMenuService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\ZipCodeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ZipCodeService.asmx.cs">
+      <DependentUpon>ZipCodeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\AdFileBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\AdFileService.asmx.cs">
+      <DependentUpon>AdFileService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\AdFileWideBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\AdFileWideService.asmx.cs">
+      <DependentUpon>AdFileWideService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\AdvertiserBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\AdvertiserService.asmx.cs">
+      <DependentUpon>AdvertiserService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\AgencyBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\AgencyService.asmx.cs">
+      <DependentUpon>AgencyService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\CampaignBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\CampaignService.asmx.cs">
+      <DependentUpon>CampaignService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\ClientBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\ClientService.asmx.cs">
+      <DependentUpon>ClientService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractItemBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractItemService.asmx.cs">
+      <DependentUpon>ContractItemService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractPackageBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractPackageService.asmx.cs">
+      <DependentUpon>ContractPackageService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractService.asmx.cs">
+      <DependentUpon>ContractService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\FilePublishBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\FilePublishService.asmx.cs">
+      <DependentUpon>FilePublishService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contract\MediaAgencyBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\MediaAgencyService.asmx.cs">
+      <DependentUpon>MediaAgencyService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrameSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\AdFileDistribute.aspx.cs">
+      <DependentUpon>AdFileDistribute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\AdFileDistribute.aspx.designer.cs">
+      <DependentUpon>AdFileDistribute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\AdFileDistributeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\ClsComm.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\DataSetFileDis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFileDis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\GetDataService.asmx.cs">
+      <DependentUpon>GetDataService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\InterfaceBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\InterfaceService.asmx.cs">
+      <DependentUpon>InterfaceService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\ItemList2Ukey.aspx.cs">
+      <DependentUpon>ItemList2Ukey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ItemList2Ukey.aspx.designer.cs">
+      <DependentUpon>ItemList2Ukey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ItemList2UkeyBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\MonitorCapBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\Relay.aspx.cs">
+      <DependentUpon>Relay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\Relay.aspx.designer.cs">
+      <DependentUpon>Relay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ReportBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\ReportData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\ReportService.asmx.cs">
+      <DependentUpon>ReportService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\RequestAdPopContentList.aspx.cs">
+      <DependentUpon>RequestAdPopContentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\RequestAdPopContentList.aspx.designer.cs">
+      <DependentUpon>RequestAdPopContentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\RequestAdPopContentListBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login\LoginBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login\LoginService.asmx.cs">
+      <DependentUpon>LoginService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\AnalysisItemGroupBiz.cs" />
+    <Compile Include="Media\AnalysisItemGroupService.asmx.cs">
+      <DependentUpon>AnalysisItemGroupService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\CategoryBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\CategoryService.asmx.cs">
+      <DependentUpon>CategoryService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\ChannelBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\ChannelService.asmx.cs">
+      <DependentUpon>ChannelService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\ChannelSetBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\ChannelSetService.asmx.cs">
+      <DependentUpon>ChannelSetService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\ContentsBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\ContentsService.asmx.cs">
+      <DependentUpon>ContentsService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\GenreBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\GenreService.asmx.cs">
+      <DependentUpon>GenreService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\GroupBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\GroupOrganizationBiz.cs" />
+    <Compile Include="Media\GroupOrganizationService.asmx.cs">
+      <DependentUpon>GroupOrganizationService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\GroupService.asmx.cs">
+      <DependentUpon>GroupService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\MediaInfoBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\MediaInfoService.asmx.cs">
+      <DependentUpon>MediaInfoService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\MediaMenuBiz.cs" />
+    <Compile Include="Media\MediaMenuService.asmx.cs">
+      <DependentUpon>MediaMenuService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\MediaMenuSetBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\MediaMenuSetService.asmx.cs">
+      <DependentUpon>MediaMenuSetService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\MediaRapBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\MediaRapService.asmx.cs">
+      <DependentUpon>MediaRapService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\MenuMapBiz.cs" />
+    <Compile Include="Media\MenuMapService.asmx.cs">
+      <DependentUpon>MenuMapService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\SchOrgGenreBiz.cs" />
+    <Compile Include="Media\SchOrgGenreService.asmx.cs">
+      <DependentUpon>SchOrgGenreService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\SlotAdInfoBiz.cs" />
+    <Compile Include="Media\SlotAdInfoService.asmx.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>SlotAdInfoService.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="Media\SlotOrganizationBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\SlotOrganizationService.asmx.cs">
+      <DependentUpon>SlotOrganizationService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Media\UserInfoBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\UserInfoService.asmx.cs">
+      <DependentUpon>UserInfoService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\AdHitStatusBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\AdHitStatusService.asmx.cs">
+      <DependentUpon>AdHitStatusService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\AreaDayBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\AreaDayService.asmx.cs">
+      <DependentUpon>AreaDayService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\DailyAdHitBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\DailyAdHitService.asmx.cs">
+      <DependentUpon>DailyAdHitService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\DailyProgramHitBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\DailyProgramHitService.asmx.cs">
+      <DependentUpon>DailyProgramHitService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\DateSummaryBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\DateSummaryService.asmx.cs">
+      <DependentUpon>DateSummaryService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\ProgramAdHitBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\ProgramAdHitService.asmx.cs">
+      <DependentUpon>ProgramAdHitService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\RegionDateBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\RegionDateService.asmx.cs">
+      <DependentUpon>RegionDateService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\StatisticsChannelBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\StatisticsChannelService.asmx.cs">
+      <DependentUpon>StatisticsChannelService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\StatisticsDailyBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\StatisticsDailyService.asmx.cs">
+      <DependentUpon>StatisticsDailyService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\StatisticsRegionBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\StatisticsRegionService.asmx.cs">
+      <DependentUpon>StatisticsRegionService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\StatisticsTimeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\StatisticsTimeService.asmx.cs">
+      <DependentUpon>StatisticsTimeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\StatisticsTotalBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\StatisticsTotalService.asmx.cs">
+      <DependentUpon>StatisticsTotalService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\SummaryAdBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\SummaryAdService.asmx.cs">
+      <DependentUpon>SummaryAdService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportAd\TimeSummaryBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAd\TimeSummaryService.asmx.cs">
+      <DependentUpon>TimeSummaryService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\CategoryRatingBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\CategoryRatingService.asmx.cs">
+      <DependentUpon>CategoryRatingService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\ContentRatingBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\ContentRatingService.asmx.cs">
+      <DependentUpon>ContentRatingService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\GenreRatingBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\GenreRatingService.asmx.cs">
+      <DependentUpon>GenreRatingService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\PgmDailyRatingBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\PgmDailyRatingService.asmx.cs">
+      <DependentUpon>PgmDailyRatingService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgCategoryBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgCategoryService.asmx.cs">
+      <DependentUpon>StatisticsPgCategoryService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgChannelBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgChannelService.asmx.cs">
+      <DependentUpon>StatisticsPgChannelService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgBiz.cs" />
+    <Compile Include="ReportMedia\StatisticsPgService.asmx.cs">
+      <DependentUpon>StatisticsPgService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgRegionBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgRegionService.asmx.cs">
+      <DependentUpon>StatisticsPgRegionService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgTimeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgTimeService.asmx.cs">
+      <DependentUpon>StatisticsPgTimeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgWeekBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMedia\StatisticsPgWeekService.asmx.cs">
+      <DependentUpon>StatisticsPgWeekService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\AdExecuteRateBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\AdExecuteRateService.asmx.cs">
+      <DependentUpon>AdExecuteRateService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\AdTypeMoniteringBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\AdTypeMoniteringService.asmx.cs">
+      <DependentUpon>AdTypeMoniteringService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\BizManageBiz.cs" />
+    <Compile Include="ReportSummaryAd\BizManageService.asmx.cs">
+      <DependentUpon>BizManageService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\DailyAdExecSummaryRptBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\DailyAdExecSummaryRptService.asmx.cs">
+      <DependentUpon>DailyAdExecSummaryRptService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\DateAdTypeSummaryRptBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\DateAdTypeSummaryRptService.asmx.cs">
+      <DependentUpon>DateAdTypeSummaryRptService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\InventoryPresentConditionBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\InventoryPresentConditionService.asmx.cs">
+      <DependentUpon>InventoryPresentConditionService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\OAPWeekSummaryRptBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\OAPWeekSummaryRptService.asmx.cs">
+      <DependentUpon>OAPWeekSummaryRptService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\PreferenceTotalizeBiz.cs" />
+    <Compile Include="ReportSummaryAd\PreferenceTotalizeService.asmx.cs">
+      <DependentUpon>PreferenceTotalizeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\ReportSummAdBiz.cs" />
+    <Compile Include="ReportSummaryAd\ReportSummAdService.asmx.cs">
+      <DependentUpon>ReportSummAdService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\RptAdCategorySummaryBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\RptAdCategorySummaryService.asmx.cs">
+      <DependentUpon>RptAdCategorySummaryService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\RptSummaryAdDailyBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\RptSummaryAdDailyService.asmx.cs">
+      <DependentUpon>RptSummaryAdDailyService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\RptSummaryAdMonthlyBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\RptSummaryAdMonthlyService.asmx.cs">
+      <DependentUpon>RptSummaryAdMonthlyService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\RptSummaryAdWeeklyBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportSummaryAd\RptSummaryAdWeeklyService.asmx.cs">
+      <DependentUpon>RptSummaryAdWeeklyService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\AdStatusBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\AdStatusService.asmx.cs">
+      <DependentUpon>AdStatusService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\ChannelGroupBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\ChannelGroupService.asmx.cs">
+      <DependentUpon>ChannelGroupService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\ChannelJumpBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\ChannelJumpService.asmx.cs">
+      <DependentUpon>ChannelJumpService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\ChooseAdScheduleBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\ChooseAdScheduleService.asmx.cs">
+      <DependentUpon>ChooseAdScheduleService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\ExcelUploadService.asmx.cs">
+      <DependentUpon>SchExcelService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\GenreGroupBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\GenreGroupService.asmx.cs">
+      <DependentUpon>GenreGroupService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\Sch3FormBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\Sch3FormService.asmx.cs">
+      <DependentUpon>Sch3FormService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchAppendAdBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchAppendAdService.asmx.cs">
+      <DependentUpon>SchAppendAdService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchChoiceAdBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchChoiceAdService.asmx.cs">
+      <DependentUpon>SchChoiceAdService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchCommBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchDesignateBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchDesignateService.asmx.cs">
+      <DependentUpon>SchDesignateService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchExcelBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchExclusiveZoneBiz.cs" />
+    <Compile Include="Schedule\SchExclusiveZoneService.asmx.cs">
+      <DependentUpon>SchExclusiveZoneService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchMenuAdBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchMenuAdService.asmx.cs">
+      <DependentUpon>SchMenuAdService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchMidAdBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchMidAdService.asmx.cs">
+      <DependentUpon>SchMidAdService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchPopularChannelBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchPopularChannelService.asmx.cs">
+      <DependentUpon>SchPopularChannelService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchPublishBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchPublishService.asmx.cs">
+      <DependentUpon>SchPublishService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schedule\SchRecommBiz.cs" />
+    <Compile Include="Schedule\SchRecommService.asmx.cs">
+      <DependentUpon>SchRecommService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Target\GradeBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Target\GradeService.asmx.cs">
+      <DependentUpon>GradeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Target\RatioBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Target\RatioService.asmx.cs">
+      <DependentUpon>RatioService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Target\TargetingBiz.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Target\TargetingService.asmx.cs">
+      <DependentUpon>TargetingService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Common\AgencyCodeService.asmx.resx">
+      <DependentUpon>AgencyCodeService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\CampaignCodeService.asmx.resx">
+      <DependentUpon>CampaignCodeService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\CategoryGenreService.asmx.resx">
+      <DependentUpon>CategoryGenreService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\CodeService.asmx.resx">
+      <DependentUpon>CodeService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\CugCodeService.asmx.resx">
+      <DependentUpon>CugCodeService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\MediaCodeService.asmx.resx">
+      <DependentUpon>MediaCodeService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\MediaRapCodeService.asmx.resx">
+      <DependentUpon>MediaRapCodeService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\MenuService.asmx.resx">
+      <DependentUpon>MenuService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SystemConfigService.asmx.resx">
+      <DependentUpon>SystemConfigService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SystemMenuService.asmx.resx">
+      <DependentUpon>SystemMenuService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ZipCodeService.asmx.resx">
+      <DependentUpon>ZipCodeService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\AdFileService.asmx.resx">
+      <DependentUpon>AdFileService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\AdFileWideService.asmx.resx">
+      <DependentUpon>AdFileWideService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\AdvertiserService.asmx.resx">
+      <DependentUpon>AdvertiserService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\AgencyService.asmx.resx">
+      <DependentUpon>AgencyService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\CampaignService.asmx.resx">
+      <DependentUpon>CampaignService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\ClientService.asmx.resx">
+      <DependentUpon>ClientService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\ContractItemService.asmx.resx">
+      <DependentUpon>ContractItemService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\ContractPackageService.asmx.resx">
+      <DependentUpon>ContractPackageService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\ContractService.asmx.resx">
+      <DependentUpon>ContractService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\FilePublishService.asmx.resx">
+      <DependentUpon>FilePublishService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\MediaAgencyService.asmx.resx">
+      <DependentUpon>MediaAgencyService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\AdFileDistribute.aspx.resx">
+      <DependentUpon>AdFileDistribute.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\InterfaceService.asmx.resx">
+      <DependentUpon>InterfaceService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\ItemList2Ukey.aspx.resx">
+      <DependentUpon>ItemList2Ukey.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Relay.aspx.resx">
+      <DependentUpon>Relay.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\ReportService.asmx.resx">
+      <DependentUpon>ReportService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\RequestAdPopContentList.aspx.resx">
+      <DependentUpon>RequestAdPopContentList.aspx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginService.asmx.resx">
+      <DependentUpon>LoginService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\CategoryService.asmx.resx">
+      <DependentUpon>CategoryService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\ChannelService.asmx.resx">
+      <DependentUpon>ChannelService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\ChannelSetService.asmx.resx">
+      <DependentUpon>ChannelSetService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\ContentsService.asmx.resx">
+      <DependentUpon>ContentsService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\GenreService.asmx.resx">
+      <DependentUpon>GenreService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\GroupService.asmx.resx">
+      <DependentUpon>GroupService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\MediaInfoService.asmx.resx">
+      <DependentUpon>MediaInfoService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\MediaMenuSetService.asmx.resx">
+      <DependentUpon>MediaMenuSetService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\MediaRapService.asmx.resx">
+      <DependentUpon>MediaRapService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\SchOrgGenreService.asmx.resx">
+      <DependentUpon>SchOrgGenreService.asmx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\SlotAdInfoService.asmx.resx">
+      <DependentUpon>SlotAdInfoService.asmx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\SlotOrganizationService.asmx.resx">
+      <DependentUpon>SlotOrganizationService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media\UserInfoService.asmx.resx">
+      <DependentUpon>UserInfoService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\AdHitStatusService.asmx.resx">
+      <DependentUpon>AdHitStatusService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\AreaDayService.asmx.resx">
+      <DependentUpon>AreaDayService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\DailyAdHitService.asmx.resx">
+      <DependentUpon>DailyAdHitService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\DailyProgramHitService.asmx.resx">
+      <DependentUpon>DailyProgramHitService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\DateSummaryService.asmx.resx">
+      <DependentUpon>DateSummaryService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\ProgramAdHitService.asmx.resx">
+      <DependentUpon>ProgramAdHitService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\RegionDateService.asmx.resx">
+      <DependentUpon>RegionDateService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\StatisticsChannelService.asmx.resx">
+      <DependentUpon>StatisticsChannelService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\StatisticsDailyService.asmx.resx">
+      <DependentUpon>StatisticsDailyService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\StatisticsRegionService.asmx.resx">
+      <DependentUpon>StatisticsRegionService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\StatisticsTimeService.asmx.resx">
+      <DependentUpon>StatisticsTimeService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\StatisticsTotalService.asmx.resx">
+      <DependentUpon>StatisticsTotalService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\SummaryAdService.asmx.resx">
+      <DependentUpon>SummaryAdService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAd\TimeSummaryService.asmx.resx">
+      <DependentUpon>TimeSummaryService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMedia\CategoryRatingService.asmx.resx">
+      <DependentUpon>CategoryRatingService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMedia\ContentRatingService.asmx.resx">
+      <DependentUpon>ContentRatingService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMedia\GenreRatingService.asmx.resx">
+      <DependentUpon>GenreRatingService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMedia\PgmDailyRatingService.asmx.resx">
+      <DependentUpon>PgmDailyRatingService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMedia\StatisticsPgCategoryService.asmx.resx">
+      <DependentUpon>StatisticsPgCategoryService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMedia\StatisticsPgChannelService.asmx.resx">
+      <DependentUpon>StatisticsPgChannelService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMedia\StatisticsPgRegionService.asmx.resx">
+      <DependentUpon>StatisticsPgRegionService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMedia\StatisticsPgTimeService.asmx.resx">
+      <DependentUpon>StatisticsPgTimeService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMedia\StatisticsPgWeekService.asmx.resx">
+      <DependentUpon>StatisticsPgWeekService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummaryAd\AdExecuteRateService.asmx.resx">
+      <DependentUpon>AdExecuteRateService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummaryAd\AdTypeMoniteringService.asmx.resx">
+      <DependentUpon>AdTypeMoniteringService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummaryAd\DailyAdExecSummaryRptService.asmx.resx">
+      <DependentUpon>DailyAdExecSummaryRptService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummaryAd\DateAdTypeSummaryRptService.asmx.resx">
+      <DependentUpon>DateAdTypeSummaryRptService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummaryAd\InventoryPresentConditionService.asmx.resx">
+      <DependentUpon>InventoryPresentConditionService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummaryAd\OAPWeekSummaryRptService.asmx.resx">
+      <DependentUpon>OAPWeekSummaryRptService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummaryAd\RptAdCategorySummaryService.asmx.resx">
+      <DependentUpon>RptAdCategorySummaryService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummaryAd\RptSummaryAdDailyService.asmx.resx">
+      <DependentUpon>RptSummaryAdDailyService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummaryAd\RptSummaryAdMonthlyService.asmx.resx">
+      <DependentUpon>RptSummaryAdMonthlyService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSummaryAd\RptSummaryAdWeeklyService.asmx.resx">
+      <DependentUpon>RptSummaryAdWeeklyService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\AdStatusService.asmx.resx">
+      <DependentUpon>AdStatusService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\ChannelGroupService.asmx.resx">
+      <DependentUpon>ChannelGroupService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\ChannelJumpService.asmx.resx">
+      <DependentUpon>ChannelJumpService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\ChooseAdScheduleService.asmx.resx">
+      <DependentUpon>ChooseAdScheduleService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\ExcelUploadService.asmx.resx">
+      <DependentUpon>ExcelUploadService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\GenreGroupService.asmx.resx">
+      <DependentUpon>GenreGroupService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\Sch3FormService.asmx.resx">
+      <DependentUpon>Sch3FormService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\SchAppendAdService.asmx.resx">
+      <DependentUpon>SchAppendAdService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\SchChoiceAdService.asmx.resx">
+      <DependentUpon>SchChoiceAdService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\SchDesignateService.asmx.resx">
+      <DependentUpon>SchDesignateService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\SchMenuAdService.asmx.resx">
+      <DependentUpon>SchMenuAdService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\SchMidAdService.asmx.resx">
+      <DependentUpon>SchMidAdService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\SchPopularChannelService.asmx.resx">
+      <DependentUpon>SchPopularChannelService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\SchPublishService.asmx.resx">
+      <DependentUpon>SchPublishService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Target\GradeService.asmx.resx">
+      <DependentUpon>GradeService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Target\RatioService.asmx.resx">
+      <DependentUpon>RatioService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Target\TargetingService.asmx.resx">
+      <DependentUpon>TargetingService.asmx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Interface\DataSetFileDis.xsx">
+      <DependentUpon>DataSetFileDis.xsd</DependentUpon>
+    </None>
+    <None Include="Interface\images\Thumbs.db" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8086</DevelopmentServerPort>
+          <DevelopmentServerVPath>/AdManagerWebservice</DevelopmentServerVPath>
+          <IISUrl>http://localhost/AdManagerWebService</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

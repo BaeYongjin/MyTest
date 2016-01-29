@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CombineRptDataSet" targetNamespace="http://tempuri.org/CombineRptDataSet.xsd" xmlns:mstns="http://tempuri.org/CombineRptDataSet.xsd" xmlns="http://tempuri.org/CombineRptDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CombineRptDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CombineRptDataSet" msprop:Generator_UserDSName="CombineRptDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ListTable" msprop:Generator_TableClassName="ListTableDataTable" msprop:Generator_TableVarName="tableListTable" msprop:Generator_TablePropName="ListTable" msprop:Generator_RowDeletingName="ListTableRowDeleting" msprop:Generator_UserTableName="ListTable" msprop:Generator_RowChangingName="ListTableRowChanging" msprop:Generator_RowEvHandlerName="ListTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ListTableRowDeleted" msprop:Generator_RowEvArgName="ListTableRowChangeEvent" msprop:Generator_RowChangedName="ListTableRowChanged" msprop:Generator_RowClassName="ListTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Class1Code" msprop:Generator_ColumnVarNameInTable="columnClass1Code" msprop:Generator_ColumnPropNameInRow="Class1Code" msprop:Generator_ColumnPropNameInTable="Class1CodeColumn" msprop:Generator_UserColumnName="Class1Code" type="xs:string" />
+              <xs:element name="Class1Name" msprop:Generator_ColumnVarNameInTable="columnClass1Name" msprop:Generator_ColumnPropNameInRow="Class1Name" msprop:Generator_ColumnPropNameInTable="Class1NameColumn" msprop:Generator_UserColumnName="Class1Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Class2Code" msprop:Generator_ColumnVarNameInTable="columnClass2Code" msprop:Generator_ColumnPropNameInRow="Class2Code" msprop:Generator_ColumnPropNameInTable="Class2CodeColumn" msprop:Generator_UserColumnName="Class2Code" type="xs:string" />
+              <xs:element name="Class2Name" msprop:Generator_ColumnVarNameInTable="columnClass2Name" msprop:Generator_ColumnPropNameInRow="Class2Name" msprop:Generator_ColumnPropNameInTable="Class2NameColumn" msprop:Generator_UserColumnName="Class2Name" type="xs:string" minOccurs="0" />
+              <xs:element name="AdsImps" msprop:Generator_ColumnVarNameInTable="columnAdsImps" msprop:Generator_ColumnPropNameInRow="AdsImps" msprop:Generator_ColumnPropNameInTable="AdsImpsColumn" msprop:Generator_UserColumnName="AdsImps" type="xs:int" minOccurs="0" />
+              <xs:element name="AdsRate" msprop:Generator_ColumnVarNameInTable="columnAdsRate" msprop:Generator_ColumnPropNameInRow="AdsRate" msprop:Generator_ColumnPropNameInTable="AdsRateColumn" msprop:Generator_UserColumnName="AdsRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AdsHouse" msprop:Generator_ColumnVarNameInTable="columnAdsHouse" msprop:Generator_ColumnPropNameInRow="AdsHouse" msprop:Generator_ColumnPropNameInTable="AdsHouseColumn" msprop:Generator_UserColumnName="AdsHouse" type="xs:int" minOccurs="0" />
+              <xs:element name="AdsReach" msprop:Generator_ColumnVarNameInTable="columnAdsReach" msprop:Generator_ColumnPropNameInRow="AdsReach" msprop:Generator_ColumnPropNameInTable="AdsReachColumn" msprop:Generator_UserColumnName="AdsReach" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AdsFreq" msprop:Generator_ColumnVarNameInTable="columnAdsFreq" msprop:Generator_ColumnPropNameInRow="AdsFreq" msprop:Generator_ColumnPropNameInTable="AdsFreqColumn" msprop:Generator_UserColumnName="AdsFreq" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PnsImps" msprop:Generator_ColumnVarNameInTable="columnPnsImps" msprop:Generator_ColumnPropNameInRow="PnsImps" msprop:Generator_ColumnPropNameInTable="PnsImpsColumn" msprop:Generator_UserColumnName="PnsImps" type="xs:int" minOccurs="0" />
+              <xs:element name="PnsRate" msprop:Generator_ColumnVarNameInTable="columnPnsRate" msprop:Generator_ColumnPropNameInRow="PnsRate" msprop:Generator_ColumnPropNameInTable="PnsRateColumn" msprop:Generator_UserColumnName="PnsRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PnsHouse" msprop:Generator_ColumnVarNameInTable="columnPnsHouse" msprop:Generator_ColumnPropNameInRow="PnsHouse" msprop:Generator_ColumnPropNameInTable="PnsHouseColumn" msprop:Generator_UserColumnName="PnsHouse" type="xs:int" minOccurs="0" />
+              <xs:element name="PnsReach" msprop:Generator_ColumnVarNameInTable="columnPnsReach" msprop:Generator_ColumnPropNameInRow="PnsReach" msprop:Generator_ColumnPropNameInTable="PnsReachColumn" msprop:Generator_UserColumnName="PnsReach" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PnsFreq" msprop:Generator_ColumnVarNameInTable="columnPnsFreq" msprop:Generator_ColumnPropNameInRow="PnsFreq" msprop:Generator_ColumnPropNameInTable="PnsFreqColumn" msprop:Generator_UserColumnName="PnsFreq" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListTable" />
+      <xs:field xpath="mstns:Class1Code" />
+      <xs:field xpath="mstns:Class2Code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

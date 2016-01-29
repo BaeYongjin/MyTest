@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetCategoryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelSetModel" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChannelSetModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelSetDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="GenreDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchCategoryName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchGenreName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContentId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode_P" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode_old" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryCode_P" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryCode_old" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelNo_old" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SeriesNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreCode_P" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreCode_old" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TotalSeries" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CheckYn" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryListResult" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelSetModel" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreListResult" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelSetList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelSetModel" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelSetListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelSetListResult" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategenList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelSetModel" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategenListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategenListResult" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelNoPopList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelSetModel" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelNoPopListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelNoPopListResult" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetChannelSetUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelSetModel" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetChannelSetUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetChannelSetUpdateResult" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetChannelSetCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelSetModel" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetChannelSetCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetChannelSetCreateResult" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetChannelSetDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="channelSetModel" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetChannelSetDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetChannelSetDeleteResult" type="tns:ChannelSetModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCategoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreList" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelSetListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelSetList" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelSetListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelSetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategenListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategenList" />
+  </wsdl:message>
+  <wsdl:message name="GetCategenListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategenListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelNoPopListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelNoPopList" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelNoPopListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelNoPopListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetChannelSetUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetChannelSetUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetChannelSetUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetChannelSetUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetChannelSetCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetChannelSetCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetChannelSetCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetChannelSetCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetChannelSetDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetChannelSetDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetChannelSetDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetChannelSetDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ChannelSetServiceSoap">
+    <wsdl:operation name="GetCategoryList">
+      <wsdl:input message="tns:GetCategoryListSoapIn" />
+      <wsdl:output message="tns:GetCategoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <wsdl:input message="tns:GetGenreListSoapIn" />
+      <wsdl:output message="tns:GetGenreListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelSetList">
+      <wsdl:input message="tns:GetChannelSetListSoapIn" />
+      <wsdl:output message="tns:GetChannelSetListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategenList">
+      <wsdl:input message="tns:GetCategenListSoapIn" />
+      <wsdl:output message="tns:GetCategenListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelNoPopList">
+      <wsdl:input message="tns:GetChannelNoPopListSoapIn" />
+      <wsdl:output message="tns:GetChannelNoPopListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetChannelSetUpdate">
+      <wsdl:input message="tns:SetChannelSetUpdateSoapIn" />
+      <wsdl:output message="tns:SetChannelSetUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetChannelSetCreate">
+      <wsdl:input message="tns:SetChannelSetCreateSoapIn" />
+      <wsdl:output message="tns:SetChannelSetCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetChannelSetDelete">
+      <wsdl:input message="tns:SetChannelSetDeleteSoapIn" />
+      <wsdl:output message="tns:SetChannelSetDeleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ChannelSetServiceSoap" type="tns:ChannelSetServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCategoryList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelSetList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelSetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategenList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategenList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelNoPopList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelNoPopList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetChannelSetUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetChannelSetUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetChannelSetCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetChannelSetCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetChannelSetDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetChannelSetDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ChannelSetServiceSoap12" type="tns:ChannelSetServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCategoryList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelSetList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelSetList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategenList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategenList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelNoPopList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelNoPopList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetChannelSetUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetChannelSetUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetChannelSetCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetChannelSetCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetChannelSetDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetChannelSetDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ChannelSetService">
+    <wsdl:port name="ChannelSetServiceSoap" binding="tns:ChannelSetServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Media/ChannelSetService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ChannelSetServiceSoap12" binding="tns:ChannelSetServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Media/ChannelSetService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

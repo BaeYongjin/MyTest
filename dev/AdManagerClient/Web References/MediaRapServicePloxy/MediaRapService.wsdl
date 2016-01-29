@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetMediaRapList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="mediarapModel" type="tns:MediaRapModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MediaRapModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="MediaRapDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaRap" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_10" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Tell" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseYn" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMediaRapListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMediaRapListResult" type="tns:MediaRapModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaRapUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="mediarapModel" type="tns:MediaRapModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaRapUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMediaRapUpdateResult" type="tns:MediaRapModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaRapCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="mediarapModel" type="tns:MediaRapModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaRapCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMediaRapCreateResult" type="tns:MediaRapModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaRapDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="mediarapModel" type="tns:MediaRapModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaRapDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMediaRapDeleteResult" type="tns:MediaRapModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMediaRapListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMediaRapList" />
+  </wsdl:message>
+  <wsdl:message name="GetMediaRapListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMediaRapListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaRapUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMediaRapUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaRapUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMediaRapUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaRapCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMediaRapCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaRapCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMediaRapCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaRapDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMediaRapDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaRapDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMediaRapDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MediaRapServiceSoap">
+    <wsdl:operation name="GetMediaRapList">
+      <wsdl:input message="tns:GetMediaRapListSoapIn" />
+      <wsdl:output message="tns:GetMediaRapListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaRapUpdate">
+      <wsdl:input message="tns:SetMediaRapUpdateSoapIn" />
+      <wsdl:output message="tns:SetMediaRapUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaRapCreate">
+      <wsdl:input message="tns:SetMediaRapCreateSoapIn" />
+      <wsdl:output message="tns:SetMediaRapCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaRapDelete">
+      <wsdl:input message="tns:SetMediaRapDeleteSoapIn" />
+      <wsdl:output message="tns:SetMediaRapDeleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MediaRapServiceSoap" type="tns:MediaRapServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMediaRapList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetMediaRapList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaRapUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMediaRapUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaRapCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMediaRapCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaRapDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMediaRapDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MediaRapServiceSoap12" type="tns:MediaRapServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMediaRapList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetMediaRapList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaRapUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMediaRapUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaRapCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMediaRapCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaRapDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMediaRapDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MediaRapService">
+    <wsdl:port name="MediaRapServiceSoap" binding="tns:MediaRapServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Media/MediaRapService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MediaRapServiceSoap12" binding="tns:MediaRapServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Media/MediaRapService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

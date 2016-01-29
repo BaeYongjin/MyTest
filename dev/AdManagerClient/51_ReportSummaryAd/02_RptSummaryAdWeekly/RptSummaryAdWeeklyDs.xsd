@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="RptSummaryAdWeeklyDs" targetNamespace="http://tempuri.org/RptSummaryAdWeeklyDs.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/RptSummaryAdWeeklyDs.xsd" xmlns:mstns="http://tempuri.org/RptSummaryAdWeeklyDs.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="RptSummaryAdWeeklyDs" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="RptWeekly">  
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TotNum" type="xs:int" minOccurs="0" />
+							<xs:element name="TypeNum" type="xs:int" minOccurs="0" />
+							<xs:element name="ItemNo" type="xs:int" minOccurs="0" />
+							<xs:element name="ItemName" type="xs:string" minOccurs="0" />
+							<xs:element name="ItemNo1" type="xs:string" minOccurs="0" />
+							<xs:element name="DayAdCnt1" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdCnt2" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdCnt3" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdCnt4" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdCnt5" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdCnt6" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdCnt7" type="xs:int" minOccurs="0" />
+							<xs:element name="SumDayAdCnt" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdUsers1" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdUsers2" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdUsers3" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdUsers4" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdUsers5" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdUsers6" type="xs:int" minOccurs="0" />
+							<xs:element name="DayAdUsers7" type="xs:int" minOccurs="0" />
+							<xs:element name="SumDayUsers" type="xs:int" minOccurs="0" />
+							<xs:element name="DayCovr" type="xs:float" minOccurs="0" />
+							<xs:element name="DayFreq" type="xs:float" minOccurs="0" />
+							<xs:element name="AccuAdCnt" type="xs:int" minOccurs="0" />
+							<xs:element name="AccuAdUsers" type="xs:int" minOccurs="0" />
+							<xs:element name="RunDay" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

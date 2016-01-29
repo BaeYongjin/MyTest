@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost:8086/AdManagerWebserviceV5/Common/MediaRapCodeService.asmx?wsdl" docRef="http://localhost:8086/AdManagerWebserviceV5/Common/MediaRapCodeService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost:8086/AdManagerWebserviceV5/Common/MediaRapCodeService.asmx" xmlns:q1="http://advmgt.hanafostv.com/AdManagerWebService/" binding="q1:MediaRapCodeServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost:8086/AdManagerWebserviceV5/Common/MediaRapCodeService.asmx" xmlns:q2="http://advmgt.hanafostv.com/AdManagerWebService/" binding="q2:MediaRapCodeServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

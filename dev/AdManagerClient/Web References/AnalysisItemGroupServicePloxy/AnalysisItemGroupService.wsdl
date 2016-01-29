@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetAdvertiserList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="analysisItemGroupModel" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AnalysisItemGroupModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AnalysisMonthsDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="AnalysisItemGroupDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="AnalysisItemGroupDetailDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractItemDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMonth" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AgencyCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvertiserCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AnalysisItemGroupNo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnalysisItemGroupName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnalysisItemGroupMonth" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnalysisItemGroupType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ItemNo" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAdvertiserListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdvertiserListResult" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="analysisItemGroupModel" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractItemListResult" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAnalysisItemGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="analysisItemGroupModel" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAnalysisItemGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAnalysisItemGroupResult" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAnalysisItemGroupDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="analysisItemGroupModel" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAnalysisItemGroupDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAnalysisItemGroupDetailResult" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAnalysisMonths">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="analysisItemGroupModel" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAnalysisMonthsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAnalysisMonthsResult" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAnalysisItemGroupCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="analysisItemGroupModel" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAnalysisItemGroupCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAnalysisItemGroupCreateResult" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAnalysisItemGroupDetailCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="analysisItemGroupModel" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAnalysisItemGroupDetailCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAnalysisItemGroupDetailCreateResult" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAnalysisItemGroupUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="analysisItemGroupModel" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAnalysisItemGroupUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAnalysisItemGroupUpdateResult" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAnalysisItemGroupDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="analysisItemGroupModel" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAnalysisItemGroupDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAnalysisItemGroupDeleteResult" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAnalysisItemGroupDetailDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="analysisItemGroupModel" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAnalysisItemGroupDetailDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAnalysisItemGroupDetailDeleteResult" type="tns:AnalysisItemGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAdvertiserListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdvertiserList" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvertiserListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdvertiserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractItemList" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractItemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAnalysisItemGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAnalysisItemGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetAnalysisItemGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAnalysisItemGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAnalysisItemGroupDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAnalysisItemGroupDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetAnalysisItemGroupDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAnalysisItemGroupDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAnalysisMonthsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAnalysisMonths" />
+  </wsdl:message>
+  <wsdl:message name="GetAnalysisMonthsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAnalysisMonthsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAnalysisItemGroupCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAnalysisItemGroupCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetAnalysisItemGroupCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAnalysisItemGroupCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAnalysisItemGroupDetailCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAnalysisItemGroupDetailCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetAnalysisItemGroupDetailCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAnalysisItemGroupDetailCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAnalysisItemGroupUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAnalysisItemGroupUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetAnalysisItemGroupUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAnalysisItemGroupUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAnalysisItemGroupDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAnalysisItemGroupDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetAnalysisItemGroupDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAnalysisItemGroupDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAnalysisItemGroupDetailDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAnalysisItemGroupDetailDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetAnalysisItemGroupDetailDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAnalysisItemGroupDetailDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AnalysisItemGroupServiceSoap">
+    <wsdl:operation name="GetAdvertiserList">
+      <wsdl:input message="tns:GetAdvertiserListSoapIn" />
+      <wsdl:output message="tns:GetAdvertiserListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <wsdl:input message="tns:GetContractItemListSoapIn" />
+      <wsdl:output message="tns:GetContractItemListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysisItemGroup">
+      <wsdl:input message="tns:GetAnalysisItemGroupSoapIn" />
+      <wsdl:output message="tns:GetAnalysisItemGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysisItemGroupDetail">
+      <wsdl:input message="tns:GetAnalysisItemGroupDetailSoapIn" />
+      <wsdl:output message="tns:GetAnalysisItemGroupDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysisMonths">
+      <wsdl:input message="tns:GetAnalysisMonthsSoapIn" />
+      <wsdl:output message="tns:GetAnalysisMonthsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupCreate">
+      <wsdl:input message="tns:SetAnalysisItemGroupCreateSoapIn" />
+      <wsdl:output message="tns:SetAnalysisItemGroupCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupDetailCreate">
+      <wsdl:input message="tns:SetAnalysisItemGroupDetailCreateSoapIn" />
+      <wsdl:output message="tns:SetAnalysisItemGroupDetailCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupUpdate">
+      <wsdl:input message="tns:SetAnalysisItemGroupUpdateSoapIn" />
+      <wsdl:output message="tns:SetAnalysisItemGroupUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupDelete">
+      <wsdl:input message="tns:SetAnalysisItemGroupDeleteSoapIn" />
+      <wsdl:output message="tns:SetAnalysisItemGroupDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupDetailDelete">
+      <wsdl:input message="tns:SetAnalysisItemGroupDetailDeleteSoapIn" />
+      <wsdl:output message="tns:SetAnalysisItemGroupDetailDeleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AnalysisItemGroupServiceSoap" type="tns:AnalysisItemGroupServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAdvertiserList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAdvertiserList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysisItemGroup">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAnalysisItemGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysisItemGroupDetail">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAnalysisItemGroupDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysisMonths">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAnalysisMonths" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAnalysisItemGroupCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupDetailCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAnalysisItemGroupDetailCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAnalysisItemGroupUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAnalysisItemGroupDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupDetailDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAnalysisItemGroupDetailDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AnalysisItemGroupServiceSoap12" type="tns:AnalysisItemGroupServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAdvertiserList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAdvertiserList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysisItemGroup">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAnalysisItemGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysisItemGroupDetail">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAnalysisItemGroupDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysisMonths">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAnalysisMonths" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAnalysisItemGroupCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupDetailCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAnalysisItemGroupDetailCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAnalysisItemGroupUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAnalysisItemGroupDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAnalysisItemGroupDetailDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAnalysisItemGroupDetailDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AnalysisItemGroupService">
+    <wsdl:port name="AnalysisItemGroupServiceSoap" binding="tns:AnalysisItemGroupServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebServiceV5/Media/AnalysisItemGroupService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AnalysisItemGroupServiceSoap12" binding="tns:AnalysisItemGroupServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebServiceV5/Media/AnalysisItemGroupService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

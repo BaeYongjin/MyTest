@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetCollectionHomeCombo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CollectionHomeModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CollectionHomeDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="ClientListDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="StbListDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_10" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchLevel" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CollectionCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CollectionName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpiryDay" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="SeqNo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="StbId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ServiceCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ResidentNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PageSize" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Page" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsStbColl" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="FromCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ToCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CopyMove" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCollectionHomeComboResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCollectionHomeComboResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCollectionHomeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCollectionHomeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCollectionHomeListResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStbList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStbListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStbListResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStbPageList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStbPageListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStbPageListResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStbListColl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStbListCollResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStbListCollResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientListResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientPageList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientPageListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientPageListResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCollectionHomeUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCollectionHomeUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCollectionHomeUpdateResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCollectionHomeCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCollectionHomeCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCollectionHomeCreateResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetClientCreateResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientCollectionCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientCollectionCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetClientCollectionCreateResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCollectionHomeDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCollectionHomeDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCollectionHomeDeleteResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetClientDeleteResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAllClientDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAllClientDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAllClientDeleteResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientCollectionDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientCollectionDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetClientCollectionDeleteResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientListCopyMove">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="collectionHomeModel" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientListCopyMoveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetClientListCopyMoveResult" type="tns:CollectionHomeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCollectionHomeComboSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCollectionHomeCombo" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionHomeComboSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCollectionHomeComboResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionHomeListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCollectionHomeList" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionHomeListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCollectionHomeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStbListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStbList" />
+  </wsdl:message>
+  <wsdl:message name="GetStbListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStbListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStbPageListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStbPageList" />
+  </wsdl:message>
+  <wsdl:message name="GetStbPageListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStbPageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStbListCollSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStbListColl" />
+  </wsdl:message>
+  <wsdl:message name="GetStbListCollSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStbListCollResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientList" />
+  </wsdl:message>
+  <wsdl:message name="GetClientListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientPageListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientPageList" />
+  </wsdl:message>
+  <wsdl:message name="GetClientPageListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientPageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCollectionHomeUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCollectionHomeUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetCollectionHomeUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCollectionHomeUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCollectionHomeCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCollectionHomeCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetCollectionHomeCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCollectionHomeCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetClientCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetClientCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetClientCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetClientCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetClientCollectionCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetClientCollectionCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetClientCollectionCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetClientCollectionCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCollectionHomeDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCollectionHomeDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetCollectionHomeDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCollectionHomeDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetClientDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetClientDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetClientDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetClientDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAllClientDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAllClientDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetAllClientDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAllClientDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetClientCollectionDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetClientCollectionDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetClientCollectionDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetClientCollectionDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetClientListCopyMoveSoapIn">
+    <wsdl:part name="parameters" element="tns:SetClientListCopyMove" />
+  </wsdl:message>
+  <wsdl:message name="SetClientListCopyMoveSoapOut">
+    <wsdl:part name="parameters" element="tns:SetClientListCopyMoveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CollectionHomeServiceSoap">
+    <wsdl:operation name="GetCollectionHomeCombo">
+      <wsdl:input message="tns:GetCollectionHomeComboSoapIn" />
+      <wsdl:output message="tns:GetCollectionHomeComboSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectionHomeList">
+      <wsdl:input message="tns:GetCollectionHomeListSoapIn" />
+      <wsdl:output message="tns:GetCollectionHomeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStbList">
+      <wsdl:input message="tns:GetStbListSoapIn" />
+      <wsdl:output message="tns:GetStbListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStbPageList">
+      <wsdl:input message="tns:GetStbPageListSoapIn" />
+      <wsdl:output message="tns:GetStbPageListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStbListColl">
+      <wsdl:input message="tns:GetStbListCollSoapIn" />
+      <wsdl:output message="tns:GetStbListCollSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientList">
+      <wsdl:input message="tns:GetClientListSoapIn" />
+      <wsdl:output message="tns:GetClientListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientPageList">
+      <wsdl:input message="tns:GetClientPageListSoapIn" />
+      <wsdl:output message="tns:GetClientPageListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCollectionHomeUpdate">
+      <wsdl:input message="tns:SetCollectionHomeUpdateSoapIn" />
+      <wsdl:output message="tns:SetCollectionHomeUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCollectionHomeCreate">
+      <wsdl:input message="tns:SetCollectionHomeCreateSoapIn" />
+      <wsdl:output message="tns:SetCollectionHomeCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCreate">
+      <wsdl:input message="tns:SetClientCreateSoapIn" />
+      <wsdl:output message="tns:SetClientCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCollectionCreate">
+      <wsdl:input message="tns:SetClientCollectionCreateSoapIn" />
+      <wsdl:output message="tns:SetClientCollectionCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCollectionHomeDelete">
+      <wsdl:input message="tns:SetCollectionHomeDeleteSoapIn" />
+      <wsdl:output message="tns:SetCollectionHomeDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClientDelete">
+      <wsdl:input message="tns:SetClientDeleteSoapIn" />
+      <wsdl:output message="tns:SetClientDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAllClientDelete">
+      <wsdl:input message="tns:SetAllClientDeleteSoapIn" />
+      <wsdl:output message="tns:SetAllClientDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCollectionDelete">
+      <wsdl:input message="tns:SetClientCollectionDeleteSoapIn" />
+      <wsdl:output message="tns:SetClientCollectionDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClientListCopyMove">
+      <wsdl:input message="tns:SetClientListCopyMoveSoapIn" />
+      <wsdl:output message="tns:SetClientListCopyMoveSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CollectionHomeServiceSoap" type="tns:CollectionHomeServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCollectionHomeCombo">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCollectionHomeCombo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectionHomeList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCollectionHomeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStbList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStbList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStbPageList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStbPageList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStbListColl">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStbListColl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientPageList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientPageList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCollectionHomeUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCollectionHomeUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCollectionHomeCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCollectionHomeCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCollectionCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientCollectionCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCollectionHomeDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCollectionHomeDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllClientDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAllClientDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCollectionDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientCollectionDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientListCopyMove">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientListCopyMove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CollectionHomeServiceSoap12" type="tns:CollectionHomeServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCollectionHomeCombo">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCollectionHomeCombo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectionHomeList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCollectionHomeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStbList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStbList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStbPageList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStbPageList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStbListColl">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStbListColl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientPageList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientPageList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCollectionHomeUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCollectionHomeUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCollectionHomeCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCollectionHomeCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCollectionCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientCollectionCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCollectionHomeDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCollectionHomeDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAllClientDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetAllClientDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCollectionDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientCollectionDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientListCopyMove">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientListCopyMove" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CollectionHomeService">
+    <wsdl:port name="CollectionHomeServiceSoap" binding="tns:CollectionHomeServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Schedule/CollectionHomeService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CollectionHomeServiceSoap12" binding="tns:CollectionHomeServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Schedule/CollectionHomeService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetStatisticsPgChannel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:StatisticsPgChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StatisticsPgChannelModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ReportDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchStartDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchEndDay" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStatisticsPgChannelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatisticsPgChannelResult" type="tns:StatisticsPgChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetStatisticsPgChannelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStatisticsPgChannel" />
+  </wsdl:message>
+  <wsdl:message name="GetStatisticsPgChannelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatisticsPgChannelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="StatisticsPgChannelServiceSoap">
+    <wsdl:operation name="GetStatisticsPgChannel">
+      <wsdl:input message="tns:GetStatisticsPgChannelSoapIn" />
+      <wsdl:output message="tns:GetStatisticsPgChannelSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StatisticsPgChannelServiceSoap" type="tns:StatisticsPgChannelServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStatisticsPgChannel">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStatisticsPgChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StatisticsPgChannelServiceSoap12" type="tns:StatisticsPgChannelServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStatisticsPgChannel">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStatisticsPgChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StatisticsPgChannelService">
+    <wsdl:port name="StatisticsPgChannelServiceSoap" binding="tns:StatisticsPgChannelServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/ReportMedia/StatisticsPgChannelService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="StatisticsPgChannelServiceSoap12" binding="tns:StatisticsPgChannelServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/ReportMedia/StatisticsPgChannelService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

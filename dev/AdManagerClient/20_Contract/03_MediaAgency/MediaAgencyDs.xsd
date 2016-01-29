@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MediaAgencyDs" targetNamespace="http://tempuri.org/MediaAgencyDs.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/MediaAgencyDs.xsd" xmlns:mstns="http://tempuri.org/MediaAgencyDs.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="MediaAgencyDs" msdata:IsDataSet="true">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="MediaAgencys">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="RapCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="AgencyCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="MediaName" type="xs:string" minOccurs="0" />
+                            <xs:element name="RapName" type="xs:string" minOccurs="0" />
+                            <xs:element name="AgencyName" type="xs:string" minOccurs="0" />
+                            <xs:element name="ContStartDay" type="xs:string" minOccurs="0" />
+                            <xs:element name="ContEndDay" type="xs:string" minOccurs="0" />
+                            <xs:element name="Charger" type="xs:string" minOccurs="0" />
+                            <xs:element name="Tell" type="xs:string" minOccurs="0" />
+                            <xs:element name="Email" type="xs:string" minOccurs="0" />
+                            <xs:element name="UseYn" type="xs:string" minOccurs="0" />
+                            <xs:element name="UseYn_N" type="xs:string" minOccurs="0" />
+                            <xs:element name="RegDt" type="xs:string" minOccurs="0" />
+                            <xs:element name="ModDt" type="xs:string" minOccurs="0" />
+                            <xs:element name="RegName" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Medias">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="MediaName" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MediaRaps">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="RapCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="RapName" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MediaRap">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="RapCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="RapName" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Agencys">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="AgencyCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="AgencyName" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

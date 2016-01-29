@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetMenuList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SchPopularChannelModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SchPopularChannelDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchStartDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchEndDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Channel" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ScheduleOrder" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastOrder" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMenuListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMenuListResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelListResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChooseAdScheduleListMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChooseAdScheduleListMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChooseAdScheduleListMenuResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChooseAdScheduleListChannel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChooseAdScheduleListChannelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChooseAdScheduleListChannelResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreGroupList_p">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreGroupList_pResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreGroupList_pResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelList_p">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelList_pResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelList_pResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatisticsPgChannel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatisticsPgChannelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatisticsPgChannelResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChoiceChannelDetailCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChoiceChannelDetailCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchChoiceChannelDetailCreateResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPopularChannelUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPopularChannelUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetPopularChannelUpdateResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchPopularChannelDetailCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchPopularChannelDetailCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchPopularChannelDetailCreateResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchPopularChannelDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchPopularChannelDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchPopularChannelDeleteResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPopularChannelDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPopularChannelDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetPopularChannelDeleteResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderFirst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderFirstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchMenuAdOrderFirstResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchMenuAdOrderUpResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderDown">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderDownResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchMenuAdOrderDownResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderLast">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderLastResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchMenuAdOrderLastResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderFirst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderFirstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchChannelAdOrderFirstResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchChannelAdOrderUpResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderDown">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderDownResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchChannelAdOrderDownResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderLast">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schPopularChannelModel" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderLastResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchChannelAdOrderLastResult" type="tns:SchPopularChannelModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMenuListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMenuList" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMenuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelList" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChooseAdScheduleListMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChooseAdScheduleListMenu" />
+  </wsdl:message>
+  <wsdl:message name="GetChooseAdScheduleListMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChooseAdScheduleListMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChooseAdScheduleListChannelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChooseAdScheduleListChannel" />
+  </wsdl:message>
+  <wsdl:message name="GetChooseAdScheduleListChannelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChooseAdScheduleListChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreGroupList_pSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreGroupList_p" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreGroupList_pSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreGroupList_pResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelList_pSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelList_p" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelList_pSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelList_pResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStatisticsPgChannelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStatisticsPgChannel" />
+  </wsdl:message>
+  <wsdl:message name="GetStatisticsPgChannelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatisticsPgChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChoiceChannelDetailCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchChoiceChannelDetailCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChoiceChannelDetailCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchChoiceChannelDetailCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPopularChannelUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPopularChannelUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetPopularChannelUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPopularChannelUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchPopularChannelDetailCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchPopularChannelDetailCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetSchPopularChannelDetailCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchPopularChannelDetailCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchPopularChannelDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchPopularChannelDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetSchPopularChannelDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchPopularChannelDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPopularChannelDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPopularChannelDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetPopularChannelDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPopularChannelDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderFirstSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderFirst" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderFirstSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderFirstResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderUpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderUp" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderUpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderDownSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderDown" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderDownSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderLastSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderLast" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderLastSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderLastResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderFirstSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderFirst" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderFirstSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderFirstResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderUpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderUp" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderUpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderDownSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderDown" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderDownSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderLastSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderLast" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderLastSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderLastResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SchPopularChannelServiceSoap">
+    <wsdl:operation name="GetMenuList">
+      <wsdl:input message="tns:GetMenuListSoapIn" />
+      <wsdl:output message="tns:GetMenuListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <wsdl:input message="tns:GetChannelListSoapIn" />
+      <wsdl:output message="tns:GetChannelListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListMenu">
+      <wsdl:input message="tns:GetChooseAdScheduleListMenuSoapIn" />
+      <wsdl:output message="tns:GetChooseAdScheduleListMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListChannel">
+      <wsdl:input message="tns:GetChooseAdScheduleListChannelSoapIn" />
+      <wsdl:output message="tns:GetChooseAdScheduleListChannelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreGroupList_p">
+      <wsdl:input message="tns:GetGenreGroupList_pSoapIn" />
+      <wsdl:output message="tns:GetGenreGroupList_pSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList_p">
+      <wsdl:input message="tns:GetChannelList_pSoapIn" />
+      <wsdl:output message="tns:GetChannelList_pSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsPgChannel">
+      <wsdl:input message="tns:GetStatisticsPgChannelSoapIn" />
+      <wsdl:output message="tns:GetStatisticsPgChannelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChoiceChannelDetailCreate">
+      <wsdl:input message="tns:SetSchChoiceChannelDetailCreateSoapIn" />
+      <wsdl:output message="tns:SetSchChoiceChannelDetailCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPopularChannelUpdate">
+      <wsdl:input message="tns:SetPopularChannelUpdateSoapIn" />
+      <wsdl:output message="tns:SetPopularChannelUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchPopularChannelDetailCreate">
+      <wsdl:input message="tns:SetSchPopularChannelDetailCreateSoapIn" />
+      <wsdl:output message="tns:SetSchPopularChannelDetailCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchPopularChannelDelete">
+      <wsdl:input message="tns:SetSchPopularChannelDeleteSoapIn" />
+      <wsdl:output message="tns:SetSchPopularChannelDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPopularChannelDelete">
+      <wsdl:input message="tns:SetPopularChannelDeleteSoapIn" />
+      <wsdl:output message="tns:SetPopularChannelDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderFirst">
+      <wsdl:input message="tns:SetSchMenuAdOrderFirstSoapIn" />
+      <wsdl:output message="tns:SetSchMenuAdOrderFirstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderUp">
+      <wsdl:input message="tns:SetSchMenuAdOrderUpSoapIn" />
+      <wsdl:output message="tns:SetSchMenuAdOrderUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderDown">
+      <wsdl:input message="tns:SetSchMenuAdOrderDownSoapIn" />
+      <wsdl:output message="tns:SetSchMenuAdOrderDownSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderLast">
+      <wsdl:input message="tns:SetSchMenuAdOrderLastSoapIn" />
+      <wsdl:output message="tns:SetSchMenuAdOrderLastSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderFirst">
+      <wsdl:input message="tns:SetSchChannelAdOrderFirstSoapIn" />
+      <wsdl:output message="tns:SetSchChannelAdOrderFirstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderUp">
+      <wsdl:input message="tns:SetSchChannelAdOrderUpSoapIn" />
+      <wsdl:output message="tns:SetSchChannelAdOrderUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderDown">
+      <wsdl:input message="tns:SetSchChannelAdOrderDownSoapIn" />
+      <wsdl:output message="tns:SetSchChannelAdOrderDownSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderLast">
+      <wsdl:input message="tns:SetSchChannelAdOrderLastSoapIn" />
+      <wsdl:output message="tns:SetSchChannelAdOrderLastSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SchPopularChannelServiceSoap" type="tns:SchPopularChannelServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMenuList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetMenuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListMenu">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChooseAdScheduleListMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListChannel">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChooseAdScheduleListChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreGroupList_p">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreGroupList_p" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList_p">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelList_p" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsPgChannel">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStatisticsPgChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChoiceChannelDetailCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChoiceChannelDetailCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPopularChannelUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetPopularChannelUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchPopularChannelDetailCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchPopularChannelDetailCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchPopularChannelDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchPopularChannelDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPopularChannelDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetPopularChannelDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderFirst">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderUp">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderDown">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderLast">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderFirst">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderUp">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderDown">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderLast">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SchPopularChannelServiceSoap12" type="tns:SchPopularChannelServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMenuList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetMenuList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListMenu">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChooseAdScheduleListMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListChannel">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChooseAdScheduleListChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreGroupList_p">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreGroupList_p" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList_p">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelList_p" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsPgChannel">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStatisticsPgChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChoiceChannelDetailCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChoiceChannelDetailCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPopularChannelUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetPopularChannelUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchPopularChannelDetailCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchPopularChannelDetailCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchPopularChannelDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchPopularChannelDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPopularChannelDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetPopularChannelDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderFirst">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderUp">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderDown">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderLast">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderFirst">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderUp">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderDown">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderLast">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SchPopularChannelService">
+    <wsdl:port name="SchPopularChannelServiceSoap" binding="tns:SchPopularChannelServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Schedule/SchPopularChannelService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SchPopularChannelServiceSoap12" binding="tns:SchPopularChannelServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Schedule/SchPopularChannelService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

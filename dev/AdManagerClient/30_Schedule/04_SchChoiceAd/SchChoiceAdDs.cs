@@ -1,0 +1,6 @@
+﻿namespace AdManagerClient
+{
+}
+namespace AdManagerClient
+{
+}

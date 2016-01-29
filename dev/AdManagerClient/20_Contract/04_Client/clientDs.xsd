@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="ClientDs" targetNamespace="http://tempuri.org/ClientDs.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/ClientDs.xsd" xmlns:mstns="http://tempuri.org/ClientDs.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="MediaAgencyDs" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Clients">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+							<xs:element name="RapCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AgencyCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AdvertiserCode" type="xs:string" minOccurs="0" />
+							<xs:element name="MediaName" type="xs:string" minOccurs="0" />
+							<xs:element name="RapName" type="xs:string" minOccurs="0" />
+							<xs:element name="AgencyName" type="xs:string" minOccurs="0" />
+							<xs:element name="AdvertiserName" type="xs:string" minOccurs="0" />
+							<xs:element name="Comment" type="xs:string" minOccurs="0" />
+							<xs:element name="UseYn" type="xs:string" minOccurs="0" />
+							<xs:element name="UseYn_N" type="xs:string" minOccurs="0" />
+							<xs:element name="RegDt" type="xs:string" minOccurs="0" />
+							<xs:element name="ModDt" type="xs:string" minOccurs="0" />
+							<xs:element name="RegID" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Medias">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+							<xs:element name="MediaName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MediaRaps">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RapCode" type="xs:string" minOccurs="0" />
+							<xs:element name="RapName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Agencys">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AgencyCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AgencyName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Advertisers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AdvertiserCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AdvertiserName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Medias_C">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+							<xs:element name="MediaName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MediaRaps_C">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+							<xs:element name="RapCode" type="xs:string" minOccurs="0" />
+							<xs:element name="RapName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Agencys_C">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+							<xs:element name="RapCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AgencyCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AgencyName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Advertisers_C">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AdvertiserCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AdvertiserName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

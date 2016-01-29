@@ -1,0 +1,65 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdManagerClient", "AdManagerClient\AdManagerClient.csproj", "{13FEFAE9-AB27-4EDF-B829-18CB762BD8A5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE7A9FBE-3CD4-422D-97FA-961B6F7E60B3} = {FE7A9FBE-3CD4-422D-97FA-961B6F7E60B3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdManagerModel", "AdManagerModel\AdManagerModel.csproj", "{04D71333-82A8-4B47-BE33-E2BE47741D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdManagerWebService", "AdManagerWebService\AdManagerWebService.csproj", "{FE7A9FBE-3CD4-422D-97FA-961B6F7E60B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrameworkLib", "FrameworkLib", "{8DA6A19C-12E2-4C41-B932-14DFA1C17856}"
+	ProjectSection(SolutionItems) = preProject
+		FrameworkLib\AdTargets.WinFramework.dll = FrameworkLib\AdTargets.WinFramework.dll
+		FrameworkLib\Microsoft.Office.Interop.Excel.dll = FrameworkLib\Microsoft.Office.Interop.Excel.dll
+		FrameworkLib\Microsoft.Vbe.Interop.dll = FrameworkLib\Microsoft.Vbe.Interop.dll
+		FrameworkLib\nobletech.dll = FrameworkLib\nobletech.dll
+		FrameworkLib\Oracle.DataAccess.dll = FrameworkLib\Oracle.DataAccess.dll
+		FrameworkLib\System.Runtime.InteropServices.APIs.dll = FrameworkLib\System.Runtime.InteropServices.APIs.dll
+		FrameworkLib\system.windows.forms.treelistview.dll = FrameworkLib\system.windows.forms.treelistview.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VlcLib", "VlcLib", "{678D5131-3379-4347-BBA0-E052FB9C26D8}"
+	ProjectSection(SolutionItems) = preProject
+		VlcLib\Common.Logging.dll = VlcLib\Common.Logging.dll
+		VlcLib\DZ.MediaPlayer.Vlc.dll = VlcLib\DZ.MediaPlayer.Vlc.dll
+		VlcLib\DZ.MediaPlayer.Vlc.WindowsForms.dll = VlcLib\DZ.MediaPlayer.Vlc.WindowsForms.dll
+		VlcLib\ICSharpCode.SharpZipLib.dll = VlcLib\ICSharpCode.SharpZipLib.dll
+		VlcLib\libvlc-1.1.9-win32.zip = VlcLib\libvlc-1.1.9-win32.zip
+		VlcLib\MediaInfo.dll = VlcLib\MediaInfo.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Description = 包府砒 俺惯 贾风记
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13FEFAE9-AB27-4EDF-B829-18CB762BD8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FEFAE9-AB27-4EDF-B829-18CB762BD8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FEFAE9-AB27-4EDF-B829-18CB762BD8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FEFAE9-AB27-4EDF-B829-18CB762BD8A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D71333-82A8-4B47-BE33-E2BE47741D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D71333-82A8-4B47-BE33-E2BE47741D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D71333-82A8-4B47-BE33-E2BE47741D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D71333-82A8-4B47-BE33-E2BE47741D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE7A9FBE-3CD4-422D-97FA-961B6F7E60B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE7A9FBE-3CD4-422D-97FA-961B6F7E60B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE7A9FBE-3CD4-422D-97FA-961B6F7E60B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE7A9FBE-3CD4-422D-97FA-961B6F7E60B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(VisualSVN) = preSolution
+	EndGlobalSection
+EndGlobal

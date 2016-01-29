@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<xs:schema id="AdHitStatusDs" 
+                  targetNamespace="http://tempuri.org/AdHitStatusDs.xsd"
+                  elementFormDefault="qualified"
+                  attributeFormDefault="qualified"
+                  xmlns="http://tempuri.org/AdHitStatusDs.xsd"
+                  xmlns:mstns="http://tempuri.org/AdHitStatusDs.xsd"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="AdHitStatusDs" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Media">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+							<xs:element name="MediaName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MediaRaps">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RapCode" type="xs:string" minOccurs="0" />
+							<xs:element name="RapName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Agencys">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AgencyCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AgencyName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>				
+				<xs:element name="Report">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ItemNo" type="xs:int" minOccurs="0" />
+							<xs:element name="ItemName" type="xs:string" minOccurs="0" />
+							<xs:element name="AdCnt" type="xs:int" minOccurs="0" />
+							<xs:element name="TotAdCnt" type="xs:int" minOccurs="0" />
+							<xs:element name="ExpCntExcu" type="xs:int" minOccurs="0" />
+							<xs:element name="ExpCntReal" type="xs:int" minOccurs="0" />
+							<xs:element name="ContractAmt" type="xs:int" minOccurs="0" />
+							<xs:element name="ExcuteStartDay" type="xs:string" minOccurs="0" />
+							<xs:element name="ExcuteEndDay" type="xs:string" minOccurs="0" />
+							<xs:element name="RealEndDay" type="xs:string" minOccurs="0" />
+							<xs:element name="ExDays" type="xs:int" minOccurs="0" />
+							<xs:element name="TotDaysExcu" type="xs:int" minOccurs="0" />
+							<xs:element name="TotDaysReal" type="xs:int" minOccurs="0" />
+							<xs:element name="ContractSeq" type="xs:int" minOccurs="0" />
+							<xs:element name="ContractName" type="xs:string" minOccurs="0" />
+							<xs:element name="AgencyName" type="xs:string" minOccurs="0" />
+							<xs:element name="AdvertiserName" type="xs:string" minOccurs="0" />
+							<xs:element name="ExpCntDay" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetContractList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractModel" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContractModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchState_10" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchState_20" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchRap" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchUse" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AgencyCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvertiserCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AgencyName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvertiserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractSeq" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContStartDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContEndDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PackageNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PackageName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractAmt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobName2" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobName3" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Level1Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Level2Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Level" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobClass" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BonusRate" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LongBonus" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SpecialBonus" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TotalBonus" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SecurityTgt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="packageName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdTime" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetContractListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractListResult" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractPackageList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractModel" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractPackageListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractPackageListResult" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLevel1List">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractModel" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLevel1ListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLevel1ListResult" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractModel" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJobListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJobListResult" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLevel3List">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractModel" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLevel3ListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLevel3ListResult" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractList2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractModel" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractList2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractList2Result" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractModel" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractItemListResult" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetContractUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractModel" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetContractUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetContractUpdateResult" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetContractCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractModel" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetContractCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetContractCreateResult" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetContractDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractModel" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetContractDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetContractDeleteResult" type="tns:ContractModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetContractListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractList" />
+  </wsdl:message>
+  <wsdl:message name="GetContractListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContractPackageListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractPackageList" />
+  </wsdl:message>
+  <wsdl:message name="GetContractPackageListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractPackageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLevel1ListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLevel1List" />
+  </wsdl:message>
+  <wsdl:message name="GetLevel1ListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLevel1ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJobListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJobList" />
+  </wsdl:message>
+  <wsdl:message name="GetJobListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJobListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLevel3ListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLevel3List" />
+  </wsdl:message>
+  <wsdl:message name="GetLevel3ListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLevel3ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContractList2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractList2" />
+  </wsdl:message>
+  <wsdl:message name="GetContractList2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractList2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractItemList" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractItemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetContractUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetContractUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetContractUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetContractUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetContractCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetContractCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetContractCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetContractCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetContractDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetContractDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetContractDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetContractDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ContractServiceSoap">
+    <wsdl:operation name="GetContractList">
+      <wsdl:input message="tns:GetContractListSoapIn" />
+      <wsdl:output message="tns:GetContractListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractPackageList">
+      <wsdl:input message="tns:GetContractPackageListSoapIn" />
+      <wsdl:output message="tns:GetContractPackageListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLevel1List">
+      <wsdl:input message="tns:GetLevel1ListSoapIn" />
+      <wsdl:output message="tns:GetLevel1ListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobList">
+      <wsdl:input message="tns:GetJobListSoapIn" />
+      <wsdl:output message="tns:GetJobListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLevel3List">
+      <wsdl:input message="tns:GetLevel3ListSoapIn" />
+      <wsdl:output message="tns:GetLevel3ListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractList2">
+      <wsdl:input message="tns:GetContractList2SoapIn" />
+      <wsdl:output message="tns:GetContractList2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <wsdl:input message="tns:GetContractItemListSoapIn" />
+      <wsdl:output message="tns:GetContractItemListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetContractUpdate">
+      <wsdl:input message="tns:SetContractUpdateSoapIn" />
+      <wsdl:output message="tns:SetContractUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetContractCreate">
+      <wsdl:input message="tns:SetContractCreateSoapIn" />
+      <wsdl:output message="tns:SetContractCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetContractDelete">
+      <wsdl:input message="tns:SetContractDeleteSoapIn" />
+      <wsdl:output message="tns:SetContractDeleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ContractServiceSoap" type="tns:ContractServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContractList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractPackageList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractPackageList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLevel1List">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetLevel1List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetJobList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLevel3List">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetLevel3List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractList2">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractList2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetContractUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetContractUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetContractCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetContractCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetContractDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetContractDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ContractServiceSoap12" type="tns:ContractServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContractList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractPackageList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractPackageList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLevel1List">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetLevel1List" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetJobList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLevel3List">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetLevel3List" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractList2">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractList2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetContractUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetContractUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetContractCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetContractCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetContractDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetContractDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ContractService">
+    <wsdl:port name="ContractServiceSoap" binding="tns:ContractServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Contract/ContractService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ContractServiceSoap12" binding="tns:ContractServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Contract/ContractService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

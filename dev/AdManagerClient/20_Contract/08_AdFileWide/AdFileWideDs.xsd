@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AdFileWideDs" targetNamespace="http://tempuri.org/AdFileWideDs.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/AdFileWideDs.xsd" xmlns:mstns="http://tempuri.org/AdFileWideDs.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="AdFileWideDs" msdata:IsDataSet="true">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="AdFileWide">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="CheckYn" type="xs:boolean" minOccurs="0" />
+                            <xs:element name="ItemNo" type="xs:int" minOccurs="0" />
+                            <xs:element name="ItemName" type="xs:string" minOccurs="0" />
+                            <xs:element name="AdStateName" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileName" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileType" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileTypeName" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileState" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileStateName" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileLength" type="xs:int" minOccurs="0" />
+                            <xs:element name="FilePath" type="xs:string" minOccurs="0" />
+                            <xs:element name="DownLevel" type="xs:string" minOccurs="0" />
+                            <xs:element name="DownLevelName" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileRegDt" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileRegID" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileRegName" type="xs:string" minOccurs="0" />
+							<xs:element name="CheckDt" type="xs:string" minOccurs="0" />
+							<xs:element name="CheckName" type="xs:string" minOccurs="0" />
+							<xs:element name="CDNSyncDt" type="xs:string" minOccurs="0" />
+							<xs:element name="CDNSyncName" type="xs:string" minOccurs="0" />
+							<xs:element name="CDNPubDt" type="xs:string" minOccurs="0" />
+							<xs:element name="CDNPubName" type="xs:string" minOccurs="0" />
+							<xs:element name="STBDelDt" type="xs:string" minOccurs="0" />
+							<xs:element name="STBDelName" type="xs:string" minOccurs="0" />                            
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="FileCount">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="FileState" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileStateName" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileCount" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Medias">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="MediaName" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AdSchedule">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="ORD" type="xs:string" minOccurs="0" />
+                            <xs:element name="Flag" type="xs:string" minOccurs="0" />
+                            <xs:element name="CategoryCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="CategoryName" type="xs:string" minOccurs="0" />
+                            <xs:element name="GenreCode" type="xs:string" minOccurs="0" />
+                            <xs:element name="GenreName" type="xs:string" minOccurs="0" />
+                            <xs:element name="ChannelNo" type="xs:int" minOccurs="0" />
+                            <xs:element name="Title" type="xs:string" minOccurs="0" />
+                            <xs:element name="ItemNo" type="xs:int" minOccurs="0" />
+                            <xs:element name="ItemName" type="xs:string" minOccurs="0" />
+                            <xs:element name="AdStateName" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileName" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileType" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileTypeName" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileState" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileStateName" type="xs:string" minOccurs="0" />
+                            <xs:element name="FileLength" type="xs:string" minOccurs="0" />
+                            <xs:element name="FilePath" type="xs:string" minOccurs="0" />
+                            <xs:element name="DownLevel" type="xs:string" minOccurs="0" />
+                            <xs:element name="DownLevelName" type="xs:string" minOccurs="0" />
+                            <xs:element name="ScheduleOrder" type="xs:int" minOccurs="0" />
+                            <xs:element name="AdType" type="xs:string" minOccurs="0" />
+                            <xs:element name="AdTypeName" type="xs:string" minOccurs="0" />
+                            <xs:element name="AckNo" type="xs:int" minOccurs="0" />
+                            <xs:element name="AckState" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

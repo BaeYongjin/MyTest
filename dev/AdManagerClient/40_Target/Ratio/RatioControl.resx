@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="uiPM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>75</value>
+  </metadata>
+  <metadata name="dvSchedule.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>96, 17</value>
+  </metadata>
+  <metadata name="ratioDs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>215, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="grdExScheduleList_DesignTimeLayout_Reference_0.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsNAAALDQHtB8AsAAABuklE
+        QVQ4T4XTPUiVURjA8VuUVIPDTUoiBEEIXIUaNSEQTMFVQ0IUB0EEpSGSNEVEHByctVFc1AYHpSkITe8g
+        YoIWfqCSVoNSNATZ/385R14vfQw/7nOe95xzn3Pe502dptK5CtCFN9jFIT5jGU9RiHNrzg3wCC78iBHU
+        4R5qMYwNHKAZZ+uSGzzDj/CbH3K5rqET3zEYcmebNOAXqsL4f8rxE62OTaRxhG4TKIGlezdxkcfMBI0h
+        145j3HLgJe7hKiowgw+4AZ9Xw8sdQh/2YcWXsIkXTnoLL9F4Fr6J94iVvMR8iDWNiRC76ZKBO3v7xhfw
+        EOuIlYwjuckUPJZxJXYNvI+ykJSluknshxp8wQB8cyd4B5/dwYGBlfjvf9tETVjFHF7hNcz7lrKVLMK3
+        ERfETW6G8WO0hViTGAvxc2QMbOUt5MHxn45jlz6Bx7Hy+7gI5w06yQv8CjvRsW0+iuthLPvEe7Dq+pBr
+        wTcUxUl+C3agZ4y5f7kLP5EOx8kHfgvubCdeCblcl2EFdqrVZvO5k/wWPmEN/XiAUtgPPViBrztbQZTc
+        ILqNXixgG17kDrwTe6UYifnp1G8zGJeNiXmbFwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="grdExScheduleList_DesignTimeLayout_Reference_1.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsNAAALDQHtB8AsAAACiUlE
+        QVQ4T3WUTUiUQRjHp52Zd7+MDPsgKaRkPXXoEBQUdLI2iSARuhcE0YcnQ5TIysjKDnso1/3QXSnd6tSh
+        UxTdgsgy2AoqopAwzcIgChOq3/O+s9nn4cc+s8/z/8/MMzOvqi5Zn/gQFIzy8maFzeoO06/v6bSehGmY
+        0f26zP/HwwNmVXzQqNiQ+alVi34xieT1XgRvYdxkzEWbMbsRboYWximMX4kpdQfjzkT0atk1q5ZctYoZ
+        unWfnkNwwsuZalBeFnI6IC+xWSirpG6WcaoGnejVmusEJbMnlNbfI4NmJ2ZSHPC3iUymqGtkRd+WDpvD
+        olfRol2OwQzJk1WXrCK5Hm5AQkz4DcE5uAM34Ta0Un8k1Ke/RIqmTtw7aNpUtGDiJPfBKMje652JhvtQ
+        gjbohGS0aDx69JpV9iiCUYwuxIq+YARE8AQqJivdeAcsRszqA9D1oH8kRdMMWsLsmVhm3QoiSkgP+N0A
+        ctRP4RkMQ63Uk98mOSl6z5I2+o0LjCQhgoQz3gK3QI5/O7yEtNSSX0s8JUWykmbpusA4Cb6JW4nn5bWf
+        c/kueCwxeTmlSenJGHtP+fvkxvLnvEnQk11wRkQu3wsPXU+60Zcl6OJ03lAQlQQFTSCn0+BMKj0R8X54
+        B0epNRi88LL6vIoO2VrO+1NkwHRWXfbvySYoQJ2YyEUjboa7UIZjEOfCHUL3FbP64MaOmAMk5MY2ur0G
+        OJN/3FiZaI4b2+7f2MrboSiF86zNmjaKY/8xiZCXFXxmnK+5Yhf4b+ePV9zKDB/o0XNe7VlecRMPbh0k
+        TdacogfS8I/hnG7/7RVLUDFx35PViE4jeIDZBCL5NEwQj9mM7mU7DVI3/z2x6gfh/SBTNEGigQAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="grdExScheduleList_DesignTimeLayout_Reference_2.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhCwALAIUAADa3+ieT5iSM4SiX6Cqb6y+o8je6/DOw9zOv9i2k7yCD3Da3+zWz+SWQ5C2k8CGF
+        3TKw9jGr9CSL4Sub6jCn8iOM4TGs9SKI4CGG3SGF3iub6zW3+za2+iOL4SWP5C+n8iyg7S6k8De6/SWP
+        4yeT5Sqb6jSz+SKI3ymX6DCo8ji8/jm+/zGs9Cyf7f///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAvACwAAAAACwAL
+        AAAIcABfrFihQgQHEwhYFBBI0AAAEwdYpEjQouECFxg/OGgxoeAGjCwwtigxQMRDjClCgCCAgsQCBgkx
+        uiBJYgQDCApDtMAYYISAAxEoYCSA0YOECxYm7sQ4osIJDClHogjQoMOJDApetNDQsoGAEw+yBgQAOw==
+</value>
+  </data>
+  <data name="grdExScheduleList_DesignTimeLayout_Reference_3.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsOAAALDgFAvuFBAAABk0lE
+        QVQoU1WQMUhbARCGb1RJFXTVKWNDUbpKBKEGRKwOobhrxLc5WHBQJw2lSFDBJ/iCkilBBIcIKtW4CFoI
+        BApFjFFoHNQnITUxGe7u/X1NIOLwc9zx8d9/R065RPq3SGLbXsleR/js7Bfv7Dywaf4W0zR1b8/n/MmT
+        81wiciovpPZjP2cyd5zch6ROIbkcJBYDDw+DPw3YGk98RqlMpE+2l8/P73l3F7y8DDk8hAKQeALs84E7
+        O8FdXUUnmfxAcvFzjTc3wQsL4LExiBWtw5EImKghGRraIt7YuBTLgiQSkJVVaCoFVQd6dASZnIQYBsTf
+        B25ryxGHJgpyfFJza4jlTV+LRPRMPDqalVAIsrQEmZmBe73rrNAfx27/FTI7CwkEwK2tN6SGYXFT02u2
+        8fG629x8Y/ZfOjgYIz04eM/t7cUGPD1dh799f4XfeUruxh5S988StUbY4ynU4GAQkk5Dpow62NJSlPX1
+        L1qtuH+uVMjJ50nD4W7x+6Pc0XHFzc0Ft2alt3dbFxc/Ore3pNUq/QPqYFV+yEk7qwAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="grdExScheduleList_DesignTimeLayout_Reference_4.Instance" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsOAAALDgFAvuFBAAABf0lE
+        QVQoU3WRzyvDcRjHH5kLW36ccXEkEXJQDg4OayKRcsZhh5VycRDJkpMDJm2iXZc4OPAPyG4rJVmoLWGr
+        NcSm9/P9vH024SCH1+fp/Xw+Pc/78zxi3t7EPD+LZjItmkyu4+zsAgcHT9jZudStrW09PGwz9/fCYlHE
+        vL+Lk8kMIJFI4/SUiEaJtTVidpYYGyMGB7NOLDbMjw8RJ5ttwfn5o61GhELEwgIxNUUMDRG9vURjI9HU
+        lDfHx+2i8fgG9veJ5WVieprw+YjubqK5maipIUTKqM+3JwiHr0rVrD/q5iY1GKTOz1MDAerMDHV0lHC5
+        iPr6G0EgkMPkJDWVokP+5eHhu8OLYHw8iZ4e6twcdWWFurj4y9IS1e8nqqqIurpbsSKC2tofb/+hXm9U
+        zMlJKxoa8uVkZeVfSnmP59UcHXUK7ZxNJDICtztXvqio+HpUiiVdXZ03odAECwWr7MF0WpzV1Q7t79+1
+        v762HnM2JrWvb88JBrt4d2c3WJRPT8o8eR8oaBMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="grdExScheduleList_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Key&gt;ChoiceAdSchedule&lt;/Key&gt;&lt;Caption&gt;ChoiceAdSchedule&lt;/Caption&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="keySelect"&gt;&lt;BoundMode&gt;UnboundFetch&lt;/BoundMode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;keySelect&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;16&lt;/Width&gt;&lt;/Column0&gt;&lt;Column1 ID="ItemNo"&gt;&lt;Caption&gt;번호&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;ItemNo&lt;/DataMember&gt;&lt;Key&gt;ItemNo&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;60&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="ItemName"&gt;&lt;Caption&gt;광고명&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;ItemName&lt;/DataMember&gt;&lt;Key&gt;ItemName&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;Width&gt;396&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="RealEndDay"&gt;&lt;Caption&gt;종료일&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;RealEndDay&lt;/DataMember&gt;&lt;Key&gt;RealEndDay&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;103&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="AdState"&gt;&lt;Caption&gt;AdState&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;AdState&lt;/DataMember&gt;&lt;Key&gt;AdState&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column4&gt;&lt;Column5 ID="AdStateName"&gt;&lt;Caption&gt;상태&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;AdStateName&lt;/DataMember&gt;&lt;Key&gt;AdStateName&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;70&lt;/Width&gt;&lt;/Column5&gt;&lt;Column6 ID="AdRate"&gt;&lt;Caption&gt;등급&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;ColumnType&gt;Image&lt;/ColumnType&gt;&lt;DataMember&gt;AdRate&lt;/DataMember&gt;&lt;Key&gt;AdRate&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;53&lt;/Width&gt;&lt;/Column6&gt;&lt;Column7 ID="MenuCount"&gt;&lt;Caption&gt;메뉴&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;MenuCount&lt;/DataMember&gt;&lt;Key&gt;MenuCount&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;TextAlignment&gt;Far&lt;/TextAlignment&gt;&lt;Width&gt;54&lt;/Width&gt;&lt;/Column7&gt;&lt;Column8 ID="ChannelCount"&gt;&lt;Caption&gt;채널&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;ChannelCount&lt;/DataMember&gt;&lt;Key&gt;ChannelCount&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;TextAlignment&gt;Far&lt;/TextAlignment&gt;&lt;Width&gt;60&lt;/Width&gt;&lt;/Column8&gt;&lt;Column9 ID="GroupCount"&gt;&lt;Caption&gt;그룹&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;GroupCount&lt;/DataMember&gt;&lt;Key&gt;GroupCount&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;Width&gt;58&lt;/Width&gt;&lt;/Column9&gt;&lt;Column10 ID="GroupSum"&gt;&lt;Caption&gt;총합&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;GroupSum&lt;/DataMember&gt;&lt;Key&gt;GroupSum&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;TextAlignment&gt;Far&lt;/TextAlignment&gt;&lt;Width&gt;61&lt;/Width&gt;&lt;/Column10&gt;&lt;Column11 ID="DetailCount"&gt;&lt;Caption&gt;설정&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;DetailCount&lt;/DataMember&gt;&lt;Key&gt;DetailCount&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;TextAlignment&gt;Far&lt;/TextAlignment&gt;&lt;Width&gt;59&lt;/Width&gt;&lt;/Column11&gt;&lt;Column12 ID="Column1"&gt;&lt;Key&gt;Column1&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;/Column12&gt;&lt;/Columns&gt;&lt;AllowEdit&gt;False&lt;/AllowEdit&gt;&lt;FormatConditions Collection="true" ElementName="Condition"&gt;&lt;Condition0 ID="fcAdRate19"&gt;&lt;FormatStyle&gt;&lt;BackgroundImage Reference="GridEXLayoutData.RootTable.FormatConditions.Condition0.FormatStyle.BackgroundImage" /&gt;&lt;BackgroundImageDrawMode&gt;Center&lt;/BackgroundImageDrawMode&gt;&lt;ImageHorizontalAlignment&gt;Center&lt;/ImageHorizontalAlignment&gt;&lt;ImageVerticalAlignment&gt;Center&lt;/ImageVerticalAlignment&gt;&lt;/FormatStyle&gt;&lt;TargetColIndex&gt;6&lt;/TargetColIndex&gt;&lt;Key&gt;fcAdRate19&lt;/Key&gt;&lt;FilterCondition&gt;&lt;ColumnIndex&gt;6&lt;/ColumnIndex&gt;&lt;Value1&gt;19&lt;/Value1&gt;&lt;/FilterCondition&gt;&lt;/Condition0&gt;&lt;Condition1 ID="fcAdRate15"&gt;&lt;FormatStyle&gt;&lt;BackgroundImage Reference="GridEXLayoutData.RootTable.FormatConditions.Condition1.FormatStyle.BackgroundImage" /&gt;&lt;BackgroundImageDrawMode&gt;Center&lt;/BackgroundImageDrawMode&gt;&lt;ImageHorizontalAlignment&gt;Center&lt;/ImageHorizontalAlignment&gt;&lt;ImageVerticalAlignment&gt;Center&lt;/ImageVerticalAlignment&gt;&lt;/FormatStyle&gt;&lt;TargetColIndex&gt;6&lt;/TargetColIndex&gt;&lt;Key&gt;fcAdRate15&lt;/Key&gt;&lt;FilterCondition&gt;&lt;ColumnIndex&gt;6&lt;/ColumnIndex&gt;&lt;Value1&gt;15&lt;/Value1&gt;&lt;/FilterCondition&gt;&lt;/Condition1&gt;&lt;Condition2 ID="fcNormal"&gt;&lt;FormatStyle&gt;&lt;BackgroundImage Reference="GridEXLayoutData.RootTable.FormatConditions.Condition2.FormatStyle.BackgroundImage" /&gt;&lt;BackgroundImageDrawMode&gt;Center&lt;/BackgroundImageDrawMode&gt;&lt;LineAlignment&gt;Center&lt;/LineAlignment&gt;&lt;TextAlignment&gt;Center&lt;/TextAlignment&gt;&lt;/FormatStyle&gt;&lt;TargetColIndex&gt;0&lt;/TargetColIndex&gt;&lt;Key&gt;fcNormal&lt;/Key&gt;&lt;FilterCondition&gt;&lt;ColumnIndex&gt;10&lt;/ColumnIndex&gt;&lt;TypeNameValue1&gt;System.Int32&lt;/TypeNameValue1&gt;&lt;Value1&gt;100&lt;/Value1&gt;&lt;Conditions Collection="true" ElementName="FilterCondition"&gt;&lt;FilterCondition0&gt;&lt;ColumnIndex&gt;9&lt;/ColumnIndex&gt;&lt;ConditionOperator&gt;GreaterThan&lt;/ConditionOperator&gt;&lt;LogicalOperator&gt;And&lt;/LogicalOperator&gt;&lt;TypeNameValue1&gt;System.Int32&lt;/TypeNameValue1&gt;&lt;Value1&gt;0&lt;/Value1&gt;&lt;Conditions Collection="true" ElementName="FilterCondition"&gt;&lt;FilterCondition0&gt;&lt;ColumnIndex&gt;7&lt;/ColumnIndex&gt;&lt;LogicalOperator&gt;And&lt;/LogicalOperator&gt;&lt;ValueColumnIndex1&gt;11&lt;/ValueColumnIndex1&gt;&lt;/FilterCondition0&gt;&lt;/Conditions&gt;&lt;/FilterCondition0&gt;&lt;/Conditions&gt;&lt;/FilterCondition&gt;&lt;/Condition2&gt;&lt;Condition3 ID="fcNone"&gt;&lt;FormatStyle&gt;&lt;ForeColor&gt;DarkGray&lt;/ForeColor&gt;&lt;/FormatStyle&gt;&lt;Key&gt;fcNone&lt;/Key&gt;&lt;FilterCondition&gt;&lt;ColumnIndex&gt;9&lt;/ColumnIndex&gt;&lt;TypeNameValue1&gt;System.Int32&lt;/TypeNameValue1&gt;&lt;Value1&gt;0&lt;/Value1&gt;&lt;Conditions Collection="true" ElementName="FilterCondition"&gt;&lt;FilterCondition0&gt;&lt;ColumnIndex&gt;10&lt;/ColumnIndex&gt;&lt;LogicalOperator&gt;And&lt;/LogicalOperator&gt;&lt;TypeNameValue1&gt;System.Int32&lt;/TypeNameValue1&gt;&lt;Value1&gt;0&lt;/Value1&gt;&lt;Conditions Collection="true" ElementName="FilterCondition"&gt;&lt;FilterCondition0&gt;&lt;ColumnIndex&gt;11&lt;/ColumnIndex&gt;&lt;LogicalOperator&gt;And&lt;/LogicalOperator&gt;&lt;TypeNameValue1&gt;System.Int32&lt;/TypeNameValue1&gt;&lt;Value1&gt;0&lt;/Value1&gt;&lt;/FilterCondition0&gt;&lt;/Conditions&gt;&lt;/FilterCondition0&gt;&lt;/Conditions&gt;&lt;/FilterCondition&gt;&lt;/Condition3&gt;&lt;Condition4 ID="fcPuls"&gt;&lt;FormatStyle&gt;&lt;BackgroundImage Reference="GridEXLayoutData.RootTable.FormatConditions.Condition4.FormatStyle.BackgroundImage" /&gt;&lt;BackgroundImageDrawMode&gt;Center&lt;/BackgroundImageDrawMode&gt;&lt;ImageHorizontalAlignment&gt;Center&lt;/ImageHorizontalAlignment&gt;&lt;ImageVerticalAlignment&gt;Center&lt;/ImageVerticalAlignment&gt;&lt;/FormatStyle&gt;&lt;TargetColIndex&gt;0&lt;/TargetColIndex&gt;&lt;Key&gt;fcPuls&lt;/Key&gt;&lt;FilterCondition&gt;&lt;ColumnIndex&gt;7&lt;/ColumnIndex&gt;&lt;ConditionOperator&gt;GreaterThan&lt;/ConditionOperator&gt;&lt;ValueColumnIndex1&gt;11&lt;/ValueColumnIndex1&gt;&lt;Conditions Collection="true" ElementName="FilterCondition"&gt;&lt;FilterCondition0&gt;&lt;ColumnIndex&gt;10&lt;/ColumnIndex&gt;&lt;ConditionOperator&gt;GreaterThan&lt;/ConditionOperator&gt;&lt;LogicalOperator&gt;And&lt;/LogicalOperator&gt;&lt;TypeNameValue1&gt;System.Int32&lt;/TypeNameValue1&gt;&lt;Value1&gt;0&lt;/Value1&gt;&lt;/FilterCondition0&gt;&lt;/Conditions&gt;&lt;/FilterCondition&gt;&lt;/Condition4&gt;&lt;Condition5 ID="fcMinus"&gt;&lt;FormatStyle&gt;&lt;BackgroundImage Reference="GridEXLayoutData.RootTable.FormatConditions.Condition5.FormatStyle.BackgroundImage" /&gt;&lt;BackgroundImageDrawMode&gt;Center&lt;/BackgroundImageDrawMode&gt;&lt;ImageHorizontalAlignment&gt;Center&lt;/ImageHorizontalAlignment&gt;&lt;ImageVerticalAlignment&gt;Center&lt;/ImageVerticalAlignment&gt;&lt;/FormatStyle&gt;&lt;TargetColIndex&gt;0&lt;/TargetColIndex&gt;&lt;Key&gt;fcMinus&lt;/Key&gt;&lt;FilterCondition&gt;&lt;ColumnIndex&gt;7&lt;/ColumnIndex&gt;&lt;ConditionOperator&gt;LessThan&lt;/ConditionOperator&gt;&lt;ValueColumnIndex1&gt;11&lt;/ValueColumnIndex1&gt;&lt;/FilterCondition&gt;&lt;/Condition5&gt;&lt;/FormatConditions&gt;&lt;GroupCondition /&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="dvMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>307, 17</value>
+  </metadata>
+  <data name="grdExGroup1_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="CategoryName"&gt;&lt;Caption&gt;카테고리&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;CategoryName&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;CategoryName&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Width&gt;102&lt;/Width&gt;&lt;/Column0&gt;&lt;Column1 ID="GenreName1"&gt;&lt;Caption&gt;장르&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;GenreName1&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GenreName1&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Width&gt;128&lt;/Width&gt;&lt;/Column1&gt;&lt;/Columns&gt;&lt;GroupCondition /&gt;&lt;RowHeight&gt;18&lt;/RowHeight&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="dvMenu2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>403, 17</value>
+  </metadata>
+  <data name="grdExGroup2_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="CategoryName"&gt;&lt;Caption&gt;카테고리&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;CategoryName&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;CategoryName&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;/Column0&gt;&lt;Column1 ID="GenreName1"&gt;&lt;Caption&gt;장르&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;GenreName1&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GenreName1&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;Width&gt;128&lt;/Width&gt;&lt;/Column1&gt;&lt;/Columns&gt;&lt;GridLineColor&gt;Silver&lt;/GridLineColor&gt;&lt;GridLines&gt;Vertical&lt;/GridLines&gt;&lt;GridLineStyle&gt;Solid&lt;/GridLineStyle&gt;&lt;GroupCondition /&gt;&lt;RowHeight&gt;18&lt;/RowHeight&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="dvMenu3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>507, 17</value>
+  </metadata>
+  <data name="grdExGroup3_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="CategoryName"&gt;&lt;Caption&gt;카테고리&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;CategoryName&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;CategoryName&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;/Column0&gt;&lt;Column1 ID="GenreName1"&gt;&lt;Caption&gt;장르&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;GenreName1&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GenreName1&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;/Column1&gt;&lt;/Columns&gt;&lt;GroupCondition /&gt;&lt;RowHeight&gt;18&lt;/RowHeight&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="dvMenu4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>611, 17</value>
+  </metadata>
+  <data name="grdExGroup4_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="CategoryName"&gt;&lt;Caption&gt;카테고리&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;CategoryName&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;CategoryName&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;/Column0&gt;&lt;Column1 ID="GenreName1"&gt;&lt;Caption&gt;장르&lt;/Caption&gt;&lt;DataTypeCode&gt;String&lt;/DataTypeCode&gt;&lt;DataMember&gt;GenreName1&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;GenreName1&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;/Column1&gt;&lt;/Columns&gt;&lt;GroupCondition /&gt;&lt;RowHeight&gt;18&lt;/RowHeight&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="dvMenu5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>715, 17</value>
+  </metadata>
+</root>

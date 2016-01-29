@@ -1,0 +1,19 @@
+﻿/*
+	2 : 메이저 버젼
+	2 : 마이너 버젼
+	6 : 빌드 순번
+*/
+
+AdTargets Manager 2.2.6
+2014-07-03일 
+	1.	AdManagerWebService만 영향을 받음
+	2.	Agency테이블의 AgencyCode가 tinyint로 설정되어 over발생, 형식 smallint로 변경
+		관련된 WS 수정후 배포.
+	3.  주의사항 : svn 브런치에만 적용됨, tag, trunk엔 직전 버전임
+
+
+// 2.2.7
+AdManagerWebService
+2014-07-21일
+	1. 일별-시간별 집계 데이터 오류 : AdManagerWebService.ReportAd.TimeSummaryBiz.GetDateTime()
+		SQL문 수정함. 장용석

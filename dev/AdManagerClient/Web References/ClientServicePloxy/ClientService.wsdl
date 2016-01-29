@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetAdvertisertList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientModel" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClientModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ClientDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchRapName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaAgency" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchAdvertiserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_10" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchRap" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode_C" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapCode_C" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AgencyCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AgencyCode_C" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvertiserCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvertiserCode_C" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AgencyName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAdvertisertListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdvertisertListResult" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientAdvertiserListByCombo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientModel" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientAdvertiserListByComboResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientAdvertiserListByComboResult" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientMediaList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientModel" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientMediaListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientMediaListResult" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientRapList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientModel" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientRapListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientRapListResult" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientAgencyList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientModel" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientAgencyListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientAgencyListResult" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientAdvertiserList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientModel" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientAdvertiserListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientAdvertiserListResult" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientModel" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientListResult" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientModel" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetClientUpdateResult" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientModel" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetClientCreateResult" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientModel" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetClientDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetClientDeleteResult" type="tns:ClientModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAdvertisertListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdvertisertList" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvertisertListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdvertisertListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientAdvertiserListByComboSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientAdvertiserListByCombo" />
+  </wsdl:message>
+  <wsdl:message name="GetClientAdvertiserListByComboSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientAdvertiserListByComboResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientMediaListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientMediaList" />
+  </wsdl:message>
+  <wsdl:message name="GetClientMediaListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientMediaListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientRapListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientRapList" />
+  </wsdl:message>
+  <wsdl:message name="GetClientRapListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientRapListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientAgencyListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientAgencyList" />
+  </wsdl:message>
+  <wsdl:message name="GetClientAgencyListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientAgencyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientAdvertiserListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientAdvertiserList" />
+  </wsdl:message>
+  <wsdl:message name="GetClientAdvertiserListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientAdvertiserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientList" />
+  </wsdl:message>
+  <wsdl:message name="GetClientListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetClientUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetClientUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetClientUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetClientUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetClientCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetClientCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetClientCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetClientCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetClientDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetClientDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetClientDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetClientDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ClientServiceSoap">
+    <wsdl:operation name="GetAdvertisertList">
+      <wsdl:input message="tns:GetAdvertisertListSoapIn" />
+      <wsdl:output message="tns:GetAdvertisertListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientAdvertiserListByCombo">
+      <wsdl:input message="tns:GetClientAdvertiserListByComboSoapIn" />
+      <wsdl:output message="tns:GetClientAdvertiserListByComboSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientMediaList">
+      <wsdl:input message="tns:GetClientMediaListSoapIn" />
+      <wsdl:output message="tns:GetClientMediaListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientRapList">
+      <wsdl:input message="tns:GetClientRapListSoapIn" />
+      <wsdl:output message="tns:GetClientRapListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientAgencyList">
+      <wsdl:input message="tns:GetClientAgencyListSoapIn" />
+      <wsdl:output message="tns:GetClientAgencyListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientAdvertiserList">
+      <wsdl:input message="tns:GetClientAdvertiserListSoapIn" />
+      <wsdl:output message="tns:GetClientAdvertiserListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientList">
+      <wsdl:input message="tns:GetClientListSoapIn" />
+      <wsdl:output message="tns:GetClientListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClientUpdate">
+      <wsdl:input message="tns:SetClientUpdateSoapIn" />
+      <wsdl:output message="tns:SetClientUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCreate">
+      <wsdl:input message="tns:SetClientCreateSoapIn" />
+      <wsdl:output message="tns:SetClientCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClientDelete">
+      <wsdl:input message="tns:SetClientDeleteSoapIn" />
+      <wsdl:output message="tns:SetClientDeleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ClientServiceSoap" type="tns:ClientServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAdvertisertList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAdvertisertList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientAdvertiserListByCombo">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientAdvertiserListByCombo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientMediaList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientMediaList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientRapList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientRapList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientAgencyList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientAgencyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientAdvertiserList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientAdvertiserList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ClientServiceSoap12" type="tns:ClientServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAdvertisertList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAdvertisertList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientAdvertiserListByCombo">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientAdvertiserListByCombo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientMediaList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientMediaList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientRapList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientRapList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientAgencyList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientAgencyList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientAdvertiserList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientAdvertiserList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetClientList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetClientDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClientService">
+    <wsdl:port name="ClientServiceSoap" binding="tns:ClientServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Contract/ClientService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ClientServiceSoap12" binding="tns:ClientServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Contract/ClientService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

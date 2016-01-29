@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetSlotList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="slotOrganizationModel" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SlotOrganizationModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SlotDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="GenreDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelSetDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SlotCodeDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchCategoryName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchGenreName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkUseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode_P" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode_old" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryCode_P" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryCode_old" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreCode_P" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreCode_old" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelNo_old" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot1" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot2" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot3" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot4" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot5" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot6" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot7" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot8" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot9" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot10" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot11" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot12" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot13" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot14" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Slot15" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegID" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSlotListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSlotListResult" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSlotCodeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="slotOrganizationModel" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSlotCodeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSlotCodeListResult" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="slotOrganizationModel" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryListResult" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="slotOrganizationModel" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreListResult" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSlotUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="slotOrganizationModel" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSlotUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSlotUpdateResult" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSlotCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="slotOrganizationModel" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSlotCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSlotCreateResult" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSlotDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="slotOrganizationModel" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSlotDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSlotDeleteResult" type="tns:SlotOrganizationModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSlotListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSlotList" />
+  </wsdl:message>
+  <wsdl:message name="GetSlotListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSlotListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSlotCodeListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSlotCodeList" />
+  </wsdl:message>
+  <wsdl:message name="GetSlotCodeListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSlotCodeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreList" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSlotUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSlotUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetSlotUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSlotUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSlotCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSlotCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetSlotCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSlotCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSlotDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSlotDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetSlotDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSlotDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SlotOrganizationServiceSoap">
+    <wsdl:operation name="GetSlotList">
+      <wsdl:input message="tns:GetSlotListSoapIn" />
+      <wsdl:output message="tns:GetSlotListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSlotCodeList">
+      <wsdl:input message="tns:GetSlotCodeListSoapIn" />
+      <wsdl:output message="tns:GetSlotCodeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <wsdl:input message="tns:GetCategoryListSoapIn" />
+      <wsdl:output message="tns:GetCategoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <wsdl:input message="tns:GetGenreListSoapIn" />
+      <wsdl:output message="tns:GetGenreListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSlotUpdate">
+      <wsdl:input message="tns:SetSlotUpdateSoapIn" />
+      <wsdl:output message="tns:SetSlotUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSlotCreate">
+      <wsdl:input message="tns:SetSlotCreateSoapIn" />
+      <wsdl:output message="tns:SetSlotCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSlotDelete">
+      <wsdl:input message="tns:SetSlotDeleteSoapIn" />
+      <wsdl:output message="tns:SetSlotDeleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SlotOrganizationServiceSoap" type="tns:SlotOrganizationServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSlotList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSlotList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSlotCodeList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSlotCodeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSlotUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSlotUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSlotCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSlotCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSlotDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSlotDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SlotOrganizationServiceSoap12" type="tns:SlotOrganizationServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSlotList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSlotList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSlotCodeList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSlotCodeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSlotUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSlotUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSlotCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSlotCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSlotDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSlotDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SlotOrganizationService">
+    <wsdl:port name="SlotOrganizationServiceSoap" binding="tns:SlotOrganizationServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Media/SlotOrganizationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SlotOrganizationServiceSoap12" binding="tns:SlotOrganizationServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Media/SlotOrganizationService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

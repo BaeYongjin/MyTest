@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetCategoryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:StatisticsPgRegionModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StatisticsPgRegionModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ReportDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="GenreDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchCategoryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchGenreCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchStartDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchEndDay" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryListResult" type="tns:StatisticsPgRegionModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:StatisticsPgRegionModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreListResult" type="tns:StatisticsPgRegionModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatisticsPgRegion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:StatisticsPgRegionModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatisticsPgRegionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatisticsPgRegionResult" type="tns:StatisticsPgRegionModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatisticsPgRegionAVG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:StatisticsPgRegionModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatisticsPgRegionAVGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatisticsPgRegionAVGResult" type="tns:StatisticsPgRegionModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCategoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreList" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStatisticsPgRegionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStatisticsPgRegion" />
+  </wsdl:message>
+  <wsdl:message name="GetStatisticsPgRegionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatisticsPgRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStatisticsPgRegionAVGSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStatisticsPgRegionAVG" />
+  </wsdl:message>
+  <wsdl:message name="GetStatisticsPgRegionAVGSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatisticsPgRegionAVGResponse" />
+  </wsdl:message>
+  <wsdl:portType name="StatisticsPgRegionServiceSoap">
+    <wsdl:operation name="GetCategoryList">
+      <wsdl:input message="tns:GetCategoryListSoapIn" />
+      <wsdl:output message="tns:GetCategoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <wsdl:input message="tns:GetGenreListSoapIn" />
+      <wsdl:output message="tns:GetGenreListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsPgRegion">
+      <wsdl:input message="tns:GetStatisticsPgRegionSoapIn" />
+      <wsdl:output message="tns:GetStatisticsPgRegionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsPgRegionAVG">
+      <wsdl:input message="tns:GetStatisticsPgRegionAVGSoapIn" />
+      <wsdl:output message="tns:GetStatisticsPgRegionAVGSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StatisticsPgRegionServiceSoap" type="tns:StatisticsPgRegionServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCategoryList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsPgRegion">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStatisticsPgRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsPgRegionAVG">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStatisticsPgRegionAVG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StatisticsPgRegionServiceSoap12" type="tns:StatisticsPgRegionServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCategoryList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsPgRegion">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStatisticsPgRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatisticsPgRegionAVG">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetStatisticsPgRegionAVG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StatisticsPgRegionService">
+    <wsdl:port name="StatisticsPgRegionServiceSoap" binding="tns:StatisticsPgRegionServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/ReportMedia/StatisticsPgRegionService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="StatisticsPgRegionServiceSoap12" binding="tns:StatisticsPgRegionServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/ReportMedia/StatisticsPgRegionService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

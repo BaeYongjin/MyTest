@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetComboList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SystemMenuModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMenuCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MenuCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MenuCode_2" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MenuCode_3" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MenuLevel" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UpperMenu" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MenuName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UpperName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MenuOrder" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastOrder" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SystemMenuDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetComboListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetComboListResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpperMenuList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpperMenuListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpperMenuListResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMenuListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMenuListResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUpperMenuUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUpperMenuUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetUpperMenuUpdateResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMenuCodeUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMenuCodeUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMenuCodeUpdateResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUpperMenuCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUpperMenuCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetUpperMenuCreateResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMenuCodeCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMenuCodeCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMenuCodeCreateResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUpperMenuDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUpperMenuDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetUpperMenuDeleteResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMenuCodeDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMenuCodeDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMenuCodeDeleteResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMenuCodeOrderUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMenuCodeOrderUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMenuCodeOrderUpResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMenuCodeOrderDown">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemMenuModel" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMenuCodeOrderDownResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMenuCodeOrderDownResult" type="tns:SystemMenuModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetComboListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetComboList" />
+  </wsdl:message>
+  <wsdl:message name="GetComboListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetComboListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUpperMenuListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpperMenuList" />
+  </wsdl:message>
+  <wsdl:message name="GetUpperMenuListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpperMenuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMenuList" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMenuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUpperMenuUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUpperMenuUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetUpperMenuUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUpperMenuUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMenuCodeUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMenuCodeUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetMenuCodeUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMenuCodeUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUpperMenuCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUpperMenuCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetUpperMenuCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUpperMenuCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMenuCodeCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMenuCodeCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetMenuCodeCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMenuCodeCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUpperMenuDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUpperMenuDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetUpperMenuDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUpperMenuDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMenuCodeDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMenuCodeDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetMenuCodeDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMenuCodeDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMenuCodeOrderUpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMenuCodeOrderUp" />
+  </wsdl:message>
+  <wsdl:message name="SetMenuCodeOrderUpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMenuCodeOrderUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMenuCodeOrderDownSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMenuCodeOrderDown" />
+  </wsdl:message>
+  <wsdl:message name="SetMenuCodeOrderDownSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMenuCodeOrderDownResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SystemMenuServiceSoap">
+    <wsdl:operation name="GetComboList">
+      <wsdl:input message="tns:GetComboListSoapIn" />
+      <wsdl:output message="tns:GetComboListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpperMenuList">
+      <wsdl:input message="tns:GetUpperMenuListSoapIn" />
+      <wsdl:output message="tns:GetUpperMenuListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuList">
+      <wsdl:input message="tns:GetMenuListSoapIn" />
+      <wsdl:output message="tns:GetMenuListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUpperMenuUpdate">
+      <wsdl:input message="tns:SetUpperMenuUpdateSoapIn" />
+      <wsdl:output message="tns:SetUpperMenuUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeUpdate">
+      <wsdl:input message="tns:SetMenuCodeUpdateSoapIn" />
+      <wsdl:output message="tns:SetMenuCodeUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUpperMenuCreate">
+      <wsdl:input message="tns:SetUpperMenuCreateSoapIn" />
+      <wsdl:output message="tns:SetUpperMenuCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeCreate">
+      <wsdl:input message="tns:SetMenuCodeCreateSoapIn" />
+      <wsdl:output message="tns:SetMenuCodeCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUpperMenuDelete">
+      <wsdl:input message="tns:SetUpperMenuDeleteSoapIn" />
+      <wsdl:output message="tns:SetUpperMenuDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeDelete">
+      <wsdl:input message="tns:SetMenuCodeDeleteSoapIn" />
+      <wsdl:output message="tns:SetMenuCodeDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeOrderUp">
+      <wsdl:input message="tns:SetMenuCodeOrderUpSoapIn" />
+      <wsdl:output message="tns:SetMenuCodeOrderUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeOrderDown">
+      <wsdl:input message="tns:SetMenuCodeOrderDownSoapIn" />
+      <wsdl:output message="tns:SetMenuCodeOrderDownSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SystemMenuServiceSoap" type="tns:SystemMenuServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetComboList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetComboList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpperMenuList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetUpperMenuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetMenuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUpperMenuUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUpperMenuUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMenuCodeUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUpperMenuCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUpperMenuCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMenuCodeCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUpperMenuDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUpperMenuDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMenuCodeDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeOrderUp">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMenuCodeOrderUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeOrderDown">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMenuCodeOrderDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SystemMenuServiceSoap12" type="tns:SystemMenuServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetComboList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetComboList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpperMenuList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetUpperMenuList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetMenuList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUpperMenuUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUpperMenuUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMenuCodeUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUpperMenuCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUpperMenuCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMenuCodeCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUpperMenuDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUpperMenuDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMenuCodeDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeOrderUp">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMenuCodeOrderUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMenuCodeOrderDown">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetMenuCodeOrderDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SystemMenuService">
+    <wsdl:port name="SystemMenuServiceSoap" binding="tns:SystemMenuServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Common/SystemMenuService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SystemMenuServiceSoap12" binding="tns:SystemMenuServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Common/SystemMenuService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

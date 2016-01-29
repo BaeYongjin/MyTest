@@ -1,0 +1,487 @@
+;-- Start for AdTargets Log Service
+[2015-12-02 01:50:26.469] M 
+[2015-12-02 01:50:26.470] M 
+[2015-12-02 01:50:26.470] M ############################################################
+[2015-12-02 01:50:26.471] M #                                                          #
+[2015-12-02 01:50:26.472] M #                    AdTargets Manager v2.0                #
+[2015-12-02 01:50:26.472] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 01:50:26.473] M #                                                          #
+[2015-12-02 01:50:26.474] M ############################################################
+[2015-12-02 01:50:26.475] M 환경파일을 읽습니다.
+[2015-12-02 01:50:26.486] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 01:50:26.487] M SYSTEM TIMEOUT:20000
+[2015-12-02 01:50:26.487] M 웹서버 정보
+[2015-12-02 01:50:26.488] M CLIENT TYPE:DEV
+[2015-12-02 01:50:26.489] M 웹서버 정보
+[2015-12-02 01:50:26.489] M HOST:localhost
+[2015-12-02 01:50:26.490] M PORT:8086
+[2015-12-02 01:50:26.491] M 로그 정보
+[2015-12-02 01:50:26.491] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 01:50:26.542] M 환경설정을 완료하였습니다.
+[2015-12-02 01:50:26.543] M 
+[2015-12-02 01:50:32.254] M 천하무적(admin)님으로 로그인하였습니다.
+;-- Start for AdTargets Log Service
+[2015-12-02 03:35:33.553] M 
+[2015-12-02 03:35:33.554] M 
+[2015-12-02 03:35:33.554] M ############################################################
+[2015-12-02 03:35:33.555] M #                                                          #
+[2015-12-02 03:35:33.556] M #                    AdTargets Manager v2.0                #
+[2015-12-02 03:35:33.556] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 03:35:33.557] M #                                                          #
+[2015-12-02 03:35:33.557] M ############################################################
+[2015-12-02 03:35:33.557] M 환경파일을 읽습니다.
+[2015-12-02 03:35:33.570] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 03:35:33.571] M SYSTEM TIMEOUT:20000
+[2015-12-02 03:35:33.571] M 웹서버 정보
+[2015-12-02 03:35:33.572] M CLIENT TYPE:DEV
+[2015-12-02 03:35:33.573] M 웹서버 정보
+[2015-12-02 03:35:33.574] M HOST:localhost
+[2015-12-02 03:35:33.574] M PORT:8086
+[2015-12-02 03:35:33.575] M 로그 정보
+[2015-12-02 03:35:33.575] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 03:35:33.611] M 환경설정을 완료하였습니다.
+[2015-12-02 03:35:33.612] M 
+[2015-12-02 03:35:38.834] M 천하무적(admin)님으로 로그인하였습니다.
+;-- Start for AdTargets Log Service
+[2015-12-02 19:31:29.907] M 
+[2015-12-02 19:31:29.907] M 
+[2015-12-02 19:31:29.907] M ############################################################
+[2015-12-02 19:31:29.907] M #                                                          #
+[2015-12-02 19:31:29.907] M #                    AdTargets Manager v2.0                #
+[2015-12-02 19:31:29.907] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 19:31:29.907] M #                                                          #
+[2015-12-02 19:31:29.907] M ############################################################
+[2015-12-02 19:31:29.907] M 환경파일을 읽습니다.
+[2015-12-02 19:31:29.923] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 19:31:29.923] M SYSTEM TIMEOUT:20000
+[2015-12-02 19:31:29.923] M 웹서버 정보
+[2015-12-02 19:31:29.923] M CLIENT TYPE:DEV
+[2015-12-02 19:31:29.923] M 웹서버 정보
+[2015-12-02 19:31:29.923] M HOST:localhost
+[2015-12-02 19:31:29.923] M PORT:8086
+[2015-12-02 19:31:29.923] M 로그 정보
+[2015-12-02 19:31:29.923] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 19:31:29.969] M 환경설정을 완료하였습니다.
+[2015-12-02 19:31:29.969] M 
+[2015-12-02 19:31:36.358] M 천하무적(admin)님으로 로그인하였습니다.
+[2015-12-02 19:38:02.627] E -----------------------------------------
+[2015-12-02 19:38:03.424] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemUpdate(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 909
+   위치: AdManagerClient.ContractItemManager.SetContractItemUpdate(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1054
+
+[2015-12-02 19:38:03.424] E -----------------------------------------
+[2015-12-02 19:41:18.003] E -----------------------------------------
+[2015-12-02 19:41:18.003] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemUpdate(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 909
+   위치: AdManagerClient.ContractItemManager.SetContractItemUpdate(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1054
+
+[2015-12-02 19:41:18.003] E -----------------------------------------
+[2015-12-02 19:45:09.287] E -----------------------------------------
+[2015-12-02 19:45:09.287] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.GetContractItemHIstoryList(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 469
+   위치: AdManagerClient.ContractItemManager.GetContractItemHIstoryList(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 441
+
+[2015-12-02 19:45:09.287] E -----------------------------------------
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 20:05:30.787] M 
+[2015-12-02 20:05:30.787] M 
+[2015-12-02 20:05:30.787] M ############################################################
+[2015-12-02 20:05:30.787] M #                                                          #
+[2015-12-02 20:05:30.787] M #                    AdTargets Manager v2.0                #
+[2015-12-02 20:05:30.787] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 20:05:30.787] M #                                                          #
+[2015-12-02 20:05:30.787] M ############################################################
+[2015-12-02 20:05:30.787] M 환경파일을 읽습니다.
+[2015-12-02 20:05:30.803] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 20:05:30.819] M SYSTEM TIMEOUT:20000
+[2015-12-02 20:05:30.819] M 웹서버 정보
+[2015-12-02 20:05:30.819] M CLIENT TYPE:DEV
+[2015-12-02 20:05:30.819] M 웹서버 정보
+[2015-12-02 20:05:30.819] M HOST:localhost
+[2015-12-02 20:05:30.819] M PORT:8086
+[2015-12-02 20:05:30.819] M 로그 정보
+[2015-12-02 20:05:30.819] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 20:05:30.834] M 환경설정을 완료하였습니다.
+[2015-12-02 20:05:30.834] M 
+[2015-12-02 20:05:34.540] M 천하무적(admin)님으로 로그인하였습니다.
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 20:09:38.800] M 
+[2015-12-02 20:09:38.800] M 
+[2015-12-02 20:09:38.800] M ############################################################
+[2015-12-02 20:09:38.800] M #                                                          #
+[2015-12-02 20:09:38.815] M #                    AdTargets Manager v2.0                #
+[2015-12-02 20:09:38.815] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 20:09:38.815] M #                                                          #
+[2015-12-02 20:09:38.815] M ############################################################
+[2015-12-02 20:09:38.815] M 환경파일을 읽습니다.
+[2015-12-02 20:09:38.815] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 20:09:38.815] M SYSTEM TIMEOUT:20000
+[2015-12-02 20:09:38.831] M 웹서버 정보
+[2015-12-02 20:09:38.831] M CLIENT TYPE:DEV
+[2015-12-02 20:09:38.831] M 웹서버 정보
+[2015-12-02 20:09:38.831] M HOST:localhost
+[2015-12-02 20:09:38.831] M PORT:8086
+[2015-12-02 20:09:38.831] M 로그 정보
+[2015-12-02 20:09:38.831] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 20:09:38.862] M 환경설정을 완료하였습니다.
+[2015-12-02 20:09:38.862] M 
+[2015-12-02 20:10:07.426] M 천하무적(admin)님으로 로그인하였습니다.
+[2015-12-02 20:12:41.739] E -----------------------------------------
+[2015-12-02 20:12:41.755] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.GetContractItemHIstoryList(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 469
+   위치: AdManagerClient.ContractItemManager.GetContractItemHIstoryList(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 441
+
+[2015-12-02 20:12:41.755] E -----------------------------------------
+[2015-12-02 20:14:24.919] E -----------------------------------------
+[2015-12-02 20:14:28.904] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemUpdate(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 909
+   위치: AdManagerClient.ContractItemManager.SetContractItemUpdate(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1054
+
+[2015-12-02 20:14:28.904] E -----------------------------------------
+[2015-12-02 20:20:44.625] E -----------------------------------------
+[2015-12-02 20:20:44.625] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemUpdate(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 909
+   위치: AdManagerClient.ContractItemManager.SetContractItemUpdate(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1054
+
+[2015-12-02 20:20:44.625] E -----------------------------------------
+;-- Start for AdTargets Log Service
+[2015-12-02 20:25:59.455] M 
+[2015-12-02 20:25:59.455] M 
+[2015-12-02 20:25:59.455] M ############################################################
+[2015-12-02 20:25:59.455] M #                                                          #
+[2015-12-02 20:25:59.455] M #                    AdTargets Manager v2.0                #
+[2015-12-02 20:25:59.455] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 20:25:59.455] M #                                                          #
+[2015-12-02 20:25:59.455] M ############################################################
+[2015-12-02 20:25:59.455] M 환경파일을 읽습니다.
+[2015-12-02 20:25:59.471] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 20:25:59.471] M SYSTEM TIMEOUT:20000
+[2015-12-02 20:25:59.471] M 웹서버 정보
+[2015-12-02 20:25:59.471] M CLIENT TYPE:DEV
+[2015-12-02 20:25:59.471] M 웹서버 정보
+[2015-12-02 20:25:59.471] M HOST:localhost
+[2015-12-02 20:25:59.471] M PORT:8086
+[2015-12-02 20:25:59.471] M 로그 정보
+[2015-12-02 20:25:59.471] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 20:25:59.533] M 환경설정을 완료하였습니다.
+[2015-12-02 20:25:59.533] M 
+;-- Start for AdTargets Log Service
+[2015-12-02 20:26:28.738] M 
+[2015-12-02 20:26:28.738] M 
+[2015-12-02 20:26:28.738] M ############################################################
+[2015-12-02 20:26:28.738] M #                                                          #
+[2015-12-02 20:26:28.738] M #                    AdTargets Manager v2.0                #
+[2015-12-02 20:26:28.738] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 20:26:28.738] M #                                                          #
+[2015-12-02 20:26:28.738] M ############################################################
+[2015-12-02 20:26:28.738] M 환경파일을 읽습니다.
+[2015-12-02 20:26:28.754] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 20:26:28.754] M SYSTEM TIMEOUT:20000
+[2015-12-02 20:26:28.754] M 웹서버 정보
+[2015-12-02 20:26:28.754] M CLIENT TYPE:DEV
+[2015-12-02 20:26:28.754] M 웹서버 정보
+[2015-12-02 20:26:28.754] M HOST:localhost
+[2015-12-02 20:26:28.754] M PORT:8086
+[2015-12-02 20:26:28.754] M 로그 정보
+[2015-12-02 20:26:28.754] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 20:26:28.801] M 환경설정을 완료하였습니다.
+[2015-12-02 20:26:28.801] M 
+[2015-12-02 20:26:33.210] M 천하무적(admin)님으로 로그인하였습니다.
+[2015-12-02 20:28:17.751] E -----------------------------------------
+[2015-12-02 20:28:17.766] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemUpdate(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 909
+   위치: AdManagerClient.ContractItemManager.SetContractItemUpdate(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1054
+
+[2015-12-02 20:28:17.766] E -----------------------------------------
+;-- Start for AdTargets Log Service
+[2015-12-02 20:36:12.648] M 
+[2015-12-02 20:36:12.648] M 
+[2015-12-02 20:36:12.648] M ############################################################
+[2015-12-02 20:36:12.648] M #                                                          #
+[2015-12-02 20:36:12.648] M #                    AdTargets Manager v2.0                #
+[2015-12-02 20:36:12.648] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 20:36:12.648] M #                                                          #
+[2015-12-02 20:36:12.648] M ############################################################
+[2015-12-02 20:36:12.648] M 환경파일을 읽습니다.
+[2015-12-02 20:36:12.664] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 20:36:12.664] M SYSTEM TIMEOUT:20000
+[2015-12-02 20:36:12.664] M 웹서버 정보
+[2015-12-02 20:36:12.664] M CLIENT TYPE:DEV
+[2015-12-02 20:36:12.664] M 웹서버 정보
+[2015-12-02 20:36:12.664] M HOST:localhost
+[2015-12-02 20:36:12.664] M PORT:8086
+[2015-12-02 20:36:12.664] M 로그 정보
+[2015-12-02 20:36:12.664] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 20:36:12.711] M 환경설정을 완료하였습니다.
+[2015-12-02 20:36:12.711] M 
+[2015-12-02 20:37:00.384] M 천하무적(admin)님으로 로그인하였습니다.
+;-- Start for AdTargets Log Service
+[2015-12-02 20:39:15.304] M 
+[2015-12-02 20:39:15.304] M 
+[2015-12-02 20:39:15.304] M ############################################################
+[2015-12-02 20:39:15.304] M #                                                          #
+[2015-12-02 20:39:15.304] M #                    AdTargets Manager v2.0                #
+[2015-12-02 20:39:15.304] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 20:39:15.304] M #                                                          #
+[2015-12-02 20:39:15.304] M ############################################################
+[2015-12-02 20:39:15.304] M 환경파일을 읽습니다.
+[2015-12-02 20:39:15.320] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 20:39:15.320] M SYSTEM TIMEOUT:20000
+[2015-12-02 20:39:15.320] M 웹서버 정보
+[2015-12-02 20:39:15.320] M CLIENT TYPE:DEV
+[2015-12-02 20:39:15.320] M 웹서버 정보
+[2015-12-02 20:39:15.320] M HOST:localhost
+[2015-12-02 20:39:15.320] M PORT:8086
+[2015-12-02 20:39:15.320] M 로그 정보
+[2015-12-02 20:39:15.320] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 20:39:15.351] M 환경설정을 완료하였습니다.
+[2015-12-02 20:39:15.351] M 
+[2015-12-02 20:39:19.058] M 천하무적(admin)님으로 로그인하였습니다.
+;-- Start for AdTargets Log Service
+[2015-12-02 20:40:50.634] M 
+[2015-12-02 20:40:50.634] M 
+[2015-12-02 20:40:50.634] M ############################################################
+[2015-12-02 20:40:50.634] M #                                                          #
+[2015-12-02 20:40:50.634] M #                    AdTargets Manager v2.0                #
+[2015-12-02 20:40:50.634] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 20:40:50.649] M #                                                          #
+[2015-12-02 20:40:50.649] M ############################################################
+[2015-12-02 20:40:50.649] M 환경파일을 읽습니다.
+[2015-12-02 20:40:50.649] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 20:40:50.649] M SYSTEM TIMEOUT:20000
+[2015-12-02 20:40:50.649] M 웹서버 정보
+[2015-12-02 20:40:50.649] M CLIENT TYPE:DEV
+[2015-12-02 20:40:50.649] M 웹서버 정보
+[2015-12-02 20:40:50.649] M HOST:localhost
+[2015-12-02 20:40:50.649] M PORT:8086
+[2015-12-02 20:40:50.649] M 로그 정보
+[2015-12-02 20:40:50.649] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 20:40:50.712] M 환경설정을 완료하였습니다.
+[2015-12-02 20:40:50.712] M 
+[2015-12-02 20:40:54.372] M 천하무적(admin)님으로 로그인하였습니다.
+[2015-12-02 20:42:44.991] W -----------------------------------------
+[2015-12-02 20:42:44.991] W AdManagerClient.ContractItemManager:SetContractItemDelete():3101:광고계약 정보 삭제 중 오류가 발생하였습니다
+[2015-12-02 20:42:44.991] W -----------------------------------------
+;-- Start for AdTargets Log Service
+[2015-12-02 20:44:54.128] M 
+[2015-12-02 20:44:54.144] M 
+[2015-12-02 20:44:54.144] M ############################################################
+[2015-12-02 20:44:54.144] M #                                                          #
+[2015-12-02 20:44:54.144] M #                    AdTargets Manager v2.0                #
+[2015-12-02 20:44:54.144] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 20:44:54.144] M #                                                          #
+[2015-12-02 20:44:54.144] M ############################################################
+[2015-12-02 20:44:54.144] M 환경파일을 읽습니다.
+[2015-12-02 20:44:54.144] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 20:44:54.159] M SYSTEM TIMEOUT:20000
+[2015-12-02 20:44:54.159] M 웹서버 정보
+[2015-12-02 20:44:54.159] M CLIENT TYPE:DEV
+[2015-12-02 20:44:54.159] M 웹서버 정보
+[2015-12-02 20:44:54.159] M HOST:localhost
+[2015-12-02 20:44:54.159] M PORT:8086
+[2015-12-02 20:44:54.159] M 로그 정보
+[2015-12-02 20:44:54.159] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 20:44:54.191] M 환경설정을 완료하였습니다.
+[2015-12-02 20:44:54.191] M 
+[2015-12-02 20:44:57.335] M 천하무적(admin)님으로 로그인하였습니다.
+[2015-12-02 20:45:09.430] W -----------------------------------------
+[2015-12-02 20:45:09.446] W AdManagerClient.ContractItemManager:SetContractItemDelete():3101:광고계약 정보 삭제 중 오류가 발생하였습니다
+[2015-12-02 20:45:09.446] W -----------------------------------------
+[2015-12-02 20:45:49.043] E -----------------------------------------
+[2015-12-02 20:45:50.730] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemDelete(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 1085
+   위치: AdManagerClient.ContractItemManager.SetContractItemDelete(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1268
+
+[2015-12-02 20:45:50.730] E -----------------------------------------
+[2015-12-02 20:58:47.742] E -----------------------------------------
+[2015-12-02 20:58:47.742] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemDelete(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 1085
+   위치: AdManagerClient.ContractItemManager.SetContractItemDelete(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1268
+
+[2015-12-02 20:58:47.742] E -----------------------------------------
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 21:01:10.533] M 
+[2015-12-02 21:01:10.533] M 
+[2015-12-02 21:01:10.533] M ############################################################
+[2015-12-02 21:01:10.533] M #                                                          #
+[2015-12-02 21:01:10.533] M #                    AdTargets Manager v2.0                #
+[2015-12-02 21:01:10.533] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 21:01:10.533] M #                                                          #
+[2015-12-02 21:01:10.533] M ############################################################
+[2015-12-02 21:01:10.533] M 환경파일을 읽습니다.
+[2015-12-02 21:01:10.548] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 21:01:10.548] M SYSTEM TIMEOUT:20000
+[2015-12-02 21:01:10.548] M 웹서버 정보
+[2015-12-02 21:01:10.548] M CLIENT TYPE:DEV
+[2015-12-02 21:01:10.548] M 웹서버 정보
+[2015-12-02 21:01:10.548] M HOST:localhost
+[2015-12-02 21:01:10.548] M PORT:8086
+[2015-12-02 21:01:10.548] M 로그 정보
+[2015-12-02 21:01:10.548] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 21:01:10.611] M 환경설정을 완료하였습니다.
+[2015-12-02 21:01:10.611] M 
+[2015-12-02 21:01:16.100] M 천하무적(admin)님으로 로그인하였습니다.
+[2015-12-02 21:01:52.172] E -----------------------------------------
+[2015-12-02 21:01:52.187] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemDelete(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 1085
+   위치: AdManagerClient.ContractItemManager.SetContractItemDelete(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1268
+
+[2015-12-02 21:01:52.187] E -----------------------------------------
+;-- Start for AdTargets Log Service
+[2015-12-02 21:09:56.916] M 
+[2015-12-02 21:09:56.916] M 
+[2015-12-02 21:09:56.916] M ############################################################
+[2015-12-02 21:09:56.916] M #                                                          #
+[2015-12-02 21:09:56.932] M #                    AdTargets Manager v2.0                #
+[2015-12-02 21:09:56.932] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 21:09:56.932] M #                                                          #
+[2015-12-02 21:09:56.932] M ############################################################
+[2015-12-02 21:09:56.932] M 환경파일을 읽습니다.
+[2015-12-02 21:09:56.932] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 21:09:56.947] M SYSTEM TIMEOUT:20000
+[2015-12-02 21:09:56.947] M 웹서버 정보
+[2015-12-02 21:09:56.947] M CLIENT TYPE:DEV
+[2015-12-02 21:09:56.947] M 웹서버 정보
+[2015-12-02 21:09:56.947] M HOST:localhost
+[2015-12-02 21:09:56.947] M PORT:8086
+[2015-12-02 21:09:56.947] M 로그 정보
+[2015-12-02 21:09:56.947] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 21:09:56.994] M 환경설정을 완료하였습니다.
+[2015-12-02 21:09:56.994] M 
+[2015-12-02 21:10:00.670] M 천하무적(admin)님으로 로그인하였습니다.
+[2015-12-02 21:10:42.373] E -----------------------------------------
+[2015-12-02 21:10:42.388] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemDelete(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 1085
+   위치: AdManagerClient.ContractItemManager.SetContractItemDelete(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1268
+
+[2015-12-02 21:10:42.388] E -----------------------------------------
+[2015-12-02 21:11:14.978] E -----------------------------------------
+[2015-12-02 21:11:14.978] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemDelete(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 1085
+   위치: AdManagerClient.ContractItemManager.SetContractItemDelete(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1268
+
+[2015-12-02 21:11:14.978] E -----------------------------------------
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 21:14:18.180] M 
+[2015-12-02 21:14:18.180] M 
+[2015-12-02 21:14:18.180] M ############################################################
+[2015-12-02 21:14:18.180] M #                                                          #
+[2015-12-02 21:14:18.180] M #                    AdTargets Manager v2.0                #
+[2015-12-02 21:14:18.180] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 21:14:18.180] M #                                                          #
+[2015-12-02 21:14:18.180] M ############################################################
+[2015-12-02 21:14:18.180] M 환경파일을 읽습니다.
+[2015-12-02 21:14:18.195] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 21:14:18.195] M SYSTEM TIMEOUT:20000
+[2015-12-02 21:14:18.195] M 웹서버 정보
+[2015-12-02 21:14:18.195] M CLIENT TYPE:DEV
+[2015-12-02 21:14:18.195] M 웹서버 정보
+[2015-12-02 21:14:18.195] M HOST:localhost
+[2015-12-02 21:14:18.195] M PORT:8086
+[2015-12-02 21:14:18.195] M 로그 정보
+[2015-12-02 21:14:18.195] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 21:14:19.305] M 환경설정을 완료하였습니다.
+[2015-12-02 21:14:19.305] M 
+[2015-12-02 21:14:23.290] M 천하무적(admin)님으로 로그인하였습니다.
+[2015-12-02 21:14:57.176] E -----------------------------------------
+[2015-12-02 21:14:57.582] E Exception : 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: AdManagerClient.ContractItemServicePloxy.ContractItemService.SetContractItemDelete(HeaderModel header, ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\Web References\ContractItemServicePloxy\Reference.cs:줄 1085
+   위치: AdManagerClient.ContractItemManager.SetContractItemDelete(ContractItemModel contractItemModel) 파일 F:\Project\2016IPTV\dev\AdManagerClient\20_Contract\07_ContractItem\ContractItemManager.cs:줄 1268
+
+[2015-12-02 21:14:57.582] E -----------------------------------------
+;-- Start for AdTargets Log Service
+[2015-12-02 21:16:21.998] M 
+[2015-12-02 21:16:21.998] M 
+[2015-12-02 21:16:21.998] M ############################################################
+[2015-12-02 21:16:21.998] M #                                                          #
+[2015-12-02 21:16:21.998] M #                    AdTargets Manager v2.0                #
+[2015-12-02 21:16:21.998] M #                Copyright(c) DARTmedia Inc.               #
+[2015-12-02 21:16:21.998] M #                                                          #
+[2015-12-02 21:16:21.998] M ############################################################
+[2015-12-02 21:16:21.998] M 환경파일을 읽습니다.
+[2015-12-02 21:16:22.013] M SYSTEM  VERSION:Ver2.3.9.0
+[2015-12-02 21:16:22.013] M SYSTEM TIMEOUT:20000
+[2015-12-02 21:16:22.013] M 웹서버 정보
+[2015-12-02 21:16:22.013] M CLIENT TYPE:DEV
+[2015-12-02 21:16:22.013] M 웹서버 정보
+[2015-12-02 21:16:22.013] M HOST:localhost
+[2015-12-02 21:16:22.013] M PORT:8086
+[2015-12-02 21:16:22.013] M 로그 정보
+[2015-12-02 21:16:22.013] M LOG LEVEL:MESSAGE
+;-- Stopped for AdTargets Log Service
+;-- Start for AdTargets Log Service
+[2015-12-02 21:16:22.045] M 환경설정을 완료하였습니다.
+[2015-12-02 21:16:22.045] M 
+[2015-12-02 21:16:26.464] M 천하무적(admin)님으로 로그인하였습니다.
+;-- Stopped for AdTargets Log Service

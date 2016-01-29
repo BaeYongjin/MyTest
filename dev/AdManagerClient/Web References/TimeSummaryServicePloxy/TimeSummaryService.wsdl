@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetAreaTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TimeSummaryModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ReportDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="AdList" type="tns:ArrayOfAnyType" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdListStr" type="tns:ArrayOfString" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAreaTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAreaTimeResult" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDateTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDateTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDateTimeResult" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreTimeResult" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelTimeResult" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAreaTimeByJava">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAreaTimeByJavaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAreaTimeByJavaResult" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDateTimeByJava">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDateTimeByJavaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDateTimeByJavaResult" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreTimeByJava">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreTimeByJavaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreTimeByJavaResult" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelTimeByJava">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelTimeByJavaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelTimeByJavaResult" type="tns:TimeSummaryModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAreaTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAreaTime" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAreaTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreTime" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelTime" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaTimeByJavaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAreaTimeByJava" />
+  </wsdl:message>
+  <wsdl:message name="GetAreaTimeByJavaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAreaTimeByJavaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeByJavaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDateTimeByJava" />
+  </wsdl:message>
+  <wsdl:message name="GetDateTimeByJavaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDateTimeByJavaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreTimeByJavaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreTimeByJava" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreTimeByJavaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreTimeByJavaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelTimeByJavaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelTimeByJava" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelTimeByJavaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelTimeByJavaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TimeSummaryServiceSoap">
+    <wsdl:operation name="GetAreaTime">
+      <wsdl:input message="tns:GetAreaTimeSoapIn" />
+      <wsdl:output message="tns:GetAreaTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTime">
+      <wsdl:input message="tns:GetDateTimeSoapIn" />
+      <wsdl:output message="tns:GetDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreTime">
+      <wsdl:input message="tns:GetGenreTimeSoapIn" />
+      <wsdl:output message="tns:GetGenreTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelTime">
+      <wsdl:input message="tns:GetChannelTimeSoapIn" />
+      <wsdl:output message="tns:GetChannelTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaTimeByJava">
+      <wsdl:input message="tns:GetAreaTimeByJavaSoapIn" />
+      <wsdl:output message="tns:GetAreaTimeByJavaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTimeByJava">
+      <wsdl:input message="tns:GetDateTimeByJavaSoapIn" />
+      <wsdl:output message="tns:GetDateTimeByJavaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreTimeByJava">
+      <wsdl:input message="tns:GetGenreTimeByJavaSoapIn" />
+      <wsdl:output message="tns:GetGenreTimeByJavaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelTimeByJava">
+      <wsdl:input message="tns:GetChannelTimeByJavaSoapIn" />
+      <wsdl:output message="tns:GetChannelTimeByJavaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TimeSummaryServiceSoap" type="tns:TimeSummaryServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAreaTime">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAreaTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTime">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreTime">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelTime">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaTimeByJava">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAreaTimeByJava" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTimeByJava">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetDateTimeByJava" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreTimeByJava">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreTimeByJava" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelTimeByJava">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelTimeByJava" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TimeSummaryServiceSoap12" type="tns:TimeSummaryServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAreaTime">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAreaTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTime">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetDateTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreTime">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelTime">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaTimeByJava">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetAreaTimeByJava" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDateTimeByJava">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetDateTimeByJava" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreTimeByJava">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreTimeByJava" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelTimeByJava">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelTimeByJava" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TimeSummaryService">
+    <wsdl:port name="TimeSummaryServiceSoap" binding="tns:TimeSummaryServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/ReportAd/TimeSummaryService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TimeSummaryServiceSoap12" binding="tns:TimeSummaryServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/ReportAd/TimeSummaryService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetSchTargetHomeAdList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SchTargetHomeAdModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SchHomeAdModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AddYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ListNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdSchType" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ListNm" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CollectionHomeCd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ExpiryDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TargetHomeAdDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SchHomeAdModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="FileListCount" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ScheduleDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchRapCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchAgencyCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchAdvertiserCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchContractState" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchAdClass" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_10" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_20" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_30" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_40" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ScheduleOrder" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastOrder" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LogYn" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="PlayType" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSchTargetHomeAdListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSchTargetHomeAdListResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchTargetHomeAdCreateResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchTargetHomeAdUpdateResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchTargetHomeAdDeleteResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdOrderFirst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdOrderFirstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchTargetHomeAdOrderFirstResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdOrderUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdOrderUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchTargetHomeAdOrderUpResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdOrderDown">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdOrderDownResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchTargetHomeAdOrderDownResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdOrderLast">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchTargetHomeAdOrderLastResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchTargetHomeAdOrderLastResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSchHomeAdList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSchHomeAdListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSchHomeAdListResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractItemListResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemListCm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemListCmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractItemListCmResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeSearchResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeAdCreateResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdDelete_To">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdDelete_ToResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeAdDelete_ToResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdCreate_To">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdCreate_ToResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeAdCreate_ToResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeAdDeleteResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdOrderFirst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdOrderFirstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeAdOrderFirstResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdOrderUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdOrderUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeAdOrderUpResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdOrderDown">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdOrderDownResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeAdOrderDownResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdOrderLast">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdOrderLastResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeAdOrderLastResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdLogYn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdLogYnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeAdLogYnResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdCommonYn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchHomeAdCommonYnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchHomeAdCommonYnResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSchHomeCmSlot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSchHomeCmSlotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSchHomeCmSlotResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLogCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLogCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLogCountResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSlotCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSlotCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSlotCountResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setSchTargetHomePlayType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schTargetHomeAdModel" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setSchTargetHomePlayTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setSchTargetHomePlayTypeResult" type="tns:SchTargetHomeAdModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSchTargetHomeAdListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSchTargetHomeAdList" />
+  </wsdl:message>
+  <wsdl:message name="GetSchTargetHomeAdListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSchTargetHomeAdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdOrderFirstSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdOrderFirst" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdOrderFirstSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdOrderFirstResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdOrderUpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdOrderUp" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdOrderUpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdOrderUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdOrderDownSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdOrderDown" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdOrderDownSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdOrderDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdOrderLastSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdOrderLast" />
+  </wsdl:message>
+  <wsdl:message name="SetSchTargetHomeAdOrderLastSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchTargetHomeAdOrderLastResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSchHomeAdListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSchHomeAdList" />
+  </wsdl:message>
+  <wsdl:message name="GetSchHomeAdListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSchHomeAdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractItemList" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractItemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemListCmSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractItemListCm" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemListCmSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractItemListCmResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeSearch" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdDelete_ToSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdDelete_To" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdDelete_ToSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdDelete_ToResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdCreate_ToSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdCreate_To" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdCreate_ToSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdCreate_ToResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdOrderFirstSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdOrderFirst" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdOrderFirstSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdOrderFirstResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdOrderUpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdOrderUp" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdOrderUpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdOrderUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdOrderDownSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdOrderDown" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdOrderDownSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdOrderDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdOrderLastSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdOrderLast" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdOrderLastSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdOrderLastResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdLogYnSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdLogYn" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdLogYnSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdLogYnResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdCommonYnSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdCommonYn" />
+  </wsdl:message>
+  <wsdl:message name="SetSchHomeAdCommonYnSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchHomeAdCommonYnResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSchHomeCmSlotSoapIn">
+    <wsdl:part name="parameters" element="tns:getSchHomeCmSlot" />
+  </wsdl:message>
+  <wsdl:message name="getSchHomeCmSlotSoapOut">
+    <wsdl:part name="parameters" element="tns:getSchHomeCmSlotResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLogCountSoapIn">
+    <wsdl:part name="parameters" element="tns:getLogCount" />
+  </wsdl:message>
+  <wsdl:message name="getLogCountSoapOut">
+    <wsdl:part name="parameters" element="tns:getLogCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSlotCountSoapIn">
+    <wsdl:part name="parameters" element="tns:getSlotCount" />
+  </wsdl:message>
+  <wsdl:message name="getSlotCountSoapOut">
+    <wsdl:part name="parameters" element="tns:getSlotCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="setSchTargetHomePlayTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:setSchTargetHomePlayType" />
+  </wsdl:message>
+  <wsdl:message name="setSchTargetHomePlayTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:setSchTargetHomePlayTypeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SchTargetHomeAdServiceSoap">
+    <wsdl:operation name="GetSchTargetHomeAdList">
+      <wsdl:input message="tns:GetSchTargetHomeAdListSoapIn" />
+      <wsdl:output message="tns:GetSchTargetHomeAdListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdCreate">
+      <wsdl:input message="tns:SetSchTargetHomeAdCreateSoapIn" />
+      <wsdl:output message="tns:SetSchTargetHomeAdCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdUpdate">
+      <wsdl:input message="tns:SetSchTargetHomeAdUpdateSoapIn" />
+      <wsdl:output message="tns:SetSchTargetHomeAdUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdDelete">
+      <wsdl:input message="tns:SetSchTargetHomeAdDeleteSoapIn" />
+      <wsdl:output message="tns:SetSchTargetHomeAdDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderFirst">
+      <wsdl:input message="tns:SetSchTargetHomeAdOrderFirstSoapIn" />
+      <wsdl:output message="tns:SetSchTargetHomeAdOrderFirstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderUp">
+      <wsdl:input message="tns:SetSchTargetHomeAdOrderUpSoapIn" />
+      <wsdl:output message="tns:SetSchTargetHomeAdOrderUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderDown">
+      <wsdl:input message="tns:SetSchTargetHomeAdOrderDownSoapIn" />
+      <wsdl:output message="tns:SetSchTargetHomeAdOrderDownSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderLast">
+      <wsdl:input message="tns:SetSchTargetHomeAdOrderLastSoapIn" />
+      <wsdl:output message="tns:SetSchTargetHomeAdOrderLastSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchHomeAdList">
+      <wsdl:input message="tns:GetSchHomeAdListSoapIn" />
+      <wsdl:output message="tns:GetSchHomeAdListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <wsdl:input message="tns:GetContractItemListSoapIn" />
+      <wsdl:output message="tns:GetContractItemListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemListCm">
+      <wsdl:input message="tns:GetContractItemListCmSoapIn" />
+      <wsdl:output message="tns:GetContractItemListCmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeSearch">
+      <wsdl:input message="tns:SetSchHomeSearchSoapIn" />
+      <wsdl:output message="tns:SetSchHomeSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdCreate">
+      <wsdl:input message="tns:SetSchHomeAdCreateSoapIn" />
+      <wsdl:output message="tns:SetSchHomeAdCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdDelete_To">
+      <wsdl:input message="tns:SetSchHomeAdDelete_ToSoapIn" />
+      <wsdl:output message="tns:SetSchHomeAdDelete_ToSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdCreate_To">
+      <wsdl:input message="tns:SetSchHomeAdCreate_ToSoapIn" />
+      <wsdl:output message="tns:SetSchHomeAdCreate_ToSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdDelete">
+      <wsdl:input message="tns:SetSchHomeAdDeleteSoapIn" />
+      <wsdl:output message="tns:SetSchHomeAdDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderFirst">
+      <wsdl:input message="tns:SetSchHomeAdOrderFirstSoapIn" />
+      <wsdl:output message="tns:SetSchHomeAdOrderFirstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderUp">
+      <wsdl:input message="tns:SetSchHomeAdOrderUpSoapIn" />
+      <wsdl:output message="tns:SetSchHomeAdOrderUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderDown">
+      <wsdl:input message="tns:SetSchHomeAdOrderDownSoapIn" />
+      <wsdl:output message="tns:SetSchHomeAdOrderDownSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderLast">
+      <wsdl:input message="tns:SetSchHomeAdOrderLastSoapIn" />
+      <wsdl:output message="tns:SetSchHomeAdOrderLastSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdLogYn">
+      <wsdl:input message="tns:SetSchHomeAdLogYnSoapIn" />
+      <wsdl:output message="tns:SetSchHomeAdLogYnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdCommonYn">
+      <wsdl:input message="tns:SetSchHomeAdCommonYnSoapIn" />
+      <wsdl:output message="tns:SetSchHomeAdCommonYnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSchHomeCmSlot">
+      <wsdl:input message="tns:getSchHomeCmSlotSoapIn" />
+      <wsdl:output message="tns:getSchHomeCmSlotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLogCount">
+      <wsdl:input message="tns:getLogCountSoapIn" />
+      <wsdl:output message="tns:getLogCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSlotCount">
+      <wsdl:input message="tns:getSlotCountSoapIn" />
+      <wsdl:output message="tns:getSlotCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setSchTargetHomePlayType">
+      <wsdl:input message="tns:setSchTargetHomePlayTypeSoapIn" />
+      <wsdl:output message="tns:setSchTargetHomePlayTypeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SchTargetHomeAdServiceSoap" type="tns:SchTargetHomeAdServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSchTargetHomeAdList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSchTargetHomeAdList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderFirst">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderUp">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderDown">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderLast">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchHomeAdList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSchHomeAdList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemListCm">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemListCm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeSearch">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdDelete_To">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdDelete_To" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdCreate_To">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdCreate_To" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderFirst">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderUp">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderDown">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderLast">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdLogYn">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdLogYn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdCommonYn">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdCommonYn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSchHomeCmSlot">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/getSchHomeCmSlot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogCount">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/getLogCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSlotCount">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/getSlotCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setSchTargetHomePlayType">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/setSchTargetHomePlayType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SchTargetHomeAdServiceSoap12" type="tns:SchTargetHomeAdServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSchTargetHomeAdList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSchTargetHomeAdList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderFirst">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderUp">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderDown">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchTargetHomeAdOrderLast">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchTargetHomeAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchHomeAdList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSchHomeAdList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemListCm">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemListCm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeSearch">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdDelete_To">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdDelete_To" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdCreate_To">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdCreate_To" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderFirst">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderUp">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderDown">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdOrderLast">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdLogYn">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdLogYn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchHomeAdCommonYn">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchHomeAdCommonYn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSchHomeCmSlot">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/getSchHomeCmSlot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogCount">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/getLogCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSlotCount">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/getSlotCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setSchTargetHomePlayType">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/setSchTargetHomePlayType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SchTargetHomeAdService">
+    <wsdl:port name="SchTargetHomeAdServiceSoap" binding="tns:SchTargetHomeAdServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV7/Schedule/SchTargetHomeAdService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SchTargetHomeAdServiceSoap12" binding="tns:SchTargetHomeAdServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV7/Schedule/SchTargetHomeAdService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

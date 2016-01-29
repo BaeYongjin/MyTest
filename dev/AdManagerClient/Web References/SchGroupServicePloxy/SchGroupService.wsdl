@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetGroupScheduleList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SchGroupModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SchGroupList">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SchGroupDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="ChooseAdScheduleDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GroupCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ScheduleOrder" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastOrder" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdType" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGroupScheduleListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupScheduleListResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupListResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelListResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChooseAdScheduleListMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChooseAdScheduleListMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChooseAdScheduleListMenuResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChooseAdScheduleListChannel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChooseAdScheduleListChannelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChooseAdScheduleListChannelResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchGroupDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchGroupDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchGroupDeleteResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchGroupCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchGroupCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchGroupCreateResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderFirst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderFirstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchMenuAdOrderFirstResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchMenuAdOrderUpResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderDown">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderDownResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchMenuAdOrderDownResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderLast">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchMenuAdOrderLastResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchMenuAdOrderLastResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderFirst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderFirstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchChannelAdOrderFirstResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchChannelAdOrderUpResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderDown">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderDownResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchChannelAdOrderDownResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderLast">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchChannelAdOrderLastResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchChannelAdOrderLastResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSchGroupReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="schGroupModel" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSchGroupReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSchGroupReportResult" type="tns:SchGroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGroupScheduleListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupScheduleList" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupScheduleListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupScheduleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupList" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelList" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChooseAdScheduleListMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChooseAdScheduleListMenu" />
+  </wsdl:message>
+  <wsdl:message name="GetChooseAdScheduleListMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChooseAdScheduleListMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChooseAdScheduleListChannelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChooseAdScheduleListChannel" />
+  </wsdl:message>
+  <wsdl:message name="GetChooseAdScheduleListChannelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChooseAdScheduleListChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchGroupDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchGroupDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetSchGroupDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchGroupDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchGroupCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchGroupCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetSchGroupCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchGroupCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderFirstSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderFirst" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderFirstSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderFirstResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderUpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderUp" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderUpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderDownSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderDown" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderDownSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderLastSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderLast" />
+  </wsdl:message>
+  <wsdl:message name="SetSchMenuAdOrderLastSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchMenuAdOrderLastResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderFirstSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderFirst" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderFirstSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderFirstResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderUpSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderUp" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderUpSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderDownSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderDown" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderDownSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderLastSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderLast" />
+  </wsdl:message>
+  <wsdl:message name="SetSchChannelAdOrderLastSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchChannelAdOrderLastResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSchGroupReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSchGroupReport" />
+  </wsdl:message>
+  <wsdl:message name="GetSchGroupReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSchGroupReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SchGroupServiceSoap">
+    <wsdl:operation name="GetGroupScheduleList">
+      <wsdl:input message="tns:GetGroupScheduleListSoapIn" />
+      <wsdl:output message="tns:GetGroupScheduleListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupList">
+      <wsdl:input message="tns:GetGroupListSoapIn" />
+      <wsdl:output message="tns:GetGroupListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <wsdl:input message="tns:GetChannelListSoapIn" />
+      <wsdl:output message="tns:GetChannelListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListMenu">
+      <wsdl:input message="tns:GetChooseAdScheduleListMenuSoapIn" />
+      <wsdl:output message="tns:GetChooseAdScheduleListMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListChannel">
+      <wsdl:input message="tns:GetChooseAdScheduleListChannelSoapIn" />
+      <wsdl:output message="tns:GetChooseAdScheduleListChannelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchGroupDelete">
+      <wsdl:input message="tns:SetSchGroupDeleteSoapIn" />
+      <wsdl:output message="tns:SetSchGroupDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchGroupCreate">
+      <wsdl:input message="tns:SetSchGroupCreateSoapIn" />
+      <wsdl:output message="tns:SetSchGroupCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderFirst">
+      <wsdl:input message="tns:SetSchMenuAdOrderFirstSoapIn" />
+      <wsdl:output message="tns:SetSchMenuAdOrderFirstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderUp">
+      <wsdl:input message="tns:SetSchMenuAdOrderUpSoapIn" />
+      <wsdl:output message="tns:SetSchMenuAdOrderUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderDown">
+      <wsdl:input message="tns:SetSchMenuAdOrderDownSoapIn" />
+      <wsdl:output message="tns:SetSchMenuAdOrderDownSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderLast">
+      <wsdl:input message="tns:SetSchMenuAdOrderLastSoapIn" />
+      <wsdl:output message="tns:SetSchMenuAdOrderLastSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderFirst">
+      <wsdl:input message="tns:SetSchChannelAdOrderFirstSoapIn" />
+      <wsdl:output message="tns:SetSchChannelAdOrderFirstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderUp">
+      <wsdl:input message="tns:SetSchChannelAdOrderUpSoapIn" />
+      <wsdl:output message="tns:SetSchChannelAdOrderUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderDown">
+      <wsdl:input message="tns:SetSchChannelAdOrderDownSoapIn" />
+      <wsdl:output message="tns:SetSchChannelAdOrderDownSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderLast">
+      <wsdl:input message="tns:SetSchChannelAdOrderLastSoapIn" />
+      <wsdl:output message="tns:SetSchChannelAdOrderLastSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchGroupReport">
+      <wsdl:input message="tns:GetSchGroupReportSoapIn" />
+      <wsdl:output message="tns:GetSchGroupReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SchGroupServiceSoap" type="tns:SchGroupServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGroupScheduleList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGroupScheduleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListMenu">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChooseAdScheduleListMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListChannel">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChooseAdScheduleListChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchGroupDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchGroupDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchGroupCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchGroupCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderFirst">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderUp">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderDown">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderLast">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderFirst">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderUp">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderDown">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderLast">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchGroupReport">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSchGroupReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SchGroupServiceSoap12" type="tns:SchGroupServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGroupScheduleList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGroupScheduleList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListMenu">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChooseAdScheduleListMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseAdScheduleListChannel">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChooseAdScheduleListChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchGroupDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchGroupDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchGroupCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchGroupCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderFirst">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderUp">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderDown">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchMenuAdOrderLast">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchMenuAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderFirst">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderFirst" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderUp">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderDown">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchChannelAdOrderLast">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetSchChannelAdOrderLast" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchGroupReport">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSchGroupReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SchGroupService">
+    <wsdl:port name="SchGroupServiceSoap" binding="tns:SchGroupServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV7/Schedule/SchGroupService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SchGroupServiceSoap12" binding="tns:SchGroupServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV7/Schedule/SchGroupService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

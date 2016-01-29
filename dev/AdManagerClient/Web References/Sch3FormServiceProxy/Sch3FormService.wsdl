@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetGenreListCSS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:Sch3FormModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Sch3FormModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ItemNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Media" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Category" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Genre" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Channel" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="DataType" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="DsGenre">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="DsChannel">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="DsSeries">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGenreListCSSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreListCSSResult" type="tns:Sch3FormModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreListDesign">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:Sch3FormModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreListDesignResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreListDesignResult" type="tns:Sch3FormModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreListTot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:Sch3FormModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreListTotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreListTotResult" type="tns:Sch3FormModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:Sch3FormModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelListResult" type="tns:Sch3FormModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeriesList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:Sch3FormModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeriesListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeriesListResult" type="tns:Sch3FormModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGenreListCSSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreListCSS" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListCSSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreListCSSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListDesignSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreListDesign" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListDesignSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreListDesignResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListTotSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreListTot" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListTotSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreListTotResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelList" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSeriesListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSeriesList" />
+  </wsdl:message>
+  <wsdl:message name="GetSeriesListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSeriesListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Sch3FormServiceSoap">
+    <wsdl:operation name="GetGenreListCSS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CSS편성시 사용되는 팝업윈도우의 첫번째 리스트인 카테고리/장르 목록을 가져옵니다</wsdl:documentation>
+      <wsdl:input message="tns:GetGenreListCSSSoapIn" />
+      <wsdl:output message="tns:GetGenreListCSSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreListDesign">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">지정편성시 사용되는 팝업윈도우의 첫번째 리스트인 카테고리/장르 목록을 가져옵니다</wsdl:documentation>
+      <wsdl:input message="tns:GetGenreListDesignSoapIn" />
+      <wsdl:output message="tns:GetGenreListDesignSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreListTot">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">일반편성시 사용되는 팝업윈도우의 첫번째 리스트인 카테고리/장르 목록을 가져옵니다</wsdl:documentation>
+      <wsdl:input message="tns:GetGenreListTotSoapIn" />
+      <wsdl:output message="tns:GetGenreListTotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">편성시 사용되는 팝업윈도우의 두번째 리스트인 채널 목록을 가져옵니다</wsdl:documentation>
+      <wsdl:input message="tns:GetChannelListSoapIn" />
+      <wsdl:output message="tns:GetChannelListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">편성시 사용되는 팝업윈도우의 세번째 리스트인 시리즈채널 목록을 가져옵니다</wsdl:documentation>
+      <wsdl:input message="tns:GetSeriesListSoapIn" />
+      <wsdl:output message="tns:GetSeriesListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Sch3FormServiceSoap" type="tns:Sch3FormServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGenreListCSS">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreListCSS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreListDesign">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreListDesign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreListTot">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreListTot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSeriesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Sch3FormServiceSoap12" type="tns:Sch3FormServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGenreListCSS">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreListCSS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreListDesign">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreListDesign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreListTot">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreListTot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSeriesList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Sch3FormService">
+    <wsdl:port name="Sch3FormServiceSoap" binding="tns:Sch3FormServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Schedule/Sch3FormService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Sch3FormServiceSoap12" binding="tns:Sch3FormServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Schedule/Sch3FormService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

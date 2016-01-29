@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TimeSummaryDs" targetNamespace="http://tempuri.org/TimeSummaryDs.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/TimeSummaryDs.xsd" xmlns:mstns="http://tempuri.org/TimeSummaryDs.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="TimeSummaryDs" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="AreaTime">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="region" type="xs:string" minOccurs="0" />
+							<xs:element name="regionName" type="xs:string" minOccurs="0" />
+							<xs:element name="H00" type="xs:float" minOccurs="0" />
+							<xs:element name="H01" type="xs:float" minOccurs="0" />
+							<xs:element name="H02" type="xs:float" minOccurs="0" />
+							<xs:element name="H03" type="xs:float" minOccurs="0" />
+							<xs:element name="H04" type="xs:float" minOccurs="0" />
+							<xs:element name="H05" type="xs:float" minOccurs="0" />
+							<xs:element name="H06" type="xs:float" minOccurs="0" />
+							<xs:element name="H07" type="xs:float" minOccurs="0" />
+							<xs:element name="H08" type="xs:float" minOccurs="0" />
+							<xs:element name="H09" type="xs:float" minOccurs="0" />
+							<xs:element name="H10" type="xs:float" minOccurs="0" />
+							<xs:element name="H11" type="xs:float" minOccurs="0" />
+							<xs:element name="H12" type="xs:float" minOccurs="0" />
+							<xs:element name="H13" type="xs:float" minOccurs="0" />
+							<xs:element name="H14" type="xs:float" minOccurs="0" />
+							<xs:element name="H15" type="xs:float" minOccurs="0" />
+							<xs:element name="H16" type="xs:float" minOccurs="0" />
+							<xs:element name="H17" type="xs:float" minOccurs="0" />
+							<xs:element name="H18" type="xs:float" minOccurs="0" />
+							<xs:element name="H19" type="xs:float" minOccurs="0" />
+							<xs:element name="H20" type="xs:float" minOccurs="0" />
+							<xs:element name="H21" type="xs:float" minOccurs="0" />
+							<xs:element name="H22" type="xs:float" minOccurs="0" />
+							<xs:element name="H23" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DateTime">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LogDay" type="xs:string" minOccurs="0" />
+							<xs:element name="H00" type="xs:float" minOccurs="0" />
+							<xs:element name="H01" type="xs:float" minOccurs="0" />
+							<xs:element name="H02" type="xs:float" minOccurs="0" />
+							<xs:element name="H03" type="xs:float" minOccurs="0" />
+							<xs:element name="H04" type="xs:float" minOccurs="0" />
+							<xs:element name="H05" type="xs:float" minOccurs="0" />
+							<xs:element name="H06" type="xs:float" minOccurs="0" />
+							<xs:element name="H07" type="xs:float" minOccurs="0" />
+							<xs:element name="H08" type="xs:float" minOccurs="0" />
+							<xs:element name="H09" type="xs:float" minOccurs="0" />
+							<xs:element name="H10" type="xs:float" minOccurs="0" />
+							<xs:element name="H11" type="xs:float" minOccurs="0" />
+							<xs:element name="H12" type="xs:float" minOccurs="0" />
+							<xs:element name="H13" type="xs:float" minOccurs="0" />
+							<xs:element name="H14" type="xs:float" minOccurs="0" />
+							<xs:element name="H15" type="xs:float" minOccurs="0" />
+							<xs:element name="H16" type="xs:float" minOccurs="0" />
+							<xs:element name="H17" type="xs:float" minOccurs="0" />
+							<xs:element name="H18" type="xs:float" minOccurs="0" />
+							<xs:element name="H19" type="xs:float" minOccurs="0" />
+							<xs:element name="H20" type="xs:float" minOccurs="0" />
+							<xs:element name="H21" type="xs:float" minOccurs="0" />
+							<xs:element name="H22" type="xs:float" minOccurs="0" />
+							<xs:element name="H23" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GenreTime">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Category" type="xs:string" minOccurs="0" />
+							<xs:element name="CategoryNm" type="xs:string" minOccurs="0" />
+							<xs:element name="Genre" type="xs:string" minOccurs="0" />
+							<xs:element name="GenreNm" type="xs:string" minOccurs="0" />
+							<xs:element name="H00" type="xs:float" minOccurs="0" />
+							<xs:element name="H01" type="xs:float" minOccurs="0" />
+							<xs:element name="H02" type="xs:float" minOccurs="0" />
+							<xs:element name="H03" type="xs:float" minOccurs="0" />
+							<xs:element name="H04" type="xs:float" minOccurs="0" />
+							<xs:element name="H05" type="xs:float" minOccurs="0" />
+							<xs:element name="H06" type="xs:float" minOccurs="0" />
+							<xs:element name="H07" type="xs:float" minOccurs="0" />
+							<xs:element name="H08" type="xs:float" minOccurs="0" />
+							<xs:element name="H09" type="xs:float" minOccurs="0" />
+							<xs:element name="H10" type="xs:float" minOccurs="0" />
+							<xs:element name="H11" type="xs:float" minOccurs="0" />
+							<xs:element name="H12" type="xs:float" minOccurs="0" />
+							<xs:element name="H13" type="xs:float" minOccurs="0" />
+							<xs:element name="H14" type="xs:float" minOccurs="0" />
+							<xs:element name="H15" type="xs:float" minOccurs="0" />
+							<xs:element name="H16" type="xs:float" minOccurs="0" />
+							<xs:element name="H17" type="xs:float" minOccurs="0" />
+							<xs:element name="H18" type="xs:float" minOccurs="0" />
+							<xs:element name="H19" type="xs:float" minOccurs="0" />
+							<xs:element name="H20" type="xs:float" minOccurs="0" />
+							<xs:element name="H21" type="xs:float" minOccurs="0" />
+							<xs:element name="H22" type="xs:float" minOccurs="0" />
+							<xs:element name="H23" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ChannelTime">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Category" type="xs:string" minOccurs="0" />
+							<xs:element name="CategoryNm" type="xs:string" minOccurs="0" />
+							<xs:element name="Genre" type="xs:string" minOccurs="0" />
+							<xs:element name="GenreNm" type="xs:string" minOccurs="0" />
+							<xs:element name="progKey" type="xs:string" minOccurs="0" />
+							<xs:element name="ChannelNm" type="xs:string" minOccurs="0" />
+							<xs:element name="H00" type="xs:float" minOccurs="0" />
+							<xs:element name="H01" type="xs:float" minOccurs="0" />
+							<xs:element name="H02" type="xs:float" minOccurs="0" />
+							<xs:element name="H03" type="xs:float" minOccurs="0" />
+							<xs:element name="H04" type="xs:float" minOccurs="0" />
+							<xs:element name="H05" type="xs:float" minOccurs="0" />
+							<xs:element name="H06" type="xs:float" minOccurs="0" />
+							<xs:element name="H07" type="xs:float" minOccurs="0" />
+							<xs:element name="H08" type="xs:float" minOccurs="0" />
+							<xs:element name="H09" type="xs:float" minOccurs="0" />
+							<xs:element name="H10" type="xs:float" minOccurs="0" />
+							<xs:element name="H11" type="xs:float" minOccurs="0" />
+							<xs:element name="H12" type="xs:float" minOccurs="0" />
+							<xs:element name="H13" type="xs:float" minOccurs="0" />
+							<xs:element name="H14" type="xs:float" minOccurs="0" />
+							<xs:element name="H15" type="xs:float" minOccurs="0" />
+							<xs:element name="H16" type="xs:float" minOccurs="0" />
+							<xs:element name="H17" type="xs:float" minOccurs="0" />
+							<xs:element name="H18" type="xs:float" minOccurs="0" />
+							<xs:element name="H19" type="xs:float" minOccurs="0" />
+							<xs:element name="H20" type="xs:float" minOccurs="0" />
+							<xs:element name="H21" type="xs:float" minOccurs="0" />
+							<xs:element name="H22" type="xs:float" minOccurs="0" />
+							<xs:element name="H23" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MediaRaps">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RapCode" type="xs:string" minOccurs="0" />
+							<xs:element name="RapName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

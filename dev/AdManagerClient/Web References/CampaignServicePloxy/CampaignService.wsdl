@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetContractList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CampaignModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ContractDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="CampaignDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchState_10" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchState_20" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchRap" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchUse" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchRapCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchAgencyCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchAdvertiserCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchContractState" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchAdClass" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_10" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_20" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_30" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_40" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CampaignCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CampaignName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AgencyCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvertiserCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RapName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AgencyName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdvertiserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractSeq" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContStartDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContEndDay" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PackageNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PackageName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractAmt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobName2" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobName3" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Level1Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Level2Code" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Level" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobClass" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BonusRate" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LongBonus" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SpecialBonus" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TotalBonus" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SecurityTgt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="packageName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AdTime" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BizManageTarget" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetContractListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractListResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCampaignList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCampaignListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCampaignListResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractList2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractList2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractList2Result" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractItemListResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemPopList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContractItemPopListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContractItemPopListResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="svcGetPnsList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="svcGetPnsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="svcGetPnsListResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCampaignCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCampaignCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCampaignCreateResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCampaignUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCampaignUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCampaignUpdateResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCampaignDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCampaignDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCampaignDeleteResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCampaignDetailCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCampaignDetailCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCampaignDetailCreateResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCampaignDetailDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCampaignDetailDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCampaignDetailDeleteResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="svcSetCampaignPnsCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="svcSetCampaignPnsCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="svcSetCampaignPnsCreateResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="svcSetCampaignPnsDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaignModel" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="svcSetCampaignPnsDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="svcSetCampaignPnsDeleteResult" type="tns:CampaignModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetContractListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractList" />
+  </wsdl:message>
+  <wsdl:message name="GetContractListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCampaignListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCampaignList" />
+  </wsdl:message>
+  <wsdl:message name="GetCampaignListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCampaignListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContractList2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractList2" />
+  </wsdl:message>
+  <wsdl:message name="GetContractList2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractList2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractItemList" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractItemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemPopListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContractItemPopList" />
+  </wsdl:message>
+  <wsdl:message name="GetContractItemPopListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContractItemPopListResponse" />
+  </wsdl:message>
+  <wsdl:message name="svcGetPnsListSoapIn">
+    <wsdl:part name="parameters" element="tns:svcGetPnsList" />
+  </wsdl:message>
+  <wsdl:message name="svcGetPnsListSoapOut">
+    <wsdl:part name="parameters" element="tns:svcGetPnsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCampaignCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCampaignCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetCampaignCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCampaignCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCampaignUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCampaignUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetCampaignUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCampaignUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCampaignDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCampaignDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetCampaignDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCampaignDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCampaignDetailCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCampaignDetailCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetCampaignDetailCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCampaignDetailCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCampaignDetailDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCampaignDetailDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetCampaignDetailDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCampaignDetailDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="svcSetCampaignPnsCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:svcSetCampaignPnsCreate" />
+  </wsdl:message>
+  <wsdl:message name="svcSetCampaignPnsCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:svcSetCampaignPnsCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="svcSetCampaignPnsDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:svcSetCampaignPnsDelete" />
+  </wsdl:message>
+  <wsdl:message name="svcSetCampaignPnsDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:svcSetCampaignPnsDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CampaignServiceSoap">
+    <wsdl:operation name="GetContractList">
+      <wsdl:input message="tns:GetContractListSoapIn" />
+      <wsdl:output message="tns:GetContractListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignList">
+      <wsdl:input message="tns:GetCampaignListSoapIn" />
+      <wsdl:output message="tns:GetCampaignListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractList2">
+      <wsdl:input message="tns:GetContractList2SoapIn" />
+      <wsdl:output message="tns:GetContractList2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <wsdl:input message="tns:GetContractItemListSoapIn" />
+      <wsdl:output message="tns:GetContractItemListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemPopList">
+      <wsdl:input message="tns:GetContractItemPopListSoapIn" />
+      <wsdl:output message="tns:GetContractItemPopListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="svcGetPnsList">
+      <wsdl:input message="tns:svcGetPnsListSoapIn" />
+      <wsdl:output message="tns:svcGetPnsListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignCreate">
+      <wsdl:input message="tns:SetCampaignCreateSoapIn" />
+      <wsdl:output message="tns:SetCampaignCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignUpdate">
+      <wsdl:input message="tns:SetCampaignUpdateSoapIn" />
+      <wsdl:output message="tns:SetCampaignUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignDelete">
+      <wsdl:input message="tns:SetCampaignDeleteSoapIn" />
+      <wsdl:output message="tns:SetCampaignDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignDetailCreate">
+      <wsdl:input message="tns:SetCampaignDetailCreateSoapIn" />
+      <wsdl:output message="tns:SetCampaignDetailCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignDetailDelete">
+      <wsdl:input message="tns:SetCampaignDetailDeleteSoapIn" />
+      <wsdl:output message="tns:SetCampaignDetailDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="svcSetCampaignPnsCreate">
+      <wsdl:input message="tns:svcSetCampaignPnsCreateSoapIn" />
+      <wsdl:output message="tns:svcSetCampaignPnsCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="svcSetCampaignPnsDelete">
+      <wsdl:input message="tns:svcSetCampaignPnsDeleteSoapIn" />
+      <wsdl:output message="tns:svcSetCampaignPnsDeleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CampaignServiceSoap" type="tns:CampaignServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContractList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCampaignList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractList2">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractList2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemPopList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemPopList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="svcGetPnsList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/svcGetPnsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCampaignCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCampaignUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCampaignDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignDetailCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCampaignDetailCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignDetailDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCampaignDetailDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="svcSetCampaignPnsCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/svcSetCampaignPnsCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="svcSetCampaignPnsDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/svcSetCampaignPnsDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CampaignServiceSoap12" type="tns:CampaignServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContractList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCampaignList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractList2">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractList2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractItemPopList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetContractItemPopList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="svcGetPnsList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/svcGetPnsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCampaignCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCampaignUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCampaignDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignDetailCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCampaignDetailCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCampaignDetailDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetCampaignDetailDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="svcSetCampaignPnsCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/svcSetCampaignPnsCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="svcSetCampaignPnsDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/svcSetCampaignPnsDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CampaignService">
+    <wsdl:port name="CampaignServiceSoap" binding="tns:CampaignServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV7/Contract/CampaignService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CampaignServiceSoap12" binding="tns:CampaignServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV7/Contract/CampaignService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetCampaignCodeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="campaigncodeModel" type="tns:CampaignCodeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CampaignCodeModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContractSeq" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CampaignCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CampaignName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CampaignCodeDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCampaignCodeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCampaignCodeListResult" type="tns:CampaignCodeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCampaignCodeListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCampaignCodeList" />
+  </wsdl:message>
+  <wsdl:message name="GetCampaignCodeListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCampaignCodeListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CampaignCodeServiceSoap">
+    <wsdl:operation name="GetCampaignCodeList">
+      <wsdl:input message="tns:GetCampaignCodeListSoapIn" />
+      <wsdl:output message="tns:GetCampaignCodeListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CampaignCodeServiceSoap" type="tns:CampaignCodeServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCampaignCodeList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCampaignCodeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CampaignCodeServiceSoap12" type="tns:CampaignCodeServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCampaignCodeList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCampaignCodeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CampaignCodeService">
+    <wsdl:port name="CampaignCodeServiceSoap" binding="tns:CampaignCodeServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Common/CampaignCodeService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CampaignCodeServiceSoap12" binding="tns:CampaignCodeServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Common/CampaignCodeService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

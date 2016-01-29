@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetUsersList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="mediasModel" type="tns:MediaInfoModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MediaInfoModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="UserDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_10" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchUserLevel" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Charger" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Tell" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModDt" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUsersListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersListResult" type="tns:MediaInfoModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="mediasModel" type="tns:MediaInfoModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetUserUpdateResult" type="tns:MediaInfoModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="mediasModel" type="tns:MediaInfoModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetUserCreateResult" type="tns:MediaInfoModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="mediasModel" type="tns:MediaInfoModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetUserDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetUserDeleteResult" type="tns:MediaInfoModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUsersListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsersList" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetUserUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetUserCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetUserDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetUserDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetUserDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetUserDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MediaInfoServiceSoap">
+    <wsdl:operation name="GetUsersList">
+      <wsdl:input message="tns:GetUsersListSoapIn" />
+      <wsdl:output message="tns:GetUsersListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserUpdate">
+      <wsdl:input message="tns:SetUserUpdateSoapIn" />
+      <wsdl:output message="tns:SetUserUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserCreate">
+      <wsdl:input message="tns:SetUserCreateSoapIn" />
+      <wsdl:output message="tns:SetUserCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserDelete">
+      <wsdl:input message="tns:SetUserDeleteSoapIn" />
+      <wsdl:output message="tns:SetUserDeleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MediaInfoServiceSoap" type="tns:MediaInfoServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUsersList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetUsersList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUserUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUserCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUserDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MediaInfoServiceSoap12" type="tns:MediaInfoServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUsersList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetUsersList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUserUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUserCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetUserDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MediaInfoService">
+    <wsdl:port name="MediaInfoServiceSoap" binding="tns:MediaInfoServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Media/MediaInfoService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MediaInfoServiceSoap12" binding="tns:MediaInfoServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Media/MediaInfoService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--이 파일은 XML 스키마 디자이너에서 자동 생성되었습니다. 이 파일에는 디자이너 화면의 구성 요소에 대한 레이아웃 정보가 저장됩니다.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="0" viewPortTop="5" zoom="100">
+    <Genre_XmlElement left="1005" top="1005" width="5292" height="6721" selected="0" zOrder="1" index="0" expanded="1" />
+    <ChannelSets_XmlElement left="6932" top="1005" width="5292" height="12118" selected="0" zOrder="2" index="1" expanded="1" />
+    <Series_XmlElement left="16007" top="4313" width="5292" height="11218" selected="0" zOrder="4" index="2" expanded="1" />
+</XSDDesignerLayout>

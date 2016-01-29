@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetMenuList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="chooseAdScheduleModel" type="tns:ChooseAdScheduleModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChooseAdScheduleModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ChooseAdScheduleDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SeriesNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ScheduleOrder" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_10" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_20" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_30" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchchkAdState_40" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ItemName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastOrder" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMenuListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMenuListResult" type="tns:ChooseAdScheduleModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="chooseAdScheduleModel" type="tns:ChooseAdScheduleModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelListResult" type="tns:ChooseAdScheduleModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScheduleListChannel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="chooseAdScheduleModel" type="tns:ChooseAdScheduleModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScheduleListChannelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScheduleListChannelResult" type="tns:ChooseAdScheduleModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMidAdInfoListSeries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="chooseAdScheduleModel" type="tns:ChooseAdScheduleModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMidAdInfoListSeriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMidAdInfoListSeriesResult" type="tns:ChooseAdScheduleModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMenuListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMenuList" />
+  </wsdl:message>
+  <wsdl:message name="GetMenuListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMenuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelList" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScheduleListChannelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScheduleListChannel" />
+  </wsdl:message>
+  <wsdl:message name="GetScheduleListChannelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScheduleListChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMidAdInfoListSeriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMidAdInfoListSeries" />
+  </wsdl:message>
+  <wsdl:message name="GetMidAdInfoListSeriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMidAdInfoListSeriesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SchMidAdServiceSoap">
+    <wsdl:operation name="GetMenuList">
+      <wsdl:input message="tns:GetMenuListSoapIn" />
+      <wsdl:output message="tns:GetMenuListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <wsdl:input message="tns:GetChannelListSoapIn" />
+      <wsdl:output message="tns:GetChannelListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleListChannel">
+      <wsdl:input message="tns:GetScheduleListChannelSoapIn" />
+      <wsdl:output message="tns:GetScheduleListChannelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMidAdInfoListSeries">
+      <wsdl:input message="tns:GetMidAdInfoListSeriesSoapIn" />
+      <wsdl:output message="tns:GetMidAdInfoListSeriesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SchMidAdServiceSoap" type="tns:SchMidAdServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMenuList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetMenuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleListChannel">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetScheduleListChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMidAdInfoListSeries">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetMidAdInfoListSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SchMidAdServiceSoap12" type="tns:SchMidAdServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMenuList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetMenuList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleListChannel">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetScheduleListChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMidAdInfoListSeries">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetMidAdInfoListSeries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SchMidAdService">
+    <wsdl:port name="SchMidAdServiceSoap" binding="tns:SchMidAdServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Schedule/SchMidAdService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SchMidAdServiceSoap12" binding="tns:SchMidAdServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Schedule/SchMidAdService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

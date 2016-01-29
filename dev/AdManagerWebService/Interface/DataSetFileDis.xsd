@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DataSetFileDis" targetNamespace="http://tempuri.org/DataSetFileDis.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DataSetFileDis.xsd" xmlns:mstns="http://tempuri.org/DataSetFileDis.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DataSetFileDis" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="AdFileDis">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ItemNo" type="xs:int" minOccurs="0" />
+							<xs:element name="ItemName" type="xs:string" minOccurs="0" />
+							<xs:element name="WorkDt" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="FilePath" type="xs:string" minOccurs="0" />
+							<xs:element name="FileName" type="xs:string" minOccurs="0" />
+							<xs:element name="Cid" type="xs:string" minOccurs="0" />
+							<xs:element name="RequestStatus" type="xs:string" minOccurs="0" />
+							<xs:element name="ProcStatus" type="xs:string" minOccurs="0" />
+							<xs:element name="SyncServer" type="xs:int" minOccurs="0" />
+							<xs:element name="DescServer" type="xs:int" minOccurs="0" />
+							<xs:element name="ResultDt" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="ResultMsg" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

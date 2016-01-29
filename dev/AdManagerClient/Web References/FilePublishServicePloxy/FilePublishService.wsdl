@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetPublishState">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FilePublishModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchReserveKey" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="NotCount" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModDt" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TotalCount" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="JobType" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ItemNo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReserveUserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ModifyUserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PublishDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="HistoryDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="FileListDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AckNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReserveDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PublishDesc" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPublishStateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPublishStateResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPublishList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPublishListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPublishListResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPublishHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPublishHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPublishHistoryResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFilePublish">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFilePublishResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetFilePublishResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPublishFileList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPublishFileListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPublishFileListResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReserveFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReserveFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReserveFilesResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReserveWorks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReserveWorksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReserveWorksResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReserveWorkSelect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReserveWorkSelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getReserveWorkSelectResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setReserveWorkInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setReserveWorkInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setReserveWorkInsertResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setReserveWorkUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setReserveWorkUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setReserveWorkUpdateResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setReserveFileSelect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setReserveFileSelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setReserveFileSelectResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setReserveFileUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setReserveFileUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setReserveFileUpdateResult" type="tns:FilePublishModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPublishStateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPublishState" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishStateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPublishStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPublishList" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPublishListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetPublishHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetPublishHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetFilePublishSoapIn">
+    <wsdl:part name="parameters" element="tns:SetFilePublish" />
+  </wsdl:message>
+  <wsdl:message name="SetFilePublishSoapOut">
+    <wsdl:part name="parameters" element="tns:SetFilePublishResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishFileListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPublishFileList" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishFileListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPublishFileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReserveFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReserveFiles" />
+  </wsdl:message>
+  <wsdl:message name="GetReserveFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReserveFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReserveWorksSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReserveWorks" />
+  </wsdl:message>
+  <wsdl:message name="GetReserveWorksSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReserveWorksResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReserveWorkSelectSoapIn">
+    <wsdl:part name="parameters" element="tns:getReserveWorkSelect" />
+  </wsdl:message>
+  <wsdl:message name="getReserveWorkSelectSoapOut">
+    <wsdl:part name="parameters" element="tns:getReserveWorkSelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="setReserveWorkInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:setReserveWorkInsert" />
+  </wsdl:message>
+  <wsdl:message name="setReserveWorkInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:setReserveWorkInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="setReserveWorkUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:setReserveWorkUpdate" />
+  </wsdl:message>
+  <wsdl:message name="setReserveWorkUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:setReserveWorkUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="setReserveFileSelectSoapIn">
+    <wsdl:part name="parameters" element="tns:setReserveFileSelect" />
+  </wsdl:message>
+  <wsdl:message name="setReserveFileSelectSoapOut">
+    <wsdl:part name="parameters" element="tns:setReserveFileSelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="setReserveFileUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:setReserveFileUpdate" />
+  </wsdl:message>
+  <wsdl:message name="setReserveFileUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:setReserveFileUpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FilePublishServiceSoap">
+    <wsdl:operation name="GetPublishState">
+      <wsdl:input message="tns:GetPublishStateSoapIn" />
+      <wsdl:output message="tns:GetPublishStateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishList">
+      <wsdl:input message="tns:GetPublishListSoapIn" />
+      <wsdl:output message="tns:GetPublishListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishHistory">
+      <wsdl:input message="tns:GetPublishHistorySoapIn" />
+      <wsdl:output message="tns:GetPublishHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFilePublish">
+      <wsdl:input message="tns:SetFilePublishSoapIn" />
+      <wsdl:output message="tns:SetFilePublishSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishFileList">
+      <wsdl:input message="tns:GetPublishFileListSoapIn" />
+      <wsdl:output message="tns:GetPublishFileListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReserveFiles">
+      <wsdl:input message="tns:GetReserveFilesSoapIn" />
+      <wsdl:output message="tns:GetReserveFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReserveWorks">
+      <wsdl:input message="tns:GetReserveWorksSoapIn" />
+      <wsdl:output message="tns:GetReserveWorksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReserveWorkSelect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">파일배포 예약작업 상세조회</wsdl:documentation>
+      <wsdl:input message="tns:getReserveWorkSelectSoapIn" />
+      <wsdl:output message="tns:getReserveWorkSelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setReserveWorkInsert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">파일배포 예약작업 입력</wsdl:documentation>
+      <wsdl:input message="tns:setReserveWorkInsertSoapIn" />
+      <wsdl:output message="tns:setReserveWorkInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setReserveWorkUpdate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">파일배포 예약작업 저장</wsdl:documentation>
+      <wsdl:input message="tns:setReserveWorkUpdateSoapIn" />
+      <wsdl:output message="tns:setReserveWorkUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setReserveFileSelect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">파일배포 파일작업 조회</wsdl:documentation>
+      <wsdl:input message="tns:setReserveFileSelectSoapIn" />
+      <wsdl:output message="tns:setReserveFileSelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setReserveFileUpdate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">파일배포 파일작업 저장</wsdl:documentation>
+      <wsdl:input message="tns:setReserveFileUpdateSoapIn" />
+      <wsdl:output message="tns:setReserveFileUpdateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FilePublishServiceSoap" type="tns:FilePublishServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPublishState">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPublishState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPublishList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishHistory">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPublishHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFilePublish">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetFilePublish" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishFileList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPublishFileList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReserveFiles">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetReserveFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReserveWorks">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetReserveWorks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReserveWorkSelect">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/getReserveWorkSelect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setReserveWorkInsert">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/setReserveWorkInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setReserveWorkUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/setReserveWorkUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setReserveFileSelect">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/setReserveFileSelect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setReserveFileUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/setReserveFileUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FilePublishServiceSoap12" type="tns:FilePublishServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPublishState">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPublishState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPublishList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishHistory">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPublishHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFilePublish">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetFilePublish" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishFileList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPublishFileList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReserveFiles">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetReserveFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReserveWorks">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetReserveWorks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReserveWorkSelect">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/getReserveWorkSelect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setReserveWorkInsert">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/setReserveWorkInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setReserveWorkUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/setReserveWorkUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setReserveFileSelect">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/setReserveFileSelect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setReserveFileUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/setReserveFileUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FilePublishService">
+    <wsdl:port name="FilePublishServiceSoap" binding="tns:FilePublishServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Contract/FilePublishService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FilePublishServiceSoap12" binding="tns:FilePublishServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Contract/FilePublishService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetGroupList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GroupModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GroupDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="GroupDetailDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="GenreDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SeriesDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="GroupMapDataSet">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchMedia" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchGroup" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GroupCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="RegDt" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UseYn" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GenreName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChannelNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SeriesNo" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="InvalidYn" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchType" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGroupListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupListResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupDetailList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupDetailListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupDetailListResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryListResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryList2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryList2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryList2Result" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreListResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreList2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGenreList2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGenreList2Result" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelNoPopList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelNoPopListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelNoPopListResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelNoPopList2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChannelNoPopList2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChannelNoPopList2Result" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeriesList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeriesListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeriesListResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeriesList2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeriesList2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeriesList2Result" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupMapList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupMapListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupMapListResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetGroupUpdateResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupGenreUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupGenreUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetGroupGenreUpdateResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupChannelUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupChannelUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetGroupChannelUpdateResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupSeriesUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupSeriesUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetGroupSeriesUpdateResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetGroupCreateResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupDetailCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupDetailCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetGroupDetailCreateResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetGroupDeleteResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupDetailDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupModel" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetGroupDetailDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetGroupDetailDeleteResult" type="tns:GroupModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGroupListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupList" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupDetailListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupDetailList" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupDetailListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupDetailListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryList2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryList2" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryList2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryList2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreList" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreList2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetGenreList2" />
+  </wsdl:message>
+  <wsdl:message name="GetGenreList2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetGenreList2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelNoPopListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelNoPopList" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelNoPopListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelNoPopListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelNoPopList2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetChannelNoPopList2" />
+  </wsdl:message>
+  <wsdl:message name="GetChannelNoPopList2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetChannelNoPopList2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetSeriesListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSeriesList" />
+  </wsdl:message>
+  <wsdl:message name="GetSeriesListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSeriesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSeriesList2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetSeriesList2" />
+  </wsdl:message>
+  <wsdl:message name="GetSeriesList2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetSeriesList2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupMapListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupMapList" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupMapListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupMapListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetGroupUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetGroupUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupGenreUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetGroupGenreUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupGenreUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetGroupGenreUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupChannelUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetGroupChannelUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupChannelUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetGroupChannelUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupSeriesUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetGroupSeriesUpdate" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupSeriesUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetGroupSeriesUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetGroupCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetGroupCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupDetailCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetGroupDetailCreate" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupDetailCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetGroupDetailCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetGroupDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetGroupDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupDetailDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:SetGroupDetailDelete" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupDetailDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:SetGroupDetailDeleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GroupServiceSoap">
+    <wsdl:operation name="GetGroupList">
+      <wsdl:input message="tns:GetGroupListSoapIn" />
+      <wsdl:output message="tns:GetGroupListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupDetailList">
+      <wsdl:input message="tns:GetGroupDetailListSoapIn" />
+      <wsdl:output message="tns:GetGroupDetailListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <wsdl:input message="tns:GetCategoryListSoapIn" />
+      <wsdl:output message="tns:GetCategoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList2">
+      <wsdl:input message="tns:GetCategoryList2SoapIn" />
+      <wsdl:output message="tns:GetCategoryList2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <wsdl:input message="tns:GetGenreListSoapIn" />
+      <wsdl:output message="tns:GetGenreListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList2">
+      <wsdl:input message="tns:GetGenreList2SoapIn" />
+      <wsdl:output message="tns:GetGenreList2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelNoPopList">
+      <wsdl:input message="tns:GetChannelNoPopListSoapIn" />
+      <wsdl:output message="tns:GetChannelNoPopListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelNoPopList2">
+      <wsdl:input message="tns:GetChannelNoPopList2SoapIn" />
+      <wsdl:output message="tns:GetChannelNoPopList2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList">
+      <wsdl:input message="tns:GetSeriesListSoapIn" />
+      <wsdl:output message="tns:GetSeriesListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList2">
+      <wsdl:input message="tns:GetSeriesList2SoapIn" />
+      <wsdl:output message="tns:GetSeriesList2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMapList">
+      <wsdl:input message="tns:GetGroupMapListSoapIn" />
+      <wsdl:output message="tns:GetGroupMapListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupUpdate">
+      <wsdl:input message="tns:SetGroupUpdateSoapIn" />
+      <wsdl:output message="tns:SetGroupUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupGenreUpdate">
+      <wsdl:input message="tns:SetGroupGenreUpdateSoapIn" />
+      <wsdl:output message="tns:SetGroupGenreUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupChannelUpdate">
+      <wsdl:input message="tns:SetGroupChannelUpdateSoapIn" />
+      <wsdl:output message="tns:SetGroupChannelUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupSeriesUpdate">
+      <wsdl:input message="tns:SetGroupSeriesUpdateSoapIn" />
+      <wsdl:output message="tns:SetGroupSeriesUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupCreate">
+      <wsdl:input message="tns:SetGroupCreateSoapIn" />
+      <wsdl:output message="tns:SetGroupCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDetailCreate">
+      <wsdl:input message="tns:SetGroupDetailCreateSoapIn" />
+      <wsdl:output message="tns:SetGroupDetailCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDelete">
+      <wsdl:input message="tns:SetGroupDeleteSoapIn" />
+      <wsdl:output message="tns:SetGroupDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDetailDelete">
+      <wsdl:input message="tns:SetGroupDetailDeleteSoapIn" />
+      <wsdl:output message="tns:SetGroupDetailDeleteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GroupServiceSoap" type="tns:GroupServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGroupList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupDetailList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGroupDetailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList2">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategoryList2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList2">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreList2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelNoPopList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelNoPopList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelNoPopList2">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelNoPopList2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSeriesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList2">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSeriesList2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMapList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGroupMapList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupGenreUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupGenreUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupChannelUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupChannelUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupSeriesUpdate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupSeriesUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDetailCreate">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupDetailCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDetailDelete">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupDetailDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GroupServiceSoap12" type="tns:GroupServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGroupList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupDetailList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGroupDetailList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList2">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetCategoryList2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenreList2">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGenreList2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelNoPopList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelNoPopList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelNoPopList2">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetChannelNoPopList2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSeriesList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeriesList2">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetSeriesList2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMapList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetGroupMapList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupGenreUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupGenreUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupChannelUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupChannelUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupSeriesUpdate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupSeriesUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDetailCreate">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupDetailCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDetailDelete">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/SetGroupDetailDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GroupService">
+    <wsdl:port name="GroupServiceSoap" binding="tns:GroupServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV7/Media/GroupService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GroupServiceSoap12" binding="tns:GroupServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV7/Media/GroupService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

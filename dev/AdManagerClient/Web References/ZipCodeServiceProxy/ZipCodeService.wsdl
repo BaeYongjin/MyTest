@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://advmgt.hanafostv.com/AdManagerWebService/">
+      <s:element name="GetZipList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ZipCodeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HeaderModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZipCodeModel">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseModel">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SearchKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SearchZip" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DsAddr">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCnt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCD" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetZipListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetZipListResult" type="tns:ZipCodeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPreZipList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ZipCodeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPreZipListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPreZipListResult" type="tns:ZipCodeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncludeZipList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="header" type="tns:HeaderModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ZipCodeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncludeZipListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIncludeZipListResult" type="tns:ZipCodeModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetZipListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetZipList" />
+  </wsdl:message>
+  <wsdl:message name="GetZipListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetZipListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPreZipListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPreZipList" />
+  </wsdl:message>
+  <wsdl:message name="GetPreZipListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPreZipListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIncludeZipListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIncludeZipList" />
+  </wsdl:message>
+  <wsdl:message name="GetIncludeZipListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIncludeZipListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ZipCodeServiceSoap">
+    <wsdl:operation name="GetZipList">
+      <wsdl:input message="tns:GetZipListSoapIn" />
+      <wsdl:output message="tns:GetZipListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreZipList">
+      <wsdl:input message="tns:GetPreZipListSoapIn" />
+      <wsdl:output message="tns:GetPreZipListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncludeZipList">
+      <wsdl:input message="tns:GetIncludeZipListSoapIn" />
+      <wsdl:output message="tns:GetIncludeZipListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZipCodeServiceSoap" type="tns:ZipCodeServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetZipList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetZipList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreZipList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPreZipList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncludeZipList">
+      <soap:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetIncludeZipList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZipCodeServiceSoap12" type="tns:ZipCodeServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetZipList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetZipList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreZipList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetPreZipList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncludeZipList">
+      <soap12:operation soapAction="http://advmgt.hanafostv.com/AdManagerWebService/GetIncludeZipList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZipCodeService">
+    <wsdl:port name="ZipCodeServiceSoap" binding="tns:ZipCodeServiceSoap">
+      <soap:address location="http://localhost:8086/AdManagerWebserviceV5/Common/ZipCodeService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ZipCodeServiceSoap12" binding="tns:ZipCodeServiceSoap12">
+      <soap12:address location="http://localhost:8086/AdManagerWebserviceV5/Common/ZipCodeService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

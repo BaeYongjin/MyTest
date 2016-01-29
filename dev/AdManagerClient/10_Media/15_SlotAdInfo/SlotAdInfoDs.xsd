@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SlotAdInfoDs" targetNamespace="http://tempuri.org/SlotAdInfoDs.xsd" xmlns:mstns="http://tempuri.org/SlotAdInfoDs.xsd" xmlns="http://tempuri.org/SlotAdInfoDs.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SlotAdInfoDs" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SlotAdInfoDs" msprop:Generator_UserDSName="SlotAdInfoDs">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Medias" msprop:Generator_TableClassName="MediasDataTable" msprop:Generator_TableVarName="tableMedias" msprop:Generator_RowChangedName="MediasRowChanged" msprop:Generator_TablePropName="Medias" msprop:Generator_RowDeletingName="MediasRowDeleting" msprop:Generator_RowChangingName="MediasRowChanging" msprop:Generator_RowEvHandlerName="MediasRowChangeEventHandler" msprop:Generator_RowDeletedName="MediasRowDeleted" msprop:Generator_RowClassName="MediasRow" msprop:Generator_UserTableName="Medias" msprop:Generator_RowEvArgName="MediasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MediaCode" msprop:Generator_ColumnVarNameInTable="columnMediaCode" msprop:Generator_ColumnPropNameInRow="MediaCode" msprop:Generator_ColumnPropNameInTable="MediaCodeColumn" msprop:Generator_UserColumnName="MediaCode" type="xs:string" minOccurs="0" />
+              <xs:element name="MediaName" msprop:Generator_ColumnVarNameInTable="columnMediaName" msprop:Generator_ColumnPropNameInRow="MediaName" msprop:Generator_ColumnPropNameInTable="MediaNameColumn" msprop:Generator_UserColumnName="MediaName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Categens" msprop:Generator_TableClassName="CategensDataTable" msprop:Generator_TableVarName="tableCategens" msprop:Generator_RowChangedName="CategensRowChanged" msprop:Generator_TablePropName="Categens" msprop:Generator_RowDeletingName="CategensRowDeleting" msprop:Generator_RowChangingName="CategensRowChanging" msprop:Generator_RowEvHandlerName="CategensRowChangeEventHandler" msprop:Generator_RowDeletedName="CategensRowDeleted" msprop:Generator_RowClassName="CategensRow" msprop:Generator_UserTableName="Categens" msprop:Generator_RowEvArgName="CategensRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CategoryCode" msprop:Generator_ColumnVarNameInTable="columnCategoryCode" msprop:Generator_ColumnPropNameInRow="CategoryCode" msprop:Generator_ColumnPropNameInTable="CategoryCodeColumn" msprop:Generator_UserColumnName="CategoryCode" type="xs:string" minOccurs="0" />
+              <xs:element name="CategoryName" msprop:Generator_ColumnVarNameInTable="columnCategoryName" msprop:Generator_ColumnPropNameInRow="CategoryName" msprop:Generator_ColumnPropNameInTable="CategoryNameColumn" msprop:Generator_UserColumnName="CategoryName" type="xs:string" minOccurs="0" />
+              <xs:element name="MenuCode" msprop:Generator_ColumnVarNameInTable="columnMenuCode" msprop:Generator_ColumnPropNameInRow="MenuCode" msprop:Generator_ColumnPropNameInTable="MenuCodeColumn" msprop:Generator_UserColumnName="MenuCode" type="xs:string" minOccurs="0" />
+              <xs:element name="MenuName" msprop:Generator_ColumnVarNameInTable="columnMenuName" msprop:Generator_ColumnPropNameInRow="MenuName" msprop:Generator_ColumnPropNameInTable="MenuNameColumn" msprop:Generator_UserColumnName="MenuName" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxCount" msprop:Generator_ColumnVarNameInTable="columnMaxCount" msprop:Generator_ColumnPropNameInRow="MaxCount" msprop:Generator_ColumnPropNameInTable="MaxCountColumn" msprop:Generator_UserColumnName="MaxCount" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxTime" msprop:Generator_ColumnVarNameInTable="columnMaxTime" msprop:Generator_ColumnPropNameInRow="MaxTime" msprop:Generator_ColumnPropNameInTable="MaxTimeColumn" msprop:Generator_UserColumnName="MaxTime" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxCountPay" msprop:Generator_ColumnVarNameInTable="columnMaxCountPay" msprop:Generator_ColumnPropNameInRow="MaxCountPay" msprop:Generator_ColumnPropNameInTable="MaxCountPayColumn" msprop:Generator_UserColumnName="MaxCountPay" type="xs:string" minOccurs="0" />
+              <xs:element name="MaxTimePay" msprop:Generator_ColumnVarNameInTable="columnMaxTimePay" msprop:Generator_ColumnPropNameInRow="MaxTimePay" msprop:Generator_ColumnPropNameInTable="MaxTimePayColumn" msprop:Generator_UserColumnName="MaxTimePay" type="xs:string" minOccurs="0" />
+              <xs:element name="PromotionYn" msprop:Generator_ColumnVarNameInTable="columnPromotionYn" msprop:Generator_ColumnPropNameInRow="PromotionYn" msprop:Generator_ColumnPropNameInTable="PromotionYnColumn" msprop:Generator_UserColumnName="PromotionYn" type="xs:string" minOccurs="0" />
+              <xs:element name="UseYn" msprop:Generator_ColumnVarNameInTable="columnUseYn" msprop:Generator_ColumnPropNameInRow="UseYn" msprop:Generator_ColumnPropNameInTable="UseYnColumn" msprop:Generator_UserColumnName="UseYn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

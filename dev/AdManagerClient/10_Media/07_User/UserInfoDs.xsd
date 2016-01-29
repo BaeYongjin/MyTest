@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="UserInfoDs" targetNamespace="http://tempuri.org/UserInfoDs.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/UserInfoDs.xsd" xmlns:mstns="http://tempuri.org/UserInfoDs.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="UserInfoDs" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Users">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UserID" type="xs:string" minOccurs="0" />
+							<xs:element name="UserName" type="xs:string" minOccurs="0" />
+							<xs:element name="UserPassword" type="xs:string" minOccurs="0" />
+							<xs:element name="UserLevel" type="xs:string" minOccurs="0" />
+							<xs:element name="UserClass" type="xs:string" minOccurs="0" />		
+							<xs:element name="UserClassName" type="xs:string" minOccurs="0" />		
+							<xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+							<xs:element name="RapCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AgencyCode" type="xs:string" minOccurs="0" />					
+							<xs:element name="UserLevelName" type="xs:string" minOccurs="0" />
+							<xs:element name="UserDept" type="xs:string" minOccurs="0" />
+							<xs:element name="UserTitle" type="xs:string" minOccurs="0" />
+							<xs:element name="UserTell" type="xs:string" minOccurs="0" />
+							<xs:element name="UserMobile" type="xs:string" minOccurs="0" />
+							<xs:element name="UserEMail" type="xs:string" minOccurs="0" />
+							<xs:element name="LastLogin" type="xs:string" minOccurs="0" />
+							<xs:element name="UseYn" type="xs:string" minOccurs="0" />
+							<xs:element name="UseYn_N" type="xs:string" minOccurs="0" />
+							<xs:element name="RegDt" type="xs:string" minOccurs="0" />
+							<xs:element name="ModDt" type="xs:string" minOccurs="0" />
+							<xs:element name="UserComment" type="xs:string" minOccurs="0" />							
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Levels">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Section" type="xs:string" minOccurs="0" />
+							<xs:element name="Code" type="xs:string" minOccurs="0" />
+							<xs:element name="CodeName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Class">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Section" type="xs:string" minOccurs="0" />
+							<xs:element name="Code" type="xs:string" minOccurs="0" />
+							<xs:element name="CodeName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Medias">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MediaCode" type="xs:string" minOccurs="0" />
+							<xs:element name="MediaName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MediaRaps">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RapCode" type="xs:string" minOccurs="0" />
+							<xs:element name="RapName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Agencys">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AgencyCode" type="xs:string" minOccurs="0" />
+							<xs:element name="AgencyName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
